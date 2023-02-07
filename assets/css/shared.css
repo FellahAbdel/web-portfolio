@@ -8,6 +8,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 60px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box; /* Pour ne pas depasser la limite à gauche */
 }
 
 /* Pour les liens dans la barre de navigation */
@@ -21,10 +26,15 @@ ul {
 header > a {
   padding: 10px;
   font-family: "Oleo Script", sans-serif;
-  color: rgb(245, 243, 160);
+  /* color: #252404; */
+  /* color: #400e32; */
+  /* color: #4d7a75; */
+  /* color: rgb(245, 243, 160); */
+  /* color: #0707014d; */
+  color: #070701;
   font-size: 50px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgba(66, 233, 15, 0.442);
   text-decoration: none;
 }
 
@@ -34,4 +44,20 @@ header ul {
 
 header li {
   margin-left: 20px;
+}
+
+header li a {
+  /* color: #242300; */
+  color: #201f04;
+  text-decoration: none;
+  font-style: 20px;
+  padding: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+header li a:hover {
+  /* color: rgb(77, 77, 77); */
+  color: #000000;
+  background-color: #ffffffb3;
 }

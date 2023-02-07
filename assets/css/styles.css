@@ -8,8 +8,8 @@ section:first-child {
 section:first-child div {
   width: 900px;
   background-color: rgba(51, 47, 47, 0.8);
-  box-shadow: 2px 4px 8px rgb(68, 67, 67);
-  border-radius: 8px;
+  /* box-shadow: 2px 4px 8px rgb(68, 67, 67); */
+  border-radius: 10px;
   text-align: center;
   padding: 50px 0;
   margin: 0 auto;
@@ -37,9 +37,10 @@ section:first-child p {
 /* Pour le button de Discover projects*/
 section:first-child a {
   text-decoration: none;
-  background-color: rgb(255, 251, 0);
+  background-color: #201f04;
   padding: 12px 24px;
-  color: black;
+  /* color: black; */
+  color: rgb(246, 246, 216);
   font-size: 24px;
   font-weight: bold;
   border-radius: 8px;
@@ -47,5 +48,6 @@ section:first-child a {
 }
 
 section:first-child a:hover {
-  background-color: rgb(255, 238, 0);
+  background-color: #141304;
+  color: white;
 }

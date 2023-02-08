@@ -61,3 +61,26 @@ header li a:hover {
   color: #000000;
   background-color: #ffffffb3;
 }
+
+/* Pour le pied de la page */
+/* le footer qui suit le main */
+main + footer {
+  background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29));
+  padding: 36px;
+}
+
+main + footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+main + footer li {
+  width: 80px;
+  height: 80px;
+  margin: 0 50px;
+}
+
+main + footer img {
+  width: 100%;
+  height: 100%;
+}

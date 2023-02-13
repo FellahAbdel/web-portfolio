@@ -1,6 +1,6 @@
 body {
   /* background: linear-gradient(90deg, rgb(228, 220, 220), rgb(148, 138, 138)); */
-  background-color: rgb(148, 138, 138);
+  background-color: rgba(182, 170, 170, 0.886);
 }
 
 header {
@@ -17,13 +17,20 @@ form {
   background-color: rgb(255, 255, 255);
   padding: 1rem;
   border-radius: 6px;
+  font-family: "Roboto", sans-serif;
 }
 
 input,
 textarea {
   width: 100%;
   display: block;
-  padding: 5px;
+  padding: 0.25rem;
   margin-bottom: 1rem;
   box-sizing: border-box; /* Pour avoir les mêmes espaces entre les deux bords */
+  font: inherit;
+  color: rgb(61, 58, 58);
+}
+
+button {
+  font: inherit;
 }

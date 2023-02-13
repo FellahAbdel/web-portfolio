@@ -57,10 +57,13 @@ section:last-child {
 }
 
 main section ul {
-  padding: 15px;
-  width: 70%;
+  padding: 50px 0;
+  width: 90%;
   margin: 0 auto; /* To center the element*/
-  /* display: grid; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px 0;
+  justify-items: center;
 }
 
 main li {

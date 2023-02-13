@@ -1,6 +1,7 @@
-/* body {
-  background: linear-gradient(30deg, rgb(252, 233, 233), rgb(195, 189, 189));
-} */
+body {
+  /* background: linear-gradient(90deg, rgb(228, 220, 220), rgb(148, 138, 138)); */
+  background-color: rgb(148, 138, 138);
+}
 
 header {
   position: static;

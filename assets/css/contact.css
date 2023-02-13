@@ -1,7 +1,28 @@
-body {
+/* body {
   background: linear-gradient(30deg, rgb(252, 233, 233), rgb(195, 189, 189));
-}
+} */
 
 header {
   position: static;
+  background: linear-gradient(30deg, rgb(252, 233, 233), rgb(195, 189, 189));
+}
+
+main {
+  width: 30rem;
+  margin: 3rem auto;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  margin-bottom: 1rem;
+  box-sizing: border-box; /* Pour avoir les mêmes espaces entre les deux bords */
 }

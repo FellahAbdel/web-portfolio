@@ -22,6 +22,7 @@ form {
   padding: 1rem;
   border-radius: 6px;
   font-family: "Roboto", sans-serif;
+  box-shadow: 3px 3px 3px black;
 }
 
 input,
@@ -65,18 +66,16 @@ textarea:focus {
 }
 
 button {
+  display: block;
   font: inherit;
-  font-size: 16px;
-  font-family: Arial;
   width: 113px;
   height: 37px;
-  border-width: 0px;
   color: #fff;
-  border-color: rgba(0, 98, 204, 1);
-  font-weight: bold;
-  border-radius: 10px;
-  text-shadow: 1px 1px 0px #2f6627;
+  border: 1px solid rgba(0, 123, 255, 1);
+  border-radius: 4px;
   background: rgba(0, 123, 255, 1);
+  padding: 0.5rem, 1.5rem;
+  cursor: pointer;
 }
 
 button:hover {

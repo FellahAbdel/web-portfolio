@@ -26,7 +26,7 @@ p {
   margin: 30px 0 35px 0;
 }
 
-form {
+section:last-child {
   width: 30rem;
   background-color: rgb(255, 255, 255);
   backdrop-filter: blur(5px);
@@ -37,11 +37,11 @@ form {
   box-shadow: 3px 3px 5px black;
 }
 
-form {
+/* form {
   position: relative;
   top: 150px;
   left: 250px;
-}
+} */
 
 input,
 textarea {

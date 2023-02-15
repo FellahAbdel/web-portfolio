@@ -2,6 +2,9 @@ body {
   /* background: linear-gradient(90deg, rgb(228, 220, 220), rgb(148, 138, 138));
   background-color: rgba(182, 170, 170, 0.886); */
   margin: 0;
+  background: url("/assets/images/projects/web3.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 /* header {
@@ -11,11 +14,10 @@ body {
 
 main {
   /* width: 30rem; */
-  /* margin: 3rem auto; */
-  background: url("/assets/images/projects/web3.jpg");
+  padding: 3rem;
   height: 850px;
-  background-position: center;
-  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 h1 {
@@ -26,22 +28,18 @@ p {
   margin: 30px 0 35px 0;
 }
 
+section:first-child {
+  background-color: mediumvioletred;
+}
+
 section:last-child {
-  width: 30rem;
   background-color: rgb(255, 255, 255);
   backdrop-filter: blur(5px);
   padding: 1rem;
   border-radius: 6px;
   font-family: "Roboto", sans-serif;
-  margin: 0 auto;
   box-shadow: 3px 3px 5px black;
 }
-
-/* form {
-  position: relative;
-  top: 150px;
-  left: 250px;
-} */
 
 input,
 textarea {

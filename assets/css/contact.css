@@ -37,6 +37,10 @@ main li {
   align-items: baseline;
 }
 
+div p:last-child {
+  font-weight: bold;
+}
+
 i {
   font-size: 1.17rem;
 }

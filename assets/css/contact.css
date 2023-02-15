@@ -86,6 +86,11 @@ textarea {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
+label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
 input {
   height: 34px;
 }

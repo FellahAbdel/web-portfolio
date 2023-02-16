@@ -1,5 +1,9 @@
 section:first-child {
-  height: 800px;
+  /* Pour pc
+  height: 800px; */
+
+  /* Pour telephone*/
+  height: 350px;
   background-image: url("/assets/images/projects/webDev.jpg");
   background-position: center;
   background-size: cover;
@@ -17,6 +21,7 @@ section:first-child div {
 
   position: relative;
   top: 200px;
+  display: none;
 }
 
 section:first-child h1 {
@@ -65,6 +70,7 @@ main section ul {
   grid-template-columns: 1fr 1fr;
   gap: 50px 0;
   justify-items: center;
+  display: none;
 }
 
 main li {

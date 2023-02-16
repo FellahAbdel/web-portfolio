@@ -7,7 +7,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 60px;
+  /* Pour le pc
+  padding: 15px 60px; */
+
+  padding: 15px 25px;
   position: absolute;
   width: 100%;
   top: 0;
@@ -32,7 +35,8 @@ header > a {
   /* color: rgb(245, 243, 160); */
   /* color: #0707014d; */
   color: #070701;
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 25px;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(66, 233, 15, 0.442);
   text-decoration: none;
@@ -40,6 +44,11 @@ header > a {
 
 header ul {
   display: flex;
+  display: none;
+}
+
+i {
+  font-size: 24px;
 }
 
 header li {
@@ -67,6 +76,7 @@ header li a:hover {
 main + footer {
   background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29));
   padding: 36px;
+  display: none;
 }
 
 main + footer ul {

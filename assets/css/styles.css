@@ -3,41 +3,53 @@ section:first-child {
   height: 800px; */
 
   /* Pour telephone*/
-  height: 350px;
+  height: 400px;
   background-image: url("/assets/images/projects/webDev.jpg");
   background-position: center;
   background-size: cover;
 }
 
 section:first-child div {
-  width: 900px;
   background-color: rgba(51, 47, 47, 0.8);
   backdrop-filter: blur(5px);
   /* box-shadow: 2px 4px 8px rgb(68, 67, 67); */
-  border-radius: 10px;
-  text-align: center;
-  padding: 50px 0;
-  margin: 0 auto;
 
+  width: 80%;
+  /* Pour le pc et tab
+  width: 900px;
+  border-radius: 10px;
+  padding: 50px 0;
+  top: 200px; */
+
+  padding: 10px 0;
+  height: 190px;
   position: relative;
-  top: 200px;
-  display: none;
+  top: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+  /* display: none; */
 }
 
 section:first-child h1 {
   color: white;
   text-transform: uppercase;
-  font-size: 50px;
+  /* Pour le pc
+  font-size: 50px; */
+  font: 16px;
   font-family: "Raleway", sans-serif;
-  margin: 0;
+  /* margin: 0; */
 }
 
 section:first-child p {
   color: white;
   text-transform: uppercase;
-  font-size: 24px;
+
+  /* Pour le pc
+  font-size :  */
+  font-size: 13px;
   font-weight: 300;
-  margin-bottom: 32px;
+  margin-bottom: 50px;
 }
 
 /* Pour le button de Discover projects*/
@@ -47,7 +59,9 @@ section:first-child a {
   padding: 12px 24px;
   /* color: black; */
   color: rgb(246, 246, 216);
-  font-size: 24px;
+  /* Pour le pc & tab
+  font-size: 24px; */
+  font-size: 12px;
   font-weight: bold;
   border-radius: 8px;
   box-shadow: 2px 4px 8px rgb(68, 67, 67);

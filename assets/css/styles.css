@@ -77,14 +77,16 @@ section:last-child {
 }
 
 main section ul {
-  padding: 50px 0;
-  width: 90%;
-  margin: 0 auto; /* To center the element*/
+  padding: 80px 0;
+  /* width: 90%; */
+  margin: auto; /* To center the element*/
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px 0;
+  /* Pour le pc */
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: 1fr;
+  row-gap: 50px;
   justify-items: center;
-  display: none;
+  /* display: none; */
 }
 
 main li {
@@ -93,7 +95,7 @@ main li {
   background-color: white;
   justify-content: center;
   align-items: center;
-  width: 410px;
+  width: 95%;
   border-radius: 6px;
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.2);
   overflow: hidden; /* Pour cacher le depassement de l'image sur les coins*/
@@ -156,10 +158,20 @@ footer:last-child a:hover {
   section:first-child a {
     font-size: 24px;
   }
+
+  /* Pour la 2 eme section  */
+
+  main section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media all and (min-width: 1140px) {
   section:first-child div {
     width: 800px;
+  }
+
+  main section ul {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

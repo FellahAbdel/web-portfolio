@@ -60,16 +60,17 @@ i {
 }
 
 section:first-child {
-  background-color: rgb(135, 49, 138);
-  backdrop-filter: blur(10px);
+  background-color: rgba(135, 49, 138, 0.658);
+  /* background-color: rgba(62, 31, 63, 0.68); */
+  backdrop-filter: blur(5px);
   padding: 0 1.5rem;
   border-radius: 5px 0 0 5px;
-  color: wheat;
+  color: rgb(255, 247, 231);
 }
 
 section:last-child {
-  background-color: rgb(255, 255, 255);
-  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.957);
+  backdrop-filter: blur(3px);
   padding: 1rem 7rem;
   /* border-radius: 6px; */
   font-family: "Roboto", sans-serif;

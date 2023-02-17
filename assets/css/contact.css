@@ -48,9 +48,9 @@ section:last-child p {
 
 /* Pour pc & tab */
 main li {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 30px 1fr;
-  align-items: baseline;
+  align-items: baseline; */
   display: none;
 }
 
@@ -64,12 +64,12 @@ i {
 
 /* Pour pc & tabl */
 section:first-child {
-  background-color: rgba(135, 49, 138, 0.658);
-  /* background-color: rgba(62, 31, 63, 0.68); */
+  /* background-color: rgba(135, 49, 138, 0.658);
+  background-color: rgba(62, 31, 63, 0.68);
   backdrop-filter: blur(5px);
   padding: 0 1.5rem;
   border-radius: 5px 0 0 5px;
-  color: rgb(255, 247, 231);
+  color: rgb(255, 247, 231); */
   display: none;
 }
 
@@ -161,4 +161,32 @@ button:hover {
 }
 
 @media all and (min-width: 742px) {
+  main > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0;
+  }
+
+  section:first-child {
+    display: inherit;
+    background-color: rgba(135, 49, 138, 0.658);
+    /* background-color: rgba(62, 31, 63, 0.68); */
+    backdrop-filter: blur(5px);
+    padding: 0 1.5rem;
+    border-radius: 5px 0 0 5px;
+    color: rgb(255, 247, 231);
+  }
+
+  section:last-child {
+    width: auto;
+    height: auto;
+    padding: 1rem 7rem;
+    align-self: end;
+  }
+
+  main li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: baseline;
+  }
 }

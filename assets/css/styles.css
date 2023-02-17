@@ -167,11 +167,33 @@ footer:last-child a:hover {
 }
 
 @media all and (min-width: 1140px) {
+  section:first-child {
+    height: 1150px;
+  }
   section:first-child div {
-    width: 800px;
+    top: 350px;
+    width: 60%;
+    padding: 50px 0;
+    height: 300px;
   }
 
   main section ul {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 80px;
+  }
+
+  section:first-child h1 {
+    font-size: 70px;
+    margin: 0;
+  }
+
+  section:first-child p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 70px;
+  }
+
+  section:first-child a {
+    font-size: 24px;
   }
 }

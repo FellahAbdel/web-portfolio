@@ -180,7 +180,8 @@ footer:last-child a:hover {
 
   main section ul {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 80px;
+    column-gap: 45px;
+    padding: 30px 60px;
   }
 
   section:first-child h1 {

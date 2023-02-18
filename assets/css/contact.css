@@ -168,7 +168,7 @@ button:hover {
   }
 
   section:first-child {
-    display: inherit;
+    display: block;
     background-color: rgba(135, 49, 138, 0.658);
     /* background-color: rgba(62, 31, 63, 0.68); */
     backdrop-filter: blur(5px);
@@ -181,7 +181,7 @@ button:hover {
     width: auto;
     height: auto;
     padding: 1rem 7rem;
-    align-self: end;
+    margin: 0 auto;
   }
 
   main li {

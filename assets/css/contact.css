@@ -161,10 +161,15 @@ button:hover {
 }
 
 @media all and (min-width: 742px) {
+  main {
+    height: 993px;
+  }
   main > div {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 0;
+    margin: auto 100px;
+    padding: 0;
+    top: 220px;
   }
 
   section:first-child {
@@ -172,16 +177,16 @@ button:hover {
     background-color: rgba(135, 49, 138, 0.658);
     /* background-color: rgba(62, 31, 63, 0.68); */
     backdrop-filter: blur(5px);
-    padding: 0 1.5rem;
+    padding: 0 0.8rem;
     border-radius: 5px 0 0 5px;
     color: rgb(255, 247, 231);
   }
 
   section:last-child {
     width: auto;
-    height: auto;
-    padding: 1rem 7rem;
-    margin: 0 auto;
+    padding: 1rem 3rem;
+    margin: 0 auto; /* To override the margin applied in mobile form */
+    border-radius: 0 6px 6px 0;
   }
 
   main li {

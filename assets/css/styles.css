@@ -168,13 +168,14 @@ footer:last-child a:hover {
 
 @media all and (min-width: 1140px) {
   section:first-child {
-    height: 1150px;
+    height: 800px;
   }
+
   section:first-child div {
-    top: 350px;
-    width: 60%;
+    top: 275px;
+    width: 900px;
     padding: 50px 0;
-    height: 300px;
+    height: 192px;
   }
 
   main section ul {
@@ -183,14 +184,14 @@ footer:last-child a:hover {
   }
 
   section:first-child h1 {
-    font-size: 70px;
+    font-size: 40px;
     margin: 0;
   }
 
   section:first-child p {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 70px;
+    font-size: 24px;
+    font-weight: 300px;
+    margin-bottom: 32px;
   }
 
   section:first-child a {

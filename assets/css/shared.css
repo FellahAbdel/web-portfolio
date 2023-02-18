@@ -119,12 +119,12 @@ main + footer img {
 @media all and (min-width: 1140px) {
   /* Pour le pc */
   header {
-    padding: 40px 110px;
+    padding: 15px 60px;
   }
 
   /* Le logo */
   header > a {
-    font-size: 80px;
+    font-size: 50px;
   }
 
   /* section:first-child {
@@ -132,8 +132,8 @@ main + footer img {
   } */
 
   header li a {
-    font-size: 30px;
-    padding: 12px;
-    margin: 0 5px;
+    /* font-size: 20px; */
+    padding: 10px;
+    /* margin: 0 5px; */
   }
 }

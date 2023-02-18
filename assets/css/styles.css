@@ -77,7 +77,7 @@ section:last-child {
 }
 
 main section ul {
-  padding: 80px 10px;
+  padding: 0 10px 80px 10px;
   /* width: 90%; */
   margin: auto; /* To center the element*/
   display: grid;
@@ -112,6 +112,15 @@ article {
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
+}
+
+/* Pour le titre de la liste des projets */
+#projects > h2 {
+  text-transform: uppercase;
+  color: wheat;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 55px;
 }
 
 /* On selectionne le button "explore"*/

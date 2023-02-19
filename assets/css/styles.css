@@ -172,6 +172,8 @@ footer:last-child a:hover {
 
   main section ul {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 35px 50px 35px;
+    column-gap: 30px;
   }
 }
 

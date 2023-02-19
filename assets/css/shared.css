@@ -76,7 +76,7 @@ header li a:hover {
 main + footer {
   background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29));
   padding: 36px;
-  display: none;
+  /* display: none; */
 }
 
 main + footer ul {
@@ -85,9 +85,9 @@ main + footer ul {
 }
 
 main + footer li {
-  width: 80px;
-  height: 80px;
-  margin: 0 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
 }
 
 main + footer img {
@@ -112,6 +112,13 @@ main + footer img {
 
   header nav i {
     display: none;
+  }
+
+  /* Footer en mode tab & pc */
+  main + footer li {
+    width: 80px;
+    height: 80px;
+    margin: 0 50px;
   }
 }
 

@@ -3,18 +3,20 @@ section:first-child {
   height: 800px; */
 
   /* Pour telephone*/
-  height: 400px;
+  height: 700px;
   background-image: url("/assets/images/projects/webDev.jpg");
   background-position: center;
   background-size: cover;
+  display: grid;
+  /* flex-direction: column; */
 }
 
 section:first-child div {
-  background-color: rgba(51, 47, 47, 0.8);
+  /* background-color: rgba(51, 47, 47, 0.8); */
   backdrop-filter: blur(5px);
   /* box-shadow: 2px 4px 8px rgb(68, 67, 67); */
 
-  width: 330px;
+  width: 100%;
   /* Pour le pc et tab
   width: 900px;
   border-radius: 10px;
@@ -22,7 +24,7 @@ section:first-child div {
   top: 200px; */
 
   padding: 10px 0;
-  height: 190px;
+  /* height: 190px; */
   position: relative;
   top: 120px;
   margin: 0 auto;
@@ -31,9 +33,10 @@ section:first-child div {
   /* display: none; */
 }
 
-section:first-child h1 {
+/* Le titre de la page d'acceuil*/
+#me h1 {
   color: white;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* Pour le pc
   font-size: 50px; */
   font: 16px;
@@ -41,7 +44,7 @@ section:first-child h1 {
   /* margin: 0; */
 }
 
-section:first-child p {
+#me p {
   color: white;
   text-transform: uppercase;
 
@@ -53,7 +56,7 @@ section:first-child p {
 }
 
 /* Pour le button de Discover projects*/
-section:first-child a {
+#me a {
   text-decoration: none;
   background-color: #201f04;
   padding: 12px 24px;
@@ -67,7 +70,7 @@ section:first-child a {
   box-shadow: 2px 4px 8px rgb(68, 67, 67);
 }
 
-section:first-child a:hover {
+#me a:hover {
   background-color: #141304;
   color: white;
 }
@@ -75,7 +78,7 @@ section:first-child a:hover {
 /* Nouveau look */
 .home__blob {
   width: 200px;
-  fill: rgb(80, 13, 111);
+  fill: rgb(11, 1, 16);
 }
 
 .home__blob-img {
@@ -86,7 +89,7 @@ section:last-child {
   background: linear-gradient(60deg, rgb(77, 77, 77), rgb(58, 58, 58));
 }
 
-main section ul {
+#projects ul {
   padding: 0 10px 80px 10px;
   /* width: 90%; */
   margin: auto; /* To center the element*/

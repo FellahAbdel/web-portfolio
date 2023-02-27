@@ -19,7 +19,7 @@ header {
 }
 
 /* Pour les liens dans la barre de navigation */
-ul {
+header ul {
   list-style: none;
   margin: 0;
   padding: 0;

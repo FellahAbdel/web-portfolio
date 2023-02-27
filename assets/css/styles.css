@@ -11,7 +11,7 @@ section:first-child {
   /* flex-direction: column; */
 }
 
-#home div {
+#home {
   /* background-color: rgba(51, 47, 47, 0.8); */
   backdrop-filter: blur(5px);
   /* box-shadow: 2px 4px 8px rgb(68, 67, 67); */
@@ -24,7 +24,7 @@ section:first-child {
   top: 200px; */
 
   padding: 10px 0;
-  /* height: 190px; */
+  height: 450px;
   position: relative;
   top: 120px;
   margin: 0 auto;
@@ -116,6 +116,12 @@ section:first-child {
   font-size: 1.125rem;
   font-weight: 500;
   color: antiquewhite;
+}
+
+/* On cible le dernier div dans home */
+#home div:last-child {
+  text-align: left;
+  padding: 15px 20px;
 }
 
 /*---------------------------------------------*/

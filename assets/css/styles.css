@@ -20,8 +20,8 @@ section:first-child {
   /* Pour le pc et tab
   width: 900px;
   border-radius: 10px;
-  padding: 50px 0;
-  top: 200px; */
+  /* padding: 50px 0; */
+  top: 200px;
 
   padding: 10px 0;
   height: 450px;
@@ -31,6 +31,7 @@ section:first-child {
   border-radius: 5px;
   text-align: center;
   /* display: none; */
+  display: grid;
 }
 
 /* Nouveau look */
@@ -195,12 +196,25 @@ footer:last-child a:hover {
 
 @media all and (min-width: 742px) {
   section:first-child {
-    /* Pour pc & tab */
+    height: 800px;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.406);
+    padding: 10px 50px;
+    margin-top: 70px;
+  }
+  /* section:first-child {
+    Pour pc & tab
     height: 700px;
   }
 
   section:first-child div {
-    /* Pour le pc et tab */
+    Pour le pc et tab
     width: 650px;
     border-radius: 10px;
     padding: 50px 0;
@@ -220,9 +234,10 @@ footer:last-child a:hover {
     font-size: 24px;
   }
 
-  /* Pour la 2 eme section  */
+  Pour la 2 eme section 
 
-  main section ul {
+  */
+  #projects ul {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 35px 50px 35px;
     column-gap: 30px;
@@ -230,23 +245,28 @@ footer:last-child a:hover {
 }
 
 @media all and (min-width: 1140px) {
-  section:first-child {
-    height: 800px;
+  #home {
+    width: 60%;
   }
 
+  #home image {
+    width: 190px;
+  }
+
+  /*
   section:first-child div {
     top: 275px;
     width: 900px;
     padding: 50px 0;
     height: 192px;
   }
-
-  main section ul {
+  */
+  #projects ul {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 45px;
     padding: 30px 60px;
   }
-
+  /*
   section:first-child h1 {
     font-size: 40px;
     margin: 0;
@@ -267,5 +287,5 @@ footer:last-child a:hover {
     margin: 0 auto;
     padding-top: 55px;
     padding-bottom: 0;
-  }
+  } */
 }

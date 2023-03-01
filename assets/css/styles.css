@@ -33,18 +33,59 @@ section:first-child {
   /* display: none; */
 }
 
+/* Nouveau look */
+#home svg {
+  width: 200px;
+  fill: rgb(0, 0, 0);
+  display: block;
+}
+
+#home div:first-child {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  justify-items: center;
+  gap: 50px;
+}
+
+#home div:first-child ul {
+  display: grid;
+}
+
+#home div:first-child ul li {
+  height: 2px;
+}
+
+#home div:first-child a {
+  color: black;
+}
+
+#home div:first-child a:hover {
+  color: #201f04;
+}
+
+#home image {
+  width: 170px;
+}
+
 /* Le titre de la page d'acceuil*/
-#me h1 {
+#home div:last-child h1 {
+  font-size: 2rem;
   color: white;
   /* text-transform: uppercase; */
   /* Pour le pc
   font-size: 50px; */
-  font: 16px;
+  /* font: 16px; */
   font-family: "Raleway", sans-serif;
   /* margin: 0; */
 }
 
-#me p {
+#home div:last-child h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: antiquewhite;
+}
+
+#home div:last-child p {
   color: rgb(255, 255, 255);
   /* text-transform: uppercase; */
 
@@ -56,7 +97,7 @@ section:first-child {
 }
 
 /* Pour le button de Discover projects*/
-#me a {
+#home div:last-child a {
   text-decoration: none;
   background-color: #201f04;
   padding: 12px 24px;
@@ -70,52 +111,9 @@ section:first-child {
   box-shadow: 2px 4px 8px rgb(68, 67, 67);
 }
 
-#me a:hover {
+#home div:last-child a:hover {
   background-color: #141304;
   color: white;
-}
-
-/* Nouveau look */
-.home__blob {
-  width: 200px;
-  fill: rgb(0, 0, 0);
-  display: block;
-}
-
-.home__img {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  justify-items: center;
-  gap: 50px;
-}
-
-.home__img ul {
-  display: grid;
-}
-
-.home__img ul li {
-  height: 2px;
-}
-
-.home__img a {
-  color: black;
-}
-
-.home__img a:hover {
-  color: #201f04;
-}
-.home__blob-img {
-  width: 170px;
-}
-
-.home__title {
-  font-size: 2rem;
-}
-
-.home__subtitle {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: antiquewhite;
 }
 
 /* On cible le dernier div dans home */

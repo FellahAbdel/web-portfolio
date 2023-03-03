@@ -208,6 +208,14 @@ footer:last-child a:hover {
     padding: 10px 50px;
     margin-top: 70px;
   }
+
+  #home svg {
+    fill: beige;
+  }
+
+  #home div:first-child a {
+    color: beige;
+  }
   /* section:first-child {
     Pour pc & tab
     height: 700px;

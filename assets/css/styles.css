@@ -101,15 +101,16 @@ section:first-child {
 #home div:last-child a {
   text-decoration: none;
   background-color: #201f04;
-  padding: 12px 24px;
+  padding: 15px 24px;
   /* color: black; */
   color: rgb(246, 246, 216);
   /* Pour le pc & tab
   font-size: 24px; */
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 8px;
   box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  transition: 0.3s;
 }
 
 #home div:last-child a:hover {
@@ -220,6 +221,19 @@ footer:last-child a:hover {
   #home div:first-child a:hover {
     color: rgb(209, 209, 196);
   }
+
+  #home div:last-child h1 {
+    font-size: 40px;
+  }
+
+  #home div:last-child h3 {
+    font-size: 25px;
+  }
+
+  #home div:last-child p {
+    font-size: 19px;
+  }
+
   /* section:first-child {
     Pour pc & tab
     height: 700px;
@@ -277,6 +291,18 @@ footer:last-child a:hover {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 45px;
     padding: 30px 60px;
+  }
+
+  #home div:last-child h1 {
+    font-size: 45px;
+  }
+
+  #home div:last-child h3 {
+    font-size: 30px;
+  }
+
+  #home div:last-child p {
+    font-size: 24px;
   }
   /*
   section:first-child h1 {

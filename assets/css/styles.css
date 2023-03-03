@@ -216,6 +216,10 @@ footer:last-child a:hover {
   #home div:first-child a {
     color: beige;
   }
+
+  #home div:first-child a:hover {
+    color: rgb(209, 209, 196);
+  }
   /* section:first-child {
     Pour pc & tab
     height: 700px;

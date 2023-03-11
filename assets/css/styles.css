@@ -196,6 +196,10 @@ footer:last-child a:hover {
 }
 
 @media all and (min-width: 742px) {
+  .hamburger {
+    display: none;
+  }
+
   section:first-child {
     height: 800px;
   }

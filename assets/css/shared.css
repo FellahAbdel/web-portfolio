@@ -58,13 +58,13 @@ i {
 }
 
 /* Hamburger MENU */
-.hamburger {
+header div {
   /* display: none; */
   cursor: pointer;
 }
 
 /* bar */
-div span {
+header div span {
   display: block;
   width: 25px;
   height: 3px;
@@ -156,7 +156,8 @@ main + footer img {
 
 /* Tablette */
 @media all and (min-width: 742px) {
-  .hamburger {
+  /* Hamburger */
+  header div {
     display: none;
   }
 

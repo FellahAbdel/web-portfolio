@@ -195,13 +195,14 @@ footer:last-child a:hover {
   background-color: black;
 }
 
+/* Make the front page somooth */
 .change-height {
   height: 755px !important; /* ça marchera si !important n'est pas spécifer */
 }
 
-.change-top {
+/* .change-top {
   top: 253px !important;
-}
+} */
 
 @media all and (min-width: 742px) {
   .hamburger {

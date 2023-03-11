@@ -33,6 +33,14 @@ main > div {
   /* font-family: "Roboto", sans-serif; */
   /* font-family: "Roboto Mono", monospace; */
 }
+
+main > div.change-top {
+  top: 250px !important ;
+}
+
+main.change-height {
+  height: 1040px !important;
+}
 /* 
 h1 {
   text-align: center;

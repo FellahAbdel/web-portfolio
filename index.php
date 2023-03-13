@@ -1,3 +1,8 @@
+<?php
+require_once './assets/locales/en.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +22,7 @@
     <!--I added this.-->
     <a href="/index.html">Fellah</a>
     <?php
-    include './assets/locales/en.php';
-    include './assets/templates/nav.php'
+    require_once './assets/templates/nav.php'
     ?>
   </header>
   <main>

@@ -16,18 +16,6 @@
   <header>
     <!--I added this.-->
     <a href="/index.html">Fellah</a>
-    <!-- <nav>
-        <ul>
-          <li><a href="/index.html">Presentation</a></li>
-          <li><a href="/formation.html">Education</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-        <div>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav> -->
     <?php
     include './assets/locales/en.php';
     include './assets/templates/nav.php'

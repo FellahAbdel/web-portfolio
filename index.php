@@ -5,6 +5,8 @@ include __DIR__ . '/./assets/models/Projects.php';
 $projects = new Projects();
 $allProject = $projects->getProjects();
 
+var_dump($_GET["start"]);
+
 ?>
 
 <!DOCTYPE html>
@@ -61,15 +63,9 @@ $allProject = $projects->getProjects();
             </g>
           </svg>
         </div>
-        <div>
-          <h1>Hi, I'am DIALLO</h1>
-          <h3>Web developer</h3>
-          <p>
-            High level experience in web desing and knowledge, producing
-            quality work.
-          </p>
-          <a href="#projects">Discover projects</a>
-        </div>
+        <?php
+        require_once './assets/templates/homeData.php'
+        ?>
       </div>
     </section>
     <section id="projects">
@@ -81,18 +77,9 @@ $allProject = $projects->getProjects();
       </ul>
     </section>
   </main>
-  <footer>
-    <ul>
-      <li>
-        <a href="https://www.instagram.com">
-          <img src="/assets/images/icons/insta.png" alt="instagram logo" />
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook"><img src="/assets/images/icons/facebook.png" alt="facebook logo" /></a>
-      </li>
-    </ul>
-  </footer>
+  <?php
+  require_once './assets/templates/footer.php'
+  ?>
   <script src="./assets/js/main.js"></script>
 </body>
 

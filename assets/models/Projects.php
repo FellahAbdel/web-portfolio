@@ -25,13 +25,11 @@ class Projects extends Database
       ORDER BY id
       LIMIT :start, :countP'
     );
-
     $statement->bindValue(':start', $startPosition, PDO::PARAM_INT);
     $statement->bindValue(':countP', $countProject, PDO::PARAM_INT);
-
     $statement->execute();
 
-    return $statement->fetch();
+    return $statement->fetchAll();
   }
 
   public function getProjects()

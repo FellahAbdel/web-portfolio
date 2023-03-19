@@ -3,14 +3,19 @@ require_once './assets/locales/en.php';
 include __DIR__ . '/./assets/models/Projects.php';
 
 $projects = new Projects();
-$allProject = $projects->getProjects();
 
 // Get parameters
-$start = $_GET["start"];
-$count = $_GET["count"];
+$start = 0;
+$count = 3;
 
-header("Content-Type: application/json");
-echo json_encode($projects);
+// Check if the user is on a mobile device
+if (isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/mobile/i', $_SERVER['HTTP_USER_AGENT'])) {
+  $count = 1; // Load 1 project initially on mobile devices
+}
+
+$allProject = $projects->getProjectBetween($start, $count);
+// header("Content-Type: application/json");
+// echo json_encode($projects);
 ?>
 
 <!DOCTYPE html>

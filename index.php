@@ -102,20 +102,7 @@ $allProject = $projects->getProjects();
       <h2>Projects</h2>
       <ul>
         <?php foreach ($allProject as $project) : ?>
-          <li>
-            <img src="/assets/images/projects/alejandro-escamilla-xII7efH1G6o-unsplash.jpg" alt="" />
-            <article>
-              <div>
-                <h2><?= $project["title"] ?></h2>
-                <p>
-                  <?= substr($project["description"], 0, 200) ?>
-                </p>
-              </div>
-              <footer>
-                <a href="/">explore -></a>
-              </footer>
-            </article>
-          </li>
+          <?php include __DIR__ . '/assets/templates/article.php' ?>
         <?php endforeach; ?>
       </ul>
     </section>

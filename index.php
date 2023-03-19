@@ -72,32 +72,6 @@ $allProject = $projects->getProjects();
         </div>
       </div>
     </section>
-    <!-- <section>
-        <h2>Favorites</h2>
-        <ul id="favorites-projects">
-          <li>
-            <img
-              src="/assets/images/projects/web1.jpg"
-              alt="angela yu web 3 project"
-            />
-            <p>dbang app <strong>WEB 3</strong></p>
-          </li>
-          <li>
-            <img
-              src="/assets/images/projects/web2.jpg"
-              alt="dkeeper-app image"
-            />
-            <p>dkeeper app <strong>WEB 3</strong></p>
-          </li>
-          <li>
-            <img
-              src="/assets/images/projects/web3.jpg"
-              alt="sokoban Tec Dev project"
-            />
-            <p>Sokoban puzzle<strong>C programming</strong></p>
-          </li>
-        </ul>
-      </section> -->
     <section id="projects">
       <h2>Projects</h2>
       <ul>

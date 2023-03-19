@@ -93,7 +93,7 @@ header div.active span:nth-child(3) {
     top: 84px;
     gap: 0;
     flex-direction: column;
-    background-color: #efe1e1;
+    background-color: #e3e7e8fc;
     width: 100%;
     text-align: center;
     transition: 0.3s;

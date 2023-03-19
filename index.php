@@ -5,8 +5,12 @@ include __DIR__ . '/./assets/models/Projects.php';
 $projects = new Projects();
 $allProject = $projects->getProjects();
 
-var_dump($_GET["start"]);
+// Get parameters
+$start = $_GET["start"];
+$count = $_GET["count"];
 
+header("Content-Type: application/json");
+echo json_encode($projects);
 ?>
 
 <!DOCTYPE html>
@@ -80,6 +84,7 @@ var_dump($_GET["start"]);
   <?php
   require_once './assets/templates/footer.php'
   ?>
+  <script src="./assets/js/ajax.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 

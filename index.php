@@ -1,5 +1,9 @@
 <?php
 require_once './assets/locales/en.php';
+include __DIR__ . '/./assets/models/Projects.php';
+
+$projects = new Projects();
+$allProject = $projects->getProjects();
 
 ?>
 
@@ -97,86 +101,22 @@ require_once './assets/locales/en.php';
     <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li>
-          <img src="/assets/images/projects/alejandro-escamilla-xII7efH1G6o-unsplash.jpg" alt="" />
-          <article>
-            <div>
-              <h2>Dang app</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officia ipsa laudantium aliquid dicta consequatur consectetur
-                rerum Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Esse temporibus accusamus, ipsam adipisci voluptates non
-                dolorem possimus asperiores tempore, beatae repellendus dolor
-                maxime provident inventore totam omnis blanditiis! Nulla,
-                placeat.
-              </p>
-            </div>
-            <footer>
-              <a href="/">explore -></a>
-            </footer>
-          </article>
-        </li>
-        <li>
-          <img src="/assets/images/projects/alejandro-escamilla-xII7efH1G6o-unsplash.jpg" alt="" />
-          <article>
-            <div>
-              <h2>Sokoban</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officia ipsa laudantium aliquid dicta consequatur consectetur
-                rerum Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Esse temporibus accusamus, ipsam adipisci voluptates non
-                dolorem possimus asperiores tempore, beatae repellendus dolor
-                maxime provident inventore totam omnis blanditiis! Nulla,
-                placeat.
-              </p>
-            </div>
-            <footer>
-              <a href="/">explore -></a>
-            </footer>
-          </article>
-        </li>
-        <li>
-          <img src="/assets/images/projects/alejandro-escamilla-xII7efH1G6o-unsplash.jpg" alt="" />
-          <article>
-            <div>
-              <h2>Labyrinthe MIPS</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officia ipsa laudantium aliquid dicta consequatur consectetur
-                rerum Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Esse temporibus accusamus, ipsam adipisci voluptates non
-                dolorem possimus asperiores tempore, beatae repellendus dolor
-                maxime provident inventore totam omnis blanditiis! Nulla,
-                placeat.
-              </p>
-            </div>
-            <footer>
-              <a href="/">explore -></a>
-            </footer>
-          </article>
-        </li>
-        <li>
-          <img src="/assets/images/projects/alejandro-escamilla-xII7efH1G6o-unsplash.jpg" alt="" />
-          <article>
-            <div>
-              <h2>Email Marketing</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officia ipsa laudantium aliquid dicta consequatur consectetur
-                rerum Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Esse temporibus accusamus, ipsam adipisci voluptates non
-                dolorem possimus asperiores tempore, beatae repellendus dolor
-                maxime provident inventore totam omnis blanditiis! Nulla,
-                placeat.
-              </p>
-            </div>
-            <footer>
-              <a href="/">explore -></a>
-            </footer>
-          </article>
-        </li>
+        <?php foreach ($allProject as $project) : ?>
+          <li>
+            <img src="/assets/images/projects/alejandro-escamilla-xII7efH1G6o-unsplash.jpg" alt="" />
+            <article>
+              <div>
+                <h2><?= $project["title"] ?></h2>
+                <p>
+                  <?= substr($project["description"], 0, 200) ?>
+                </p>
+              </div>
+              <footer>
+                <a href="/">explore -></a>
+              </footer>
+            </article>
+          </li>
+        <?php endforeach; ?>
       </ul>
     </section>
   </main>

@@ -23,7 +23,9 @@ function loadMore() {
       projects.forEach(function (project) {
         const html = `
                     <li>
-                      <img src="/assets/images/projects/web6.jpg" alt="" />
+                      <img src="/assets/images/projects/${
+                        project.imageName
+                      }" alt="" />
                       <article>
                         <div>
                           <h2>${project.title}</h2>

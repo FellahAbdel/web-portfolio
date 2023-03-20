@@ -1,4 +1,4 @@
-var start = 0;
+var start = 3;
 var count = getProjectCount();
 
 function getProjectCount() {
@@ -32,7 +32,9 @@ function loadMore() {
                           <p>${project.description.substring(0, 300)}</p>
                         </div>
                         <footer>
-                          <a href="/">explore -></a>
+                          <a href="../../project.php/${
+                            project.id
+                          }">explore -></a>
                         </footer>
                       </article>
                     </li>

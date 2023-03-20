@@ -34,7 +34,7 @@ function loadMore() {
                           <p>${project.description.substring(0, 300)}</p>
                         </div>
                         <footer>
-                          <a href="../../project.php/${
+                          <a href="projectItem.php?id=${
                             project.id
                           }">explore -></a>
                         </footer>

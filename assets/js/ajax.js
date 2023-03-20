@@ -13,12 +13,14 @@ function getProjectCount() {
 }
 
 function loadMore() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-      // Parse JSON response
-      var projects = JSON.parse(xhr.responseText);
-
+  fetch("assets/models/getProjects.php?start=" + start + "&count=" + count)
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error("Network response was not ok.");
+    })
+    .then(function (projects) {
       // Append projects to container element
       projects.forEach(function (project) {
         const html = `
@@ -44,18 +46,12 @@ function loadMore() {
           .insertAdjacentHTML("beforeend", html);
       });
 
-      // Update start index for next AJAX call
+      // Update start index for next fetch call
       start += count;
-    }
-  };
-
-  xhr.open(
-    "GET",
-    "assets/models/getProjects.php?start=" + start + "&count=" + count,
-    true
-  );
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send();
+    })
+    .catch(function (error) {
+      console.error("Error:", error);
+    });
 }
 
 window.addEventListener("scroll", function () {

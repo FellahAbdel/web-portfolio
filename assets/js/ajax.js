@@ -59,7 +59,3 @@ window.addEventListener("scroll", function () {
     loadMore();
   }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  loadMore();
-});

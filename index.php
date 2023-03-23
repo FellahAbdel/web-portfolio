@@ -35,7 +35,7 @@ $allProject = $projects->getProjectBetween($start, $count);
 <body>
   <header>
     <!--I added this.-->
-    <a href="/index.html">Fellah</a>
+    <a href="/index.php">Fellah</a>
     <?php
     require_once './assets/templates/nav.php'
     ?>

@@ -8,7 +8,7 @@ $projects = new Projects();
 $start = 0;
 $count = 3;
 
-// Check if the user is on a mobile device
+// Check if the user is on a mobile device or tablet
 if (isset($_SERVER['HTTP_USER_AGENT'])) {
   if (preg_match('/(tablet|ipad|android(?!.*mobile))/i', $_SERVER['HTTP_USER_AGENT'])) {
     $count = 2; // Load 2 projects initially on tablet devices
@@ -17,7 +17,6 @@ if (isset($_SERVER['HTTP_USER_AGENT'])) {
   }
 }
 
-echo $count;
 $allProject = $projects->getProjectBetween($start, $count);
 // header("Content-Type: application/json");
 // echo json_encode($projects);

@@ -8,7 +8,7 @@
       </p>
     </div>
     <footer>
-      <a href="/projectItem.php?id=<?= $project["id"] ?>">explore -></a>
+      <a href="/projectItem.php?id=<?= $project["id"] ?>">explore <i class="mdi mdi-arrow-right-thick"></i></a>
     </footer>
   </article>
 </li>

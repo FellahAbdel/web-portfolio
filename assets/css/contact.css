@@ -7,10 +7,9 @@ body {
   background-size: cover; */
 }
 
-/* header {
-  position: fixed;
-  background: linear-gradient(30deg, rgb(252, 233, 233), rgb(195, 189, 189));
-} */
+header {
+  background-color: #bdbbbf;
+}
 
 main {
   height: 900px;
@@ -34,6 +33,13 @@ main > div {
   /* font-family: "Roboto Mono", monospace; */
 }
 
+main.hide {
+  display: none;
+}
+
+footer.hide {
+  display: none;
+}
 main > div.change-top {
   top: 250px !important ;
 }

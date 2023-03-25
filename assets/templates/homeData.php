@@ -1,9 +1,11 @@
 <div>
-  <h1>Hi, I'am DIALLO</h1>
-  <h3>Web developer</h3>
+  <h1>
+    <?= $trad['divHome']["h1"] ?>
+  </h1>
+  <h3> <?= $trad["divHome"]["h3"] ?>
+  </h3>
   <p>
-    High level experience in web desing and knowledge, producing
-    quality work.
+    <?= $trad["divHome"]["p"] ?>
   </p>
-  <a href="#projects">Discover projects</a>
+  <a href="#projects"><?= $trad["divHome"]["a"] ?></a>
 </div>

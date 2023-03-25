@@ -85,6 +85,17 @@ header div.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+nav li select {
+  padding: 10px;
+  font-family: inherit;
+  color: #201f04;
+}
+
+nav li select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #191c1e;
+}
+
 @media all and (max-width: 742px) {
   /* Nav-menu */
   header ul {

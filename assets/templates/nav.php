@@ -5,7 +5,8 @@
           <li><a href="/contact.php"><?= $trad['nav']['contact'] ?></a></li>
 
           <li>
-            <select id="lang" name="lang" class="language-select">
+            <select id="lang" name="lang">
+              <option value="">Select Language</option>
               <option value="fr">Français</option>
               <option value="en">English</option>
             </select>

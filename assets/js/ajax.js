@@ -1,11 +1,15 @@
-var start = 3;
+// var start = 3;
+var start = getProjectCount(); //* Are the same
 var count = getProjectCount();
 
 function getProjectCount() {
   // Return different project count based on screen size
-  if (window.innerWidth >= 768) {
-    // Desktop and tablet
+  if (window.innerWidth >= 1140) {
+    // Desktop
     return 3;
+  } else if (window.innerWidth >= 742) {
+    // tablet
+    return 2;
   } else {
     // Mobile phone
     return 1;
@@ -36,7 +40,7 @@ function loadMore() {
                         <footer>
                           <a href="projectItem.php?id=${
                             project.id
-                          }">explore -></a>
+                          }">explore <i class="mdi mdi-arrow-right-thick" ></i></a>
                         </footer>
                       </article>
                     </li>

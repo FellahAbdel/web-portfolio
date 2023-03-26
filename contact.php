@@ -8,7 +8,7 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   require_once './assets/locales/fr.php';
   $fr_select = "selected";
 }
-var_dump($_GET['lang']);
+// var_dump($_GET['lang']);
 
 ?>
 
@@ -47,43 +47,32 @@ require_once './assets/templates/head.php'
           <li>
             <i class="mdi mdi-map-marker"></i>
             <div>
-              <h3>Burreau</h3>
-              <p>Venez me dire Bonjour</p>
-              <p>67000 Strasbourg</p>
+              <h3> <?= $trad["contact-first-section"]["div2 h3"] ?> </h3>
+              <p><?= $trad["contact-first-section"]["div2 p1"] ?></p>
+              <p><?= $trad["contact-first-section"]["div2 p2"] ?></p>
             </div>
           </li>
           <li>
             <i class="mdi mdi-phone"></i>
             <div>
-              <h3>Numéro de téléphone</h3>
-              <p>Lun-Vend de 8h-17h</p>
-              <p>0753103914</p>
+              <h3> <?= $trad["contact-first-section"]["div3 h3"] ?> </h3>
+              <p><?= $trad["contact-first-section"]["div3 p1"] ?></p>
+              <p><?= $trad["contact-first-section"]["div3 p2"] ?></p>
             </div>
           </li>
         </ul>
       </section>
       <section>
         <h1>CONTACTEZ-MOI</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-        </p>
         <!-- <p>
-          Merci de l'intérêt que vous portez a mon profile. Veuillez utiliser ce
-          formulaire pour nous contacter. Réponse rapide assurée !
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
         </p> -->
-        <form action="">
-          <label for="surname">Prénom</label>
-          <input type="text" name="user-name" id="surname" placeholder="Prénom" />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="user-email" placeholder="Email" />
-
-          <label for="phone-number">Numéro de télépone</label>
-          <input type="tel" id="phone-number" name="user-number" placeholder="Numéro de téléphone" />
-          <label for="user-msg">Votre message</label>
-          <textarea name="" id="user-msg" cols="30" rows="10" placeholder="Rédiger votre message"></textarea>
-          <button>Soumettre</button>
-        </form>
+        <p>
+          <?= $trad["contact-second-section"]["p"] ?>
+        </p>
+        <?php
+        require_once './assets/templates/form.php'
+        ?>
       </section>
     </div>
   </main>

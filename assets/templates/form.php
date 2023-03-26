@@ -1,4 +1,4 @@
-<form action="">
+<form action="/assets/php/contactUs.php" method="post">
   <div class="form-control">
     <label for="surname"><?= $trad["contact-second-section"]["label1"] ?></label>
     <input type="text" name="user-name" id="surname" placeholder="Prénom" />
@@ -24,7 +24,7 @@
   </div>
   <div class="form-control">
     <label for="user-msg"><?= $trad["contact-second-section"]["label4"] ?></label>
-    <textarea name="" id="user-msg" cols="30" rows="9" placeholder="Rédiger votre message"></textarea>
+    <textarea name="user-msg" id="user-msg" cols="30" rows="9" placeholder="Rédiger votre message"></textarea>
     <small>Error message</small>
   </div>
   <small>Your message has been successfully sent!</small>

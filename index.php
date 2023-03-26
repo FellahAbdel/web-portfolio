@@ -1,15 +1,12 @@
 <?php
-
-// $body = file_get_contents('php://input');
-// $data = json_decode($body, true);
-// $lang = isset($data['lang']);
-
-// $lang = $_POST['lang'];
-
+$en_select = "";
+$fr_select = "";
 if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   require_once './assets/locales/en.php';
+  $en_select = "selected";
 } else {
   require_once './assets/locales/fr.php';
+  $fr_select = "selected";
 }
 
 include __DIR__ . '/assets/models/Projects.php';

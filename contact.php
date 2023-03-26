@@ -1,3 +1,17 @@
+<?php
+$en_select = "";
+$fr_select = "";
+if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
+  require_once './assets/locales/en.php';
+  $en_select = "selected";
+} else {
+  require_once './assets/locales/fr.php';
+  $fr_select = "selected";
+}
+var_dump($_GET['lang']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +22,8 @@ require_once './assets/templates/head.php'
 <body>
   <header>
     <!--I added this.-->
-    <a href="/index.html">Fellah</a>
+    <a href="/index.php">Fellah</a>
     <?php
-    include './assets/locales/en.php';
     include './assets/templates/nav.php'
     ?>
   </header>
@@ -18,17 +31,17 @@ require_once './assets/templates/head.php'
     <!-- <h1>Contactez-moi</h1> -->
     <div>
       <section>
-        <h2>Entrez en contact</h2>
+        <h2><?= $trad["contact-first-section"]["h2"] ?></h2>
         <p>
-          J’aime entendre parler de vous. Je suis toujours ici pour discuter
+          <?= $trad["contact-first-section"]["p"] ?>
         </p>
         <ul>
           <li>
             <i class="mdi mdi-email-outline"></i>
             <div>
-              <h3>Discutez-avec moi</h3>
-              <p>Je suis là pour vous aider</p>
-              <p>abdoulaziz@gmail.com</p>
+              <h3> <?= $trad["contact-first-section"]["div1 h3"] ?> </h3>
+              <p><?= $trad["contact-first-section"]["div1 p1"] ?></p>
+              <p><?= $trad["contact-first-section"]["div1 p2"] ?></p>
             </div>
           </li>
           <li>
@@ -77,6 +90,7 @@ require_once './assets/templates/head.php'
   <?php
   require_once './assets/templates/footer.php'
   ?>
+  <script src="./assets/js/shared-js.js?parent=contact.php"></script>
   <script src="./assets/js/contact.js"></script>
 </body>
 

@@ -166,7 +166,9 @@ label {
 .form-control.success input {
   border-color: #2ecc71;
 }
-
+.form-control.success textarea {
+  border-color: #2ecc71;
+}
 .form-control.success i.mdi-check-circle-outline {
   color: #2ecc71;
   visibility: visible;
@@ -182,6 +184,12 @@ label {
   visibility: visible;
 }
 
+form div ~ small {
+  position: absolute;
+  top: 755px;
+  color: #2ecc71;
+  visibility: hidden;
+}
 /*--------------------------------*/
 input {
   height: 34px;

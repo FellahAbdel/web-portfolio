@@ -265,6 +265,10 @@ button:hover {
     grid-template-columns: 30px 1fr;
     align-items: baseline;
   }
+
+  form div ~ small {
+    top: 725px;
+  }
 }
 
 /* Pcs */
@@ -281,5 +285,9 @@ button:hover {
 
     box-sizing: border-box; /* make sure padding and border are included in the width */
     width: 100%;
+  }
+
+  form div ~ small {
+    top: 690px;
   }
 }

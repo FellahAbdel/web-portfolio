@@ -31,7 +31,7 @@ function loadMore() {
                     <li>
                       <img src="/assets/images/projects/${
                         project.imageName
-                      }" alt="" />
+                      }" alt="${project.imageAlt}" />
                       <article>
                         <div>
                           <h2>${project.title}</h2>

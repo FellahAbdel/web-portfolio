@@ -6,9 +6,8 @@
 
           <li>
             <select id="lang" name="lang">
-              <option value="">Select Language</option>
-              <option value="fr">Français</option>
-              <option value="en">English</option>
+              <option value="fr" <?php echo $fr_select ?>>Français</option>
+              <option value="en" <?php echo $en_select ?>>English</option>
             </select>
           </li>
         </ul>

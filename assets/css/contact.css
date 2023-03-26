@@ -169,6 +169,10 @@ label {
 .form-control.success textarea {
   border-color: #2ecc71;
 }
+
+.form-control.error textarea {
+  border-color: #e74c3c;
+}
 .form-control.success i.mdi-check-circle-outline {
   color: #2ecc71;
   visibility: visible;

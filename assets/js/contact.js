@@ -12,10 +12,6 @@ hamburger.addEventListener("click", () => {
 });
 
 //* Submit button
-// submitBtn = document.querySelector("form button");
-// submitBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-// });
 
 // //* Pour la validation des données de l'utilisateur avant envoi.
 
@@ -30,6 +26,23 @@ form.addEventListener("submit", (e) => {
 
   if (checkInputs()) {
     showSuccessfullMsg();
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        // Handle the response from the server
+        // ...
+        // Clear the form inputs
+        // form.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  } else {
+    hideSuccesfullMsg();
   }
 });
 
@@ -104,4 +117,9 @@ const phoneNumberCheck = (phoneNumber) => /^\d{10}$/.test(phoneNumber);
 function showSuccessfullMsg() {
   const smallElt = document.querySelector("form div~small");
   smallElt.style.visibility = "visible";
+}
+
+function hideSuccesfullMsg() {
+  const smallElt = document.querySelector("form div~small");
+  smallElt.style.visibility = "hidden";
 }

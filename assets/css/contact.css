@@ -91,7 +91,7 @@ section:last-child {
   background-color: rgba(255, 255, 255, 0.957);
   backdrop-filter: blur(3px);
 
-  padding: 1rem 2rem;
+  padding: 2rem;
   /* Pour pc & tab
   padding: 1rem 7rem; */
   /* border-radius: 6px; */
@@ -224,7 +224,7 @@ button:hover {
 /* Tablette */
 @media all and (min-width: 742px) {
   main {
-    height: 993px;
+    height: 1050px;
   }
 
   main > div {
@@ -247,7 +247,7 @@ button:hover {
 
   section:last-child {
     width: auto;
-    padding: 1rem 3rem;
+    padding: 15px 3rem;
     margin: 0 auto; /* To override the margin applied in mobile form */
     border-radius: 0 6px 6px 0;
   }
@@ -269,6 +269,8 @@ button:hover {
   }
 
   section:last-child {
+    padding: 0 3rem;
+
     box-sizing: border-box; /* make sure padding and border are included in the width */
     width: 100%;
   }

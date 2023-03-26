@@ -12,7 +12,96 @@ hamburger.addEventListener("click", () => {
 });
 
 //* Submit button
-submitBtn = document.querySelector("form button");
-submitBtn.addEventListener("click", (event) => {
-  event.preventDefault();
+// submitBtn = document.querySelector("form button");
+// submitBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+// });
+
+// //* Pour la validation des données de l'utilisateur avant envoi.
+
+const form = document.querySelector("form");
+const usernameElt = document.getElementById("surname");
+const emailElt = document.getElementById("email");
+const phoneNumberElt = document.getElementById("phone-number");
+const userMessageElt = document.getElementById("user-msg");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (checkInputs()) {
+    showSuccessfullMsg();
+  }
 });
+
+function checkInputs() {
+  // get the values from the inputs
+  let allInputsValid = true;
+  const usernameValue = usernameElt.value.trim();
+  const emailValue = emailElt.value.trim();
+  const phoneNumberValue = phoneNumberElt.value.trim();
+  const userMessage = userMessageElt.value.trim();
+  if (usernameValue === "") {
+    // show error
+    // add error class
+    allInputsValid = false;
+    setErrorFor(usernameElt, "First name cannot be blank");
+  } else {
+    // add sucess class
+    setSuccessFor(usernameElt);
+  }
+
+  if (emailValue === "") {
+    allInputsValid = false;
+    setErrorFor(emailElt, "Email cannot be blank.");
+  } else if (!emailCheck(emailValue)) {
+    setErrorFor(emailElt, "Email is not valid");
+  } else {
+    setSuccessFor(emailElt);
+  }
+
+  if (phoneNumberValue === "") {
+    allInputsValid = false;
+    setErrorFor(phoneNumberElt, "Phone number cannot be blank.");
+  } else if (!phoneNumberCheck(phoneNumberValue)) {
+    allInputsValid = false;
+    setErrorFor(phoneNumberElt, "Phone number is not valid.");
+  } else {
+    setSuccessFor(phoneNumberElt);
+  }
+
+  if (userMessage === "") {
+    allInputsValid = false;
+    setErrorFor(userMessageElt, "Message number cannot be blank.");
+  } else if (userMessage.length > 200) {
+    allInputsValid = false;
+    setErrorFor(userMessageElt, "At least 200 characters");
+  } else {
+    setSuccessFor(userMessageElt);
+  }
+
+  return allInputsValid;
+}
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector("small");
+
+  // Add error message inside small
+  small.innerText = message;
+  formControl.className = "form-control error";
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control success";
+}
+
+const emailCheck = (email) =>
+  /[a-zA-Z0-9-._]+@[a-zA-Z0-9-._]+\.[a-z]{2,}/.test(email);
+
+const phoneNumberCheck = (phoneNumber) => /^\d{10}$/.test(phoneNumber);
+
+function showSuccessfullMsg() {
+  const smallElt = document.querySelector("form div~small");
+  smallElt.style.visibility = "visible";
+}

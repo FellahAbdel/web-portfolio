@@ -21,7 +21,9 @@ $project = $projects->getProject(intval($projectId));
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/shared.css" />
+  <!-- <link rel="stylesheet" href="assets/css/contact.css" /> -->
   <link rel="stylesheet" href="assets/css/project-item.css" />
+  <link rel="stylesheet" href="assets/css/form-item.css" />
   <title>fellah's portfolio</title>
 </head>
 
@@ -40,10 +42,31 @@ $project = $projects->getProject(intval($projectId));
       <h1><?= $project["title"] ?></h1>
       <p><?= $project["description"] ?></p>
     </article>
+    <h2>Leave a comment</h2>
+    <form action="/assets/php/contactUs.php" method="post">
+      <div class="form-control">
+        <label for="surname"><?= $trad["contact-second-section"]["label1"] ?></label>
+        <input type="text" name="user-name" id="surname" placeholder="Prénom" />
+        <i class="mdi mdi-check-circle-outline"></i>
+        <i class="mdi mdi-alert-circle"></i>
+        <small>Error message</small>
+      </div>
+
+
+      <div class="form-control">
+        <label for="user-msg"><?= $trad["contact-second-section"]["label4"] ?></label>
+        <textarea name="user-msg" id="user-msg" cols="30" rows="9" placeholder="Rédiger votre message"></textarea>
+        <small>Error message</small>
+      </div>
+      <small>Your message has been successfully sent!</small>
+      <button><?= $trad["contact-second-section"]["submitBtn"] ?></button>
+    </form>
   </main>
   <?php
   require_once './assets/templates/footer.php'
   ?>
+
+  <!-- <script src="./assets/js/contact.js"></script> -->
   <script src="./assets/js/main.js"></script>
 </body>
 

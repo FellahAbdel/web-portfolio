@@ -50,8 +50,7 @@
 }
 
 form div ~ small {
-  position: absolute;
-  top: 755px;
+  /* position: relative; */
   color: #2ecc71;
   visibility: hidden;
 }
@@ -60,7 +59,7 @@ input {
   height: 34px;
 }
 
-form {
+.form-item {
   padding: 15px;
 }
 
@@ -126,7 +125,7 @@ label {
 }
 
 @media all and (min-width: 742px) {
-  form {
+  .form-item {
     width: 50%;
   }
 }

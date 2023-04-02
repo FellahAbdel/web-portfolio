@@ -54,7 +54,7 @@ $project = $projects->getProject(intval($projectId));
 
       <div class="form-control">
         <label for="user-msg"><?= $trad["form-item"]["labelComment"] ?></label>
-        <textarea name="user-msg" id="user-msg" cols="30" rows="9" placeholder="Rédigez votre commentaire"></textarea>
+        <textarea name="user-msg" id="user-msg" cols="30" rows="9" placeholder="<?= $trad["form-item"]["commentPlaceholder"] ?>"></textarea>
         <small>Error message</small>
       </div>
       <small><?= $trad["form-item"]["SuccessNotification"] ?></small>

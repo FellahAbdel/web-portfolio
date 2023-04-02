@@ -44,6 +44,7 @@ $trad = [
     "labelPseudo" => "Pseudo",
     "labelComment" => "Votre commentaire",
     "SuccessNotification" => "Votre commentaire a été envoyé avec succès",
+    "commentPlaceholder" => "Rédigez votre commentaire",
     "submitBtn" => "Soumettre",
   ]
 ];

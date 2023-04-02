@@ -7,7 +7,3 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/shared.css" />
-  <link rel="stylesheet" href="assets/css/contact.css" />
-  <title>fellah's portfolio</title>
-</head>

@@ -38,5 +38,12 @@ $trad = [
     "label3" => "Numéro de téléphone",
     "label4" => "Votre message",
     "submitBtn" => "Soumettre"
+  ],
+  "form-item" => [
+    "h2" => "Laissez-moi un commentaire",
+    "labelPseudo" => "Pseudo",
+    "labelComment" => "Votre commentaire",
+    "SuccessNotification" => "Votre commentaire a été envoyé avec succès",
+    "submitBtn" => "Soumettre",
   ]
 ];

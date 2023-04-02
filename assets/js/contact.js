@@ -21,6 +21,8 @@ const emailElt = document.getElementById("email");
 const phoneNumberElt = document.getElementById("phone-number");
 const userMessageElt = document.getElementById("user-msg");
 
+const elements = [usernameElt, emailElt, phoneNumberElt, userMessageElt];
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -36,7 +38,9 @@ form.addEventListener("submit", (e) => {
         // Handle the response from the server
         // ...
         // Clear the form inputs
-        // form.reset();
+        elements.forEach((element) => removeSuccess(element));
+        // removeSuccess();
+        form.reset();
       })
       .catch((error) => {
         console.error(error);
@@ -122,4 +126,9 @@ function showSuccessfullMsg() {
 function hideSuccesfullMsg() {
   const smallElt = document.querySelector("form div~small");
   smallElt.style.visibility = "hidden";
+}
+
+function removeSuccess(input) {
+  const formControl = input.parentElement;
+  formControl.classList.remove("success");
 }

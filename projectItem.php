@@ -23,7 +23,6 @@ $project = $projects->getProject(intval($projectId));
 <head>
   <?php require_once "./assets/templates/head.php" ?>
   <link rel="stylesheet" href="assets/css/shared.css" />
-  <!-- <link rel="stylesheet" href="assets/css/contact.css" /> -->
   <link rel="stylesheet" href="assets/css/project-item.css" />
   <link rel="stylesheet" href="assets/css/form-item.css" />
   <title>Un projet</title>
@@ -31,7 +30,6 @@ $project = $projects->getProject(intval($projectId));
 
 <body>
   <header>
-    <!--I added this.-->
     <a href="/index.php">Fellah</a>
     <?php
     include './assets/templates/nav.php'
@@ -44,10 +42,10 @@ $project = $projects->getProject(intval($projectId));
       <p><?= $project["description"] ?></p>
     </article>
     <h2><?= $trad["form-item"]["h2"] ?></h2>
-    <form action="/assets/php/getComment.php" method="get">
+    <form class="form-item" action="/assets/php/getComment.php" method="get">
       <div class="form-control">
-        <label for="surname"><?= $trad["form-item"]["labelPseudo"] ?></label>
-        <input type="text" name="user-name" id="surname" placeholder="Pseudo" />
+        <label for="pseudo-name"><?= $trad["form-item"]["labelPseudo"] ?></label>
+        <input type="text" name="pseudo-name" id="pseudo-name" placeholder="Pseudo" />
         <i class="mdi mdi-check-circle-outline"></i>
         <i class="mdi mdi-alert-circle"></i>
         <small>Error message</small>
@@ -67,7 +65,7 @@ $project = $projects->getProject(intval($projectId));
   require_once './assets/templates/footer.php'
   ?>
 
-  <script type="module" src="./assets/js/comment.js"></script>
+  <script src="./assets/js/comment.js"></script>
   <script src="./assets/js/shared-js.js?parent=projectItem.php"></script>
   <script src="./assets/js/main.js"></script>
 </body>

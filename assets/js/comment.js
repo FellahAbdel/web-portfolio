@@ -1,23 +1,32 @@
 const form = document.querySelector("form");
-const usernameElt = document.getElementById("surname");
+const usernameElt = document.getElementById("pseudo-name");
 const userMessageElt = document.getElementById("user-msg");
 
+let usernameValue;
+let userMessageValue;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (checkInputs()) {
     showSuccessfullMsg();
     const formData = new FormData(form);
+    const projectId = getProjectIdFromUrl(); // get project ID from URL
 
-    fetch(form.action, {
-      method: "GET",
-      body: formData,
-    })
+    fetch(
+      `${form.action}?id=${projectId}&pseudo-name=${encodeURIComponent(
+        usernameValue
+      )}&user-msg=${encodeURIComponent(userMessageValue)}`,
+      {
+        // include project ID in URL
+        method: "GET",
+      }
+    )
       .then((response) => {
         // Handle the response from the server
         // ...
         // Clear the form inputs
-        // form.reset();
+        [usernameElt, userMessageElt].forEach((e) => removeSuccess(e));
+        form.reset();
       })
       .catch((error) => {
         console.error(error);
@@ -30,8 +39,8 @@ form.addEventListener("submit", (e) => {
 function checkInputs() {
   // get the values from the inputs
   let allInputsValid = true;
-  const usernameValue = usernameElt.value.trim();
-  const userMessage = userMessageElt.value.trim();
+  usernameValue = usernameElt.value.trim();
+  userMessageValue = userMessageElt.value.trim();
   if (usernameValue === "") {
     // show error
     // add error class
@@ -42,10 +51,10 @@ function checkInputs() {
     setSuccessFor(usernameElt);
   }
 
-  if (userMessage === "") {
+  if (userMessageValue === "") {
     allInputsValid = false;
     setErrorFor(userMessageElt, "Message number cannot be blank.");
-  } else if (userMessage.length > 200) {
+  } else if (userMessageValue.length > 200) {
     allInputsValid = false;
     setErrorFor(userMessageElt, "At least 200 characters");
   } else {
@@ -77,4 +86,15 @@ function showSuccessfullMsg() {
 function hideSuccesfullMsg() {
   const smallElt = document.querySelector("form div~small");
   smallElt.style.visibility = "hidden";
+}
+
+function removeSuccess(input) {
+  const formControl = input.parentElement;
+  formControl.classList.remove("success");
+}
+
+function getProjectIdFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectId = urlParams.get("id");
+  return projectId;
 }

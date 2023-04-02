@@ -7,7 +7,7 @@
 
 .form-control i {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 7px;
   visibility: hidden;
 }
@@ -123,4 +123,10 @@ button:hover {
 label {
   margin-bottom: 0.2rem;
   display: block;
+}
+
+@media all and (min-width: 742px) {
+  form {
+    width: 50%;
+  }
 }

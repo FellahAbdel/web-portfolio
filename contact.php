@@ -15,9 +15,16 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-require_once './assets/templates/head.php'
-?>
+<head>
+  <?php
+  require_once './assets/templates/head.php'
+  ?>
+  <link rel="stylesheet" href="assets/css/shared.css" />
+  <link rel="stylesheet" href="assets/css/form-item.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <title>contact</title>
+</head>
+
 
 <body>
   <header>

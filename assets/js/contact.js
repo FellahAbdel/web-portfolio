@@ -6,21 +6,7 @@ import {
   removeSuccess,
 } from "./shared-comment-contact.js";
 
-//* C'est repetitif, il faudra penser à trouver un autre moyen plus compacte
-const hamburger = document.querySelector("header div");
-const navMenu = document.querySelector("header ul");
-const main = document.querySelector("main");
-const footer = document.querySelector("footer");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-  main.classList.toggle("hide");
-  footer.classList.toggle("hide");
-});
-
 //* Submit button
-
 // //* Pour la validation des données de l'utilisateur avant envoi.
 
 const form = document.querySelector("form");

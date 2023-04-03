@@ -1,28 +1,15 @@
 section:first-child {
-  /* Pour pc
-  height: 800px; */
-
-  /* Pour telephone*/
   height: 700px;
   background-image: url("/assets/images/projects/webDev.jpg");
   background-position: center;
   background-size: cover;
   display: grid;
-  /* flex-direction: column; */
 }
 
 #home {
-  /* background-color: rgba(51, 47, 47, 0.8); */
   backdrop-filter: blur(5px);
-  /* box-shadow: 2px 4px 8px rgb(68, 67, 67); */
-
   width: 100%;
-  /* Pour le pc et tab
-  width: 900px;
-  border-radius: 10px;
-  /* padding: 50px 0; */
   top: 200px;
-
   padding: 10px 0;
   height: 450px;
   position: relative;
@@ -30,7 +17,6 @@ section:first-child {
   margin: 0 auto;
   border-radius: 5px;
   text-align: center;
-  /* display: none; */
   display: grid;
 }
 
@@ -72,12 +58,7 @@ section:first-child {
 #home div:last-child h1 {
   font-size: 2rem;
   color: white;
-  /* text-transform: uppercase; */
-  /* Pour le pc
-  font-size: 50px; */
-  /* font: 16px; */
   font-family: "Raleway", sans-serif;
-  /* margin: 0; */
 }
 
 #home div:last-child h3 {
@@ -88,12 +69,6 @@ section:first-child {
 
 #home div:last-child p {
   color: rgb(255, 255, 255);
-  /* text-transform: uppercase; */
-
-  /* Pour le pc
-  font-size :  */
-  /* font-size: 13px; */
-  /* font-weight: 300; */
   margin-bottom: 50px;
 }
 
@@ -102,10 +77,7 @@ section:first-child {
   text-decoration: none;
   background-color: #201f04;
   padding: 15px 24px;
-  /* color: black; */
   color: rgb(246, 246, 216);
-  /* Pour le pc & tab
-  font-size: 24px; */
   font-size: 18px;
   font-weight: bold;
   border-radius: 8px;
@@ -132,15 +104,11 @@ section:last-child {
 
 #projects ul {
   padding: 0 10px 80px 10px;
-  /* width: 90%; */
   margin: auto; /* To center the element*/
   display: grid;
-  /* Pour le pc */
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: 1fr;
   row-gap: 50px;
   justify-items: center;
-  /* display: none; */
 }
 
 #projects li {
@@ -200,16 +168,6 @@ footer:last-child a:hover {
   color: white;
   background-color: black;
 }
-
-/* Make the front page somooth */
-.change-height {
-  height: 755px !important; /* ça marchera si !important n'est pas spécifer */
-}
-
-.change-top {
-  top: 253px !important;
-}
-
 @media all and (min-width: 742px) {
   .hamburger {
     display: none;
@@ -253,35 +211,7 @@ footer:last-child a:hover {
     font-size: 19px;
   }
 
-  /* section:first-child {
-    Pour pc & tab
-    height: 700px;
-  }
-
-  section:first-child div {
-    Pour le pc et tab
-    width: 650px;
-    border-radius: 10px;
-    padding: 50px 0;
-    top: 200px;
-    height: 275px;
-  }
-
-  section:first-child h1 {
-    font-size: 50px;
-  }
-
-  section:first-child p {
-    font-size: 24px;
-  }
-
-  section:first-child a {
-    font-size: 24px;
-  }
-
-  Pour la 2 eme section 
-
-  */
+  /* Pour la 2 eme section  */
   #projects ul {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 35px 50px 35px;
@@ -298,14 +228,6 @@ footer:last-child a:hover {
     width: 190px;
   }
 
-  /*
-  section:first-child div {
-    top: 275px;
-    width: 900px;
-    padding: 50px 0;
-    height: 192px;
-  }
-  */
   #projects ul {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 45px;
@@ -323,26 +245,4 @@ footer:last-child a:hover {
   #home div:last-child p {
     font-size: 24px;
   }
-  /*
-  section:first-child h1 {
-    font-size: 40px;
-    margin: 0;
-  }
-
-  section:first-child p {
-    font-size: 24px;
-    font-weight: 300px;
-    margin-bottom: 32px;
-  }
-
-  section:first-child a {
-    font-size: 24px;
-  }
-
-  #projects > h2 {
-    font-size: 50px;
-    margin: 0 auto;
-    padding-top: 55px;
-    padding-bottom: 0;
-  } */
 }

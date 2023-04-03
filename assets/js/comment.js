@@ -1,3 +1,11 @@
+import {
+  setErrorFor,
+  setSuccessFor,
+  showSuccessfullMsg,
+  hideSuccesfullMsg,
+  removeSuccess,
+} from "./shared-comment-contact.js";
+
 const form = document.querySelector("form");
 const usernameElt = document.getElementById("pseudo-name");
 const userMessageElt = document.getElementById("user-msg");
@@ -62,35 +70,6 @@ function checkInputs() {
   }
 
   return allInputsValid;
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-
-  // Add error message inside small
-  small.innerText = message;
-  formControl.className = "form-control error";
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}
-
-function showSuccessfullMsg() {
-  const smallElt = document.querySelector("form div~small");
-  smallElt.style.visibility = "visible";
-}
-
-function hideSuccesfullMsg() {
-  const smallElt = document.querySelector("form div~small");
-  smallElt.style.visibility = "hidden";
-}
-
-function removeSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.classList.remove("success");
 }
 
 function getProjectIdFromUrl() {

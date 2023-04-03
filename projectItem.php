@@ -65,7 +65,7 @@ $project = $projects->getProject(intval($projectId));
   require_once './assets/templates/footer.php'
   ?>
 
-  <script src="./assets/js/comment.js"></script>
+  <script src="./assets/js/comment.js" type="module"></script>
   <script src="./assets/js/shared-js.js?parent=projectItem.php"></script>
   <script src="./assets/js/main.js"></script>
 </body>

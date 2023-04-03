@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+body.scrollOff {
+  overflow-y: hidden;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -17,8 +21,9 @@ header {
   left: 0;
   box-sizing: border-box; /* Pour ne pas depasser la limite à gauche */
   position: fixed;
+  background-color: #cacfd85c;
   backdrop-filter: blur(25px);
-  z-index: 999;
+  z-index: 1;
 }
 
 /* Pour les liens dans la barre de navigation */
@@ -109,6 +114,7 @@ nav li select:focus {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    height: 100vh;
   }
 }
 

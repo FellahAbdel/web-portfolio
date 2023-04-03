@@ -86,8 +86,9 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   <?php
   require_once './assets/templates/footer.php'
   ?>
+  <script src="./assets/js/main.js"></script>
   <script src="./assets/js/shared-js.js?parent=contact.php"></script>
-  <script src="./assets/js/contact.js"></script>
+  <script src="./assets/js/contact.js" type="module"></script>
 </body>
 
 </html>

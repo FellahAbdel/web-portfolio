@@ -1,3 +1,11 @@
+import {
+  setErrorFor,
+  setSuccessFor,
+  showSuccessfullMsg,
+  hideSuccesfullMsg,
+  removeSuccess,
+} from "./shared-comment-contact.js";
+
 //* C'est repetitif, il faudra penser à trouver un autre moyen plus compacte
 const hamburger = document.querySelector("header div");
 const navMenu = document.querySelector("header ul");
@@ -99,36 +107,7 @@ function checkInputs() {
   return allInputsValid;
 }
 
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-
-  // Add error message inside small
-  small.innerText = message;
-  formControl.className = "form-control error";
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}
-
 const emailCheck = (email) =>
   /[a-zA-Z0-9-._]+@[a-zA-Z0-9-._]+\.[a-z]{2,}/.test(email);
 
 const phoneNumberCheck = (phoneNumber) => /^\d{10}$/.test(phoneNumber);
-
-function showSuccessfullMsg() {
-  const smallElt = document.querySelector("form div~small");
-  smallElt.style.visibility = "visible";
-}
-
-function hideSuccesfullMsg() {
-  const smallElt = document.querySelector("form div~small");
-  smallElt.style.visibility = "hidden";
-}
-
-function removeSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.classList.remove("success");
-}

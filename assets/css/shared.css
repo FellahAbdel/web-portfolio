@@ -11,9 +11,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Pour le pc
-  padding: 15px 60px; */
-
   padding: 15px 25px;
   position: absolute;
   width: 100%;
@@ -40,13 +37,7 @@ header ul {
 header > a {
   padding: 10px;
   font-family: "Oleo Script", sans-serif;
-  /* color: #252404; */
-  /* color: #400e32; */
-  /* color: #4d7a75; */
-  /* color: rgb(245, 243, 160); */
-  /* color: #0707014d; */
   color: #070701;
-  /* font-size: 50px; */
   font-size: 25px;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(66, 233, 15, 0.442);
@@ -55,7 +46,6 @@ header > a {
 
 header ul {
   display: flex;
-  /* display: none; */
 }
 
 i {
@@ -64,7 +54,6 @@ i {
 
 /* Hamburger MENU */
 header div {
-  /* display: none; */
   cursor: pointer;
 }
 
@@ -133,7 +122,6 @@ header li {
 }
 
 header li a {
-  /* color: #242300; */
   color: #201f04;
   text-decoration: none;
   font-size: 20px;
@@ -143,7 +131,6 @@ header li a {
 }
 
 header li a:hover {
-  /* color: rgb(77, 77, 77); */
   color: #000000;
   background-color: #ffffffb3;
 }
@@ -153,7 +140,6 @@ header li a:hover {
 main + footer {
   background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29));
   padding: 36px;
-  /* display: none; */
 }
 
 main + footer ul {
@@ -216,13 +202,7 @@ main + footer img {
     font-size: 50px;
   }
 
-  /* section:first-child {
-    height: 800px;
-  } */
-
   header li a {
-    /* font-size: 20px; */
     padding: 10px;
-    /* margin: 0 5px; */
   }
 }

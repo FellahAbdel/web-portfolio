@@ -208,6 +208,10 @@ main + footer img {
     padding: 10px;
   }
   /* New design */
+  header li a:hover {
+    background-color: black;
+    color: white;
+  }
 
   header li {
     padding: 0.2rem;

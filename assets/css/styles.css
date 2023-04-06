@@ -1,3 +1,5 @@
+@import url("./keyframe.css");
+
 section:first-child {
   height: 700px;
   background-image: url("/assets/images/projects/webDev.jpg");
@@ -168,6 +170,7 @@ footer:last-child a:hover {
   color: white;
   background-color: black;
 }
+
 @media all and (min-width: 742px) {
   .hamburger {
     display: none;
@@ -244,5 +247,9 @@ footer:last-child a:hover {
 
   #home div:last-child p {
     font-size: 24px;
+  }
+
+  footer:last-child:hover {
+    animation: danse 300ms ease-out;
   }
 }

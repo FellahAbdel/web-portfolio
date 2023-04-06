@@ -127,7 +127,7 @@ header li a {
   font-size: 20px;
   padding: 12px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 15px;
 }
 
 header li a:hover {
@@ -204,5 +204,48 @@ main + footer img {
 
   header li a {
     padding: 10px;
+  }
+  /* New design */
+
+  header li {
+    padding: 0.2rem;
+    cursor: pointer;
+    color: #ebebeb;
+    min-width: 80px;
+    margin: auto;
+  }
+
+  header li:not(:last-child):hover {
+    background-size: 100% 100%;
+    color: #27262c;
+    animation: danse 300ms ease-out;
+    /* font-weight: bold; */
+  }
+
+  header > a:hover {
+    animation: danse 300ms ease-out;
+  }
+
+  header + li:active {
+    transform: translateY(4px);
+  }
+
+  @keyframes danse {
+    15% {
+      transform-origin: center center;
+      transform: scale(1.2, 1.1);
+    }
+    40% {
+      transform-origin: center center;
+      transform: scale(0.95, 0.95);
+    }
+    75% {
+      transform-origin: center center;
+      transform: scale(1.05, 1);
+    }
+    100% {
+      transform-origin: center center;
+      transform: scale(1, 1);
+    }
   }
 }

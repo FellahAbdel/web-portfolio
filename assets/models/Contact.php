@@ -21,12 +21,31 @@ class Contact extends Database
     )");
   }
 
+  private function checkField($field, $isRequired, $minLength = null, $maxLength = null, $regex = null)
+  {
+    if ($isRequired && empty($field)) {
+      return false;
+    }
+    if ($minLength && strlen($field) < $minLength) {
+      return false;
+    }
+
+    if ($maxLength && strlen($field) > $maxLength) {
+      return false;
+    }
+
+    if ($regex && !preg_match($regex, $field)) {
+      return false;
+    }
+
+    return true;
+  }
   private function checkClientInputs($clientInputs): bool
   {
-    $clientNameValid = $clientInputs[0] !== "" && strlen($clientInputs[0]) <= 255;
-    $clientEmailValid = $clientInputs[1] !== "" && strlen($clientInputs[1]) <= 255;
-    $clientPhoneNumberV = $clientInputs[2] !== "" && strlen($clientInputs[2]) <= 255;
-    $clientMessageV = $clientInputs[3] !== "" && strlen($clientInputs[3]) <= 555;
+    $clientNameValid = $this->checkField($clientInputs[0], true, 3, 255);
+    $clientEmailValid = $this->checkField($clientInputs[1], true, 1, 255, '/[a-zA-Z0-9-._]+@[a-zA-Z0-9-._]+\.[a-z]{2,}/');
+    $clientPhoneNumberV = $this->checkField($clientInputs[2], true, 1, 255, '/^\d{10}$/');
+    $clientMessageV = $this->checkField($clientInputs[3], true, 1, 255);
     return $clientEmailValid && $clientNameValid && $clientMessageV && $clientPhoneNumberV;
   }
 

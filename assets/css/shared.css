@@ -142,7 +142,7 @@ select {
 select::-ms-expand {
   display: none;
 }
-.select {
+nav li:last-child {
   position: relative;
   display: flex;
   width: 8em;
@@ -152,7 +152,7 @@ select::-ms-expand {
   overflow: hidden;
   border-radius: 0.25em;
 }
-.select::after {
+nav li:last-child::after {
   content: "\25BC";
   position: absolute;
   top: -4px;

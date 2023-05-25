@@ -3,7 +3,8 @@
 $trad = [
   'nav' => [
     'home' => 'Home',
-    'education' => 'Education',
+    'cv' => 'CV',
+    'admin' => "Admin",
     'contact' => 'Contact'
   ],
   'divHome' => [

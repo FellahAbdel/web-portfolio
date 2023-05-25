@@ -1,7 +1,8 @@
       <nav>
         <ul>
           <li><a href="/index.php"><?= $trad['nav']['home'] ?> <i class="mdi mdi-home-circle"></i></a></li>
-          <li><a href="/formation.html"><?= $trad['nav']['education'] ?></a></li>
+          <li><a href="/cv.php"><?= $trad['nav']['cv'] ?></a></li>
+          <li><a href="/admin.php"><?= $trad['nav']['admin'] ?></a></li>
           <li><a href="/contact.php"><?= $trad['nav']['contact'] ?> <i class="mdi mdi-account-box"></i></a></li>
 
           <li>

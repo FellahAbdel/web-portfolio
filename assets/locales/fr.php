@@ -4,6 +4,7 @@ $trad = [
   'nav' => [
     'home' => 'Page d\'acceuil',
     'cv' => 'CV',
+    'admin' => 'Admin',
     'contact' => 'Contactez-moi',
   ],
   'divHome' => [

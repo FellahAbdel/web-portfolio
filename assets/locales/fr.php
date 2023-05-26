@@ -47,5 +47,9 @@ $trad = [
     "SuccessNotification" => "Votre commentaire a été envoyé avec succès",
     "commentPlaceholder" => "Rédigez votre commentaire",
     "submitBtn" => "Soumettre",
+  ],
+  "adminProjectSection" => [
+    "h2" => "Liste des projets",
+    "add" => "Ajouter",
   ]
 ];

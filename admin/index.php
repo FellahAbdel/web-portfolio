@@ -24,12 +24,7 @@ $allProject = $projects->getProjects();
   <?php
   require_once '../assets/templates/head.php'
   ?>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet"> -->
   <link rel="stylesheet" href="../assets/css/shared.css" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <title>fellah's portfolio</title>
 </head>

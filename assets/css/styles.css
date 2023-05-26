@@ -1,4 +1,5 @@
 @import url("./keyframe.css");
+@import url("./common.css");
 
 section:first-child {
   height: 700px;
@@ -100,51 +101,9 @@ section:first-child {
 
 /*---------------------------------------------*/
 
-section:last-child {
-  background: linear-gradient(60deg, rgb(77, 77, 77), rgb(58, 58, 58));
-}
-
-#projects ul {
-  padding: 0 10px 80px 10px;
-  margin: auto; /* To center the element*/
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 50px;
-  justify-items: center;
-}
-
-#projects li {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  border-radius: 6px;
-  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.2);
-  overflow: hidden; /* Pour cacher le depassement de l'image sur les coins*/
-}
-
-#projects li img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 24px;
-}
-
 /* Pour le titre de la liste des projets */
 #projects > h2 {
-  text-transform: uppercase;
-  color: wheat;
-  text-align: center;
   margin-top: 0;
-  padding-top: 55px;
 }
 
 /* On selectionne le button "explore"*/
@@ -154,11 +113,8 @@ footer:last-child {
 
 footer:last-child a {
   color: rgb(121, 121, 36);
-  font-weight: bold;
-  text-decoration: none;
   padding: 6px;
   border-radius: 6px;
-  vertical-align: middle;
 }
 
 footer:last-child a i {
@@ -213,13 +169,6 @@ footer:last-child a:hover {
   #home div:last-child p {
     font-size: 19px;
   }
-
-  /* Pour la 2 eme section  */
-  #projects ul {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 35px 50px 35px;
-    column-gap: 30px;
-  }
 }
 
 @media all and (min-width: 1140px) {
@@ -229,12 +178,6 @@ footer:last-child a:hover {
 
   #home image {
     width: 190px;
-  }
-
-  #projects ul {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 45px;
-    padding: 30px 60px;
   }
 
   #home div:last-child h1 {
@@ -249,7 +192,7 @@ footer:last-child a:hover {
     font-size: 24px;
   }
 
-  footer:last-child:hover {
+  footer:last-child a:hover {
     animation: danse 300ms ease-out;
   }
 }

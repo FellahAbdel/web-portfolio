@@ -51,5 +51,9 @@ $trad = [
   "adminProjectSection" => [
     "h2" => "Liste des projets",
     "add" => "Ajouter",
+  ],
+  "adminActions" => [
+    "edit" => "Modifier",
+    "delete" => "Supprimer",
   ]
 ];

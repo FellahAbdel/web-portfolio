@@ -11,9 +11,19 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
 
 include __DIR__ . '/./assets/models/Projects.php';
 
-$projectId = $_GET["id"];
-$projects = new Projects();
-$project = $projects->getProject(intval($projectId));
+if (!empty($_GET["id"])) {
+  $projectId = checkInput($data);
+  $projectId = $_GET["id"];
+  $projects = new Projects();
+  $project = $projects->getProject(intval($projectId));
+}
+
+function checkInput($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+}
 
 ?>
 <!DOCTYPE html>

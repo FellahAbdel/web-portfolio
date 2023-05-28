@@ -45,7 +45,7 @@ $allProject = $projects->getProjects();
   <?php
   require_once __DIR__ . '/../../../assets/templates/footer.php'
   ?>
-  <script src="../assets/js/shared-js.js?parent=insert.php"></script>
+  <script src="/assets/js/shared-js.js?parent=admin/assets/actions/insert.php"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/admin/js/formProject.js"></script>
 </body>

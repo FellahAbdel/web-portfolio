@@ -1,7 +1,7 @@
-<form action="/assets/php/insert.php" method="post">
+<form role="form" action="/admin/assets/actions/insert.php" method="post" enctype="multipart/form-data">
   <div class="form-control">
-    <label for="title"><?= $trad["AdminProjectForm"]["project title"] ?></label>
-    <input type="text" name="project-title" id="title" placeholder="<?= $trad["AdminProjectForm"]["project title"] ?>" />
+    <label for="project-title"><?= $trad["AdminProjectForm"]["project title"] ?></label>
+    <input type="text" name="project-title" id="project-title" placeholder="<?= $trad["AdminProjectForm"]["project title"] ?>" />
     <i class="mdi mdi-check-circle-outline"></i>
     <i class="mdi mdi-alert-circle"></i>
     <small>Error message</small>

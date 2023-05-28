@@ -55,6 +55,7 @@ h1 {
   pointer-events: none;
   border-radius: 0 5px 5px 0;
 }
+
 .file-upload-wrapper:hover:before {
   background: #7c3a98;
 }
@@ -72,4 +73,24 @@ h1 {
   display: block;
   cursor: pointer;
   width: 100%;
+}
+
+@media all and (min-width: 742px) {
+  h1 {
+    padding-top: 15px;
+  }
+}
+
+@media all and (min-width: 1140px) {
+  main {
+    height: 650px;
+  }
+
+  form,
+  h1 {
+    max-width: 1000px;
+  }
+  h1 {
+    padding-top: 60px;
+  }
 }

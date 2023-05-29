@@ -12,10 +12,18 @@
     <textarea name="description" id="description" cols="30" rows="9" placeholder="<?= $trad["AdminProjectForm"]["description"] ?>"></textarea>
     <small>Error message</small>
   </div>
+  <div class="form-control">
+    <label for="text-alt"><?= $trad["AdminProjectForm"]["text alt"] ?></label>
+    <input type="text" name="text-alt" id="text-alt" placeholder="<?= $trad["AdminProjectForm"]["text alt"] ?>" />
+    <i class="mdi mdi-check-circle-outline"></i>
+    <i class="mdi mdi-alert-circle"></i>
+    <small>Error message</small>
+  </div>
   <div class="file-upload-wrapper" data-text="<?= $trad["AdminProjectForm"]["project image"] ?>">
     <input name="file-upload-field" type="file" class="file-upload-field" value="">
     <small>Error message</small>
   </div>
+
 
   <small>Project has been successfully added!</small>
   <button><?= $trad["AdminProjectForm"]["upload button"] ?></button>

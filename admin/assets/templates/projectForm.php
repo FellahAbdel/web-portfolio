@@ -14,7 +14,9 @@
   </div>
   <div class="file-upload-wrapper" data-text="<?= $trad["AdminProjectForm"]["project image"] ?>">
     <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    <small>Error message</small>
   </div>
+
   <small>Project has been successfully added!</small>
   <button><?= $trad["AdminProjectForm"]["upload button"] ?></button>
 </form>

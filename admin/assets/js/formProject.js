@@ -45,22 +45,16 @@ formElt.addEventListener("submit", (event) => {
     showSuccessfullMsg();
     const formData = new FormData(form);
 
-    fetch(
-      `${form.action}?id=${projectId}&pseudo-name=${encodeURIComponent(
-        projectTitleValue
-      )}&description=${encodeURIComponent(projectDescriptionValue)}`,
-      {
-        // include project ID in URL
-        method: "GET",
-      }
-    )
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
       .then((response) => {
         // Handle the response from the server
         // ...
         // Clear the form inputs
-        [projectTitleElt, projectDescriptionElt, projectImageElt].forEach((e) =>
-          removeSuccess(e)
-        );
+        elements.forEach((element) => removeSuccess(element));
+        // removeSuccess();
         form.reset();
       })
       .catch((error) => {

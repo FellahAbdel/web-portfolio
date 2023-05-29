@@ -40,7 +40,7 @@ $allProject = $projects->getProjects();
   <main>
     <section id="projects">
       <h2><strong> <?= $trad["adminProjectSection"]["h2"] ?></strong>
-        <a href="/admin/assets/actions/insert.php" class="btn btn-success btn-lg">
+        <a href="/admin/insert.php" class="btn btn-success btn-lg">
           <span class="mdi mdi-plus"><?= $trad["adminProjectSection"]["add"] ?></span>
         </a>
       </h2>

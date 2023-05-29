@@ -25,6 +25,7 @@ const projectTitleElt = document.getElementById("project-title");
 const projectDescriptionElt = document.getElementById("description");
 const textAltImageElt = document.getElementById("text-alt");
 const fileUploadWrapper = document.querySelector(".file-upload-wrapper");
+const textPrompt = fileUploadWrapper.getAttribute("data-text");
 const projectImageElt = document.querySelector(".file-upload-field");
 
 let projectTitleValue;
@@ -32,10 +33,17 @@ let projectDescriptionValue;
 let projectImageValue;
 let textAltImageValue;
 
+const elements = [
+  projectTitleElt,
+  projectDescriptionElt,
+  textAltImageElt,
+  projectImageElt,
+];
+
 formElt.addEventListener("change", function (event) {
   // Update the field with the uploaded image name.
-  fileUploadWrapper.setAttribute("data-text", fileName);
   var fileName = projectImageElt.value.replace(/.*(\/|\\)/, "");
+  fileUploadWrapper.setAttribute("data-text", fileName);
 });
 
 formElt.addEventListener("submit", (event) => {
@@ -44,9 +52,9 @@ formElt.addEventListener("submit", (event) => {
   // Vérification des données.
   if (checkInputs()) {
     showSuccessfullMsg();
-    const formData = new FormData(form);
+    const formData = new FormData(formElt);
 
-    fetch(form.action, {
+    fetch(formElt.action, {
       method: "POST",
       body: formData,
     })
@@ -56,7 +64,8 @@ formElt.addEventListener("submit", (event) => {
         // Clear the form inputs
         elements.forEach((element) => removeSuccess(element));
         // removeSuccess();
-        form.reset();
+        formElt.reset();
+        fileUploadWrapper.setAttribute("data-text", textPrompt);
       })
       .catch((error) => {
         console.error(error);

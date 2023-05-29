@@ -20,7 +20,9 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   <link rel="stylesheet" href="/assets/css/shared.css" />
   <link rel="stylesheet" href="/assets/css/form-item.css" />
   <link rel="stylesheet" href="/admin/assets/css/project-form.css" />
-  <title>Add new project</title>
+  <title>
+    <?= $trad["adminPageTitle"]["insert"] ?>
+  </title>
 </head>
 
 <body>
@@ -32,7 +34,9 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
     ?>
   </header>
   <main>
-    <h1>Add new project</h1>
+    <h1>
+      <?= $trad["adminPageTitle"]["insert"] ?>
+    </h1>
     <?php include __DIR__ . '/assets/templates/projectForm.php' ?>
   </main>
   <?php

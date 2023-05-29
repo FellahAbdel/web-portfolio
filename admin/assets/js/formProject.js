@@ -12,7 +12,6 @@ export function setErrorSpecif(input, message) {
 
   // Add error message inside small
   small.innerText = message;
-  console.log(small);
   formControl.className = "file-upload-wrapper error";
 }
 
@@ -24,12 +23,14 @@ export function setSuccessSpecif(input) {
 const formElt = document.querySelector("form");
 const projectTitleElt = document.getElementById("project-title");
 const projectDescriptionElt = document.getElementById("description");
+const textAltImageElt = document.getElementById("text-alt");
 const fileUploadWrapper = document.querySelector(".file-upload-wrapper");
 const projectImageElt = document.querySelector(".file-upload-field");
 
 let projectTitleValue;
 let projectDescriptionValue;
 let projectImageValue;
+let textAltImageValue;
 
 formElt.addEventListener("change", function (event) {
   // Update the field with the uploaded image name.
@@ -70,14 +71,14 @@ function checkInputs() {
   let allInputsValid = true;
   projectTitleValue = projectTitleElt.value.trim();
   projectDescriptionValue = projectDescriptionElt.value.trim();
-
+  textAltImageValue = textAltImageElt.value.trim();
   projectImageValue = projectImageElt.value.trim();
+
   if (projectTitleValue === "") {
     // show error
     // add error class
     allInputsValid = false;
     setErrorFor(projectTitleElt, "Project title cannot be blank");
-    console.log(projectTitleElt);
   } else {
     // add sucess class
     setSuccessFor(projectTitleElt);
@@ -91,6 +92,13 @@ function checkInputs() {
     setErrorFor(projectDescriptionElt, "At least 100 characters");
   } else {
     setSuccessFor(projectDescriptionElt);
+  }
+
+  if (textAltImageValue === "") {
+    allInputsValid = false;
+    setErrorFor(textAltImageElt, "Alternative text cannot be blank.");
+  } else {
+    setSuccessFor(textAltImageElt);
   }
 
   if (projectImageValue === "") {

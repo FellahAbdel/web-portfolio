@@ -47,7 +47,7 @@ $allProject = $projects->getProjects();
   ?>
   <script src="/assets/js/shared-js.js?parent=admin/assets/actions/insert.php"></script>
   <script src="/assets/js/main.js"></script>
-  <script src="/admin/js/formProject.js"></script>
+  <script src="/admin/assets/js/formProject.js" type="module"></script>
 </body>
 
 </html>

@@ -1,14 +1,13 @@
 <?php
 // Handle data and then add it to the database.
 if (!empty($_POST)) {
-  require_once __DIR__ . "/../../../models/Insert.php";
+  require_once __DIR__ . "/../../../assets/models/Projects.php";
 
-  $insert = new Insert();
+  $project = new Projects();
   $projectName = $_POST["project-title"];
   $projectDescription = $_POST["description"];
+  $textAltImg = $_POST["text-alt"];
+  $imageFile = $_FILES["file-upload-field"];
 
-  $userInputs = array($_POST["user-name"], $_POST["user-email"], $_POST["user-number"], $_POST["user-msg"]);
-
-  // var_dump($userInputs);
-  $client->storeClientInputs($userInputs);
+  $success = $project->insertProject($projectName, $projectDescription, $textAltImg, $imageFile);
 }

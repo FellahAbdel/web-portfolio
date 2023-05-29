@@ -55,5 +55,11 @@ $trad = [
   "adminActions" => [
     "edit" => "Edit",
     "delete" => "Delete",
+  ],
+  "AdminProjectForm" => [
+    "project title" => "Project Title",
+    "description" => "Project description",
+    "project image" => "Select project image !",
+    "upload button" => "Add project"
   ]
 ];

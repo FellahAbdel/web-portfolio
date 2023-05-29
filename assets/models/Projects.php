@@ -7,6 +7,18 @@ class Projects extends Database
   public function __construct()
   {
     parent::__construct();
+    $this->initTable();
+  }
+
+  private function initTable()
+  {
+    $this->pdo->query("CREATE TABLE IF NOT EXISTS projects (
+      id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
+	    title	varchar(255) NOT NULL UNIQUE,
+	    description	TEXT NOT NULL,
+	    imageName	varchar(255) NOT NULL,
+	    imageAlt	varchar(255) NOT NULL
+    )");
   }
 
   public function getProject(int $id)
@@ -35,5 +47,83 @@ class Projects extends Database
   public function getProjects()
   {
     return $this->pdo->query('SELECT * FROM projects')->fetchAll();
+  }
+
+
+  // Inserting project.
+
+  /**
+   * @param $field
+   * @param $isRequired
+   * @param $minLength
+   * @param $maxLength
+   * @param $regex
+   *
+   * @return bool
+   */
+  private function checkField($field, $isRequired, $minLength = null, $maxLength = null, $regex = null)
+  {
+    if ($isRequired && empty($field)) {
+      return false;
+    }
+    if ($minLength && strlen($field) < $minLength) {
+      return false;
+    }
+
+    if ($maxLength && strlen($field) > $maxLength) {
+      return false;
+    }
+
+    if ($regex && !preg_match($regex, $field)) {
+      return false;
+    }
+
+    return true;
+  }
+
+  public function savePicture($picture)
+  {
+    $extension = pathinfo($picture['name'], PATHINFO_EXTENSION);
+    $filename = uniqid() . '.' . $extension;
+    $result = move_uploaded_file($picture['tmp_name'], __DIR__ . '/../../public/uploads/' . $filename);
+
+    if (!$result) {
+      return false;
+    }
+
+    return $filename;
+  }
+
+  public function insertProject($title, $description, $imageTextAlt, $picture)
+  {
+    if (
+      $this->checkField($title, true, 2, 255) &&
+      $this->checkField($description, false) &&
+      $this->checkField($imageTextAlt, true, 1, 255)
+    ) {
+      print_r("here");
+      try {
+        $pictureName = $this->savePicture($picture);
+
+        if (!$pictureName) {
+          return false;
+        }
+
+        print_r("here 2");
+        $statement = $this->pdo->prepare(
+          'INSERT INTO projects (title, description, imageAlt, imageName) 
+          VALUES (:title, :description, :imageTextAlt, :image )'
+        );
+        $statement->bindValue(':title', htmlspecialchars($title), PDO::PARAM_STR);
+        $statement->bindValue(':description', htmlspecialchars($description), PDO::PARAM_STR);
+        $statement->bindValue(':imageTextAlt', htmlspecialchars($imageTextAlt), PDO::PARAM_STR);
+        $statement->bindValue(':image', $pictureName, PDO::PARAM_STR);
+        return $statement->execute();
+      } catch (Exception $e) {
+        return false;
+      }
+    }
+
+    return false;
   }
 }

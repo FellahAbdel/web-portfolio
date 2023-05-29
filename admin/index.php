@@ -5,7 +5,7 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   require_once __DIR__ . '/../assets/locales/en.php';
   $en_select = "selected";
 } else {
-  require_once __DIR__ . '/../assets/locales/fr.php';
+  require_once __DIR__ . '/../../assets/locales/fr.php';
   $fr_select = "selected";
 }
 
@@ -40,7 +40,7 @@ $allProject = $projects->getProjects();
   <main>
     <section id="projects">
       <h2><strong> <?= $trad["adminProjectSection"]["h2"] ?></strong>
-        <a href="insert.php" class="btn btn-success btn-lg">
+        <a href="/admin/assets/actions/insert.php" class="btn btn-success btn-lg">
           <span class="mdi mdi-plus"><?= $trad["adminProjectSection"]["add"] ?></span>
         </a>
       </h2>

@@ -1,3 +1,9 @@
+const scriptElements = document.scripts;
+const currentScript = scriptElements[scriptElements.length - 1];
+const scriptSrc = currentScript.src;
+const urlParams = new URLSearchParams(scriptSrc.split("?")[1]);
+const fileName = urlParams.get("fileName") || "";
+
 import {
   setErrorFor,
   setSuccessFor,
@@ -6,20 +12,27 @@ import {
   removeSuccess,
 } from "../../../assets/js/shared-comment-contact.js";
 
-export function setErrorSpecif(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-
-  // Add error message inside small
-  small.innerText = message;
-  formControl.className = "file-upload-wrapper error";
+let isInsertPage = false;
+if (fileName === "insert") {
+  isInsertPage = true;
 }
 
-export function setSuccessSpecif(input) {
-  const formControl = input.parentElement;
-  formControl.className = "file-upload-wrapper success";
-}
+export function setErrorSpecif(input, message, isInsertPage) {
+  if (isInsertPage) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector("small");
 
+    // Add error message inside small
+    small.innerText = message;
+    formControl.className = "file-upload-wrapper error";
+  }
+}
+export function setSuccessSpecif(input, isInsertPage) {
+  if (isInsertPage) {
+    const formControl = input.parentElement;
+    formControl.className = "file-upload-wrapper success";
+  }
+}
 const formElt = document.querySelector("form");
 const projectTitleElt = document.getElementById("project-title");
 const projectDescriptionElt = document.getElementById("description");
@@ -112,9 +125,12 @@ function checkInputs() {
 
   if (projectImageValue === "") {
     allInputsValid = false;
-    setErrorSpecif(projectImageElt, "Project image is required.");
+    setErrorSpecif(projectImageElt, "Project image is required.", isInsertPage);
+    if (!isInsertPage) {
+      allInputsValid = true;
+    }
   } else {
-    setSuccessSpecif(projectImageElt);
+    setSuccessSpecif(projectImageElt, isInsertPage);
   }
 
   return allInputsValid;

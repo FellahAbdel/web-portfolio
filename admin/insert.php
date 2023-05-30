@@ -8,6 +8,9 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   require_once __DIR__ . '/../assets/locales/fr.php';
   $fr_select = "selected";
 }
+
+$button = "upload button";
+$fileHandler = "insert.php";
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +47,7 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   ?>
   <script src="/assets/js/shared-js.js?parent=admin/insert.php"></script>
   <script src="/assets/js/main.js"></script>
-  <script src="/admin/assets/js/formProject.js" type="module"></script>
+  <script src="/admin/assets/js/formProject.js?fileName=insert" type="module"></script>
 </body>
 
 </html>

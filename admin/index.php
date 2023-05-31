@@ -26,6 +26,7 @@ $allProject = $projects->getProjects();
   ?>
   <link rel="stylesheet" href="../assets/css/shared.css" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" />
   <title>fellah's portfolio</title>
 </head>
 

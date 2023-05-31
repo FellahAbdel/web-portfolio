@@ -68,6 +68,7 @@ formElt.addEventListener("submit", (event) => {
     const formData = new FormData(formElt);
 
     fetch(formElt.action, {
+      mode: "no-cors",
       method: "POST",
       body: formData,
     })

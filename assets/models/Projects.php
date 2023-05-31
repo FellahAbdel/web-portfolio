@@ -126,4 +126,60 @@ class Projects extends Database
 
     return false;
   }
+
+
+  public function updateProject($id, $title, $description, $imageTextAlt, $newPicture)
+  {
+    $project = $this->getProject($id);
+
+    if (!$project) {
+      return false;
+    }
+
+    $oldImageName = $project['imageName'];
+
+    if (
+      $this->checkField($title, true, 2, 255) &&
+      $this->checkField($description, false) &&
+      $this->checkField($imageTextAlt, true, 1, 255)
+    ) {
+      try {
+        if ($newPicture['name']) {
+          $newImageName = $this->savePicture($newPicture);
+
+          if (!$newImageName) {
+            return false;
+          }
+
+          // Remove the old image
+          $this->removeImage($oldImageName);
+        } else {
+          $newImageName = $oldImageName;
+        }
+
+        $statement = $this->pdo->prepare(
+          'UPDATE projects SET title=:title, description=:description, imageAlt=:imageTextAlt, imageName=:image WHERE id=:id'
+        );
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+        $statement->bindValue(':title', htmlspecialchars($title), PDO::PARAM_STR);
+        $statement->bindValue(':description', htmlspecialchars($description), PDO::PARAM_STR);
+        $statement->bindValue(':imageTextAlt', htmlspecialchars($imageTextAlt), PDO::PARAM_STR);
+        $statement->bindValue(':image', $newImageName, PDO::PARAM_STR);
+        return $statement->execute();
+      } catch (Exception $e) {
+        return false;
+      }
+    }
+
+    return false;
+  }
+
+  private function removeImage($imageName)
+  {
+    $filePath = __DIR__ . '/../../public/uploads/' . $imageName;
+
+    if (file_exists($filePath)) {
+      unlink($filePath);
+    }
+  }
 }

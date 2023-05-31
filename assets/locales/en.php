@@ -50,16 +50,26 @@ $trad = [
   ],
   "adminProjectSection" => [
     "h2" => "Projects list",
-    "add" => "Add",
+    "add" => "Add"
   ],
   "adminActions" => [
     "edit" => "Edit",
-    "delete" => "Delete",
+    "delete" => "Delete"
+  ],
+  "adminPageTitle" => [
+    "insert" => "Add new project !",
+    "update" => "Update current project",
+    "delete" => "Delete current project"
   ],
   "AdminProjectForm" => [
     "project title" => "Project Title",
     "description" => "Project description",
+    "text alt" => "Alternative text of image",
     "project image" => "Select project image !",
-    "upload button" => "Add project"
+    "upload button" => "Add project",
+    "update button" => "Update project",
+    "question" => "Do you wish to delete this project ?",
+    "y-response" => "Yes",
+    "n-response" => "No"
   ]
 ];

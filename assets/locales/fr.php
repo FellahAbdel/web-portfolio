@@ -46,20 +46,30 @@ $trad = [
     "labelComment" => "Votre commentaire",
     "SuccessNotification" => "Votre commentaire a été envoyé avec succès",
     "commentPlaceholder" => "Rédigez votre commentaire",
-    "submitBtn" => "Soumettre",
+    "submitBtn" => "Soumettre"
   ],
   "adminProjectSection" => [
     "h2" => "Liste des projets",
-    "add" => "Ajouter",
+    "add" => "Ajouter"
   ],
   "adminActions" => [
     "edit" => "Modifier",
-    "delete" => "Supprimer",
+    "delete" => "Supprimer"
+  ],
+  "adminPageTitle" => [
+    "insert" => "Ajouter un nouveau projet !",
+    "update" => "Modifier ce projet",
+    "delete" => "Supprimer ce projet"
   ],
   "AdminProjectForm" => [
     "project title" => "Titre du projet",
     "description" => "Description du projet",
+    "text alt" => "Texte alternatif de l'image",
     "project image" => "Selectionnez l'image du projet!",
-    "upload button" => "Ajouter le projet"
+    "upload button" => "Ajouter ",
+    "update button" => "Modifier",
+    "question" => "Voulez-vous vraiment supprimer ce projet ?",
+    "y-response" => "Oui",
+    "n-response" => "Non"
   ]
 ];

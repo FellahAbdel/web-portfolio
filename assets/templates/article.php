@@ -1,5 +1,5 @@
 <li>
-  <img src="/assets/images/projects/<?= $project["imageName"] ?>" alt="<?= $project["imageAlt"] ?>" />
+  <img src="/public/uploads/<?= $project["imageName"] ?>" alt="<?= $project["imageAlt"] ?>" />
   <article>
     <div>
       <h2><?= $project["title"] ?> </h2>

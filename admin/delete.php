@@ -8,6 +8,11 @@ if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
   require_once __DIR__ . '/../assets/locales/fr.php';
   $fr_select = "selected";
 }
+
+if (!empty($_GET["id"])) {
+  $projectId = $_GET["id"];
+}
+
 ?>
 
 <!DOCTYPE html>

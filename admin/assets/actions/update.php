@@ -9,6 +9,7 @@ if (!empty($_POST)) {
   $imageFile = $_FILES["file-upload-field"];
 
   if (isset($_GET["id"])) {
+    $id = intval($_GET["id"]);
     $success = $project->updateProject($id, $projectName, $projectDescription, $textAltImg, $imageFile);
     if ($success) {
       // After completing the project update, redirect to the index page

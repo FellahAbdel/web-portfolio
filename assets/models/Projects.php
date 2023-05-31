@@ -14,7 +14,7 @@ class Projects extends Database
   {
     $this->pdo->query("CREATE TABLE IF NOT EXISTS projects (
       id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
-	    title	varchar(255) NOT NULL UNIQUE,
+	    title	varchar(255) NOT NULL,
 	    description	TEXT NOT NULL,
 	    imageName	varchar(255) NOT NULL,
 	    imageAlt	varchar(255) NOT NULL
@@ -98,18 +98,18 @@ class Projects extends Database
   {
     if (
       $this->checkField($title, true, 2, 255) &&
-      $this->checkField($description, false) &&
+      $this->checkField($description, true, 100, 2000) &&
       $this->checkField($imageTextAlt, true, 1, 255)
     ) {
-      print_r("here");
       try {
+        print_r("start");
         $pictureName = $this->savePicture($picture);
 
+        print_r("it not working");
         if (!$pictureName) {
           return false;
         }
-
-        print_r("here 2");
+        print_r("It works");
         $statement = $this->pdo->prepare(
           'INSERT INTO projects (title, description, imageAlt, imageName) 
           VALUES (:title, :description, :imageTextAlt, :image )'
@@ -120,10 +120,11 @@ class Projects extends Database
         $statement->bindValue(':image', $pictureName, PDO::PARAM_STR);
         return $statement->execute();
       } catch (Exception $e) {
+        var_dump($e);
         return false;
       }
     }
-
+    print_r("false");
     return false;
   }
 
@@ -135,7 +136,6 @@ class Projects extends Database
     if (!$project) {
       return false;
     }
-
     $oldImageName = $project['imageName'];
 
     if (
@@ -144,13 +144,15 @@ class Projects extends Database
       $this->checkField($imageTextAlt, true, 1, 255)
     ) {
       try {
+        print_r("here");
         if ($newPicture['name']) {
           $newImageName = $this->savePicture($newPicture);
-
+          var_dump($newImageName);
           if (!$newImageName) {
             return false;
           }
 
+          print_r("here 2");
           // Remove the old image
           $this->removeImage($oldImageName);
         } else {
@@ -181,5 +183,34 @@ class Projects extends Database
     if (file_exists($filePath)) {
       unlink($filePath);
     }
+  }
+
+  public function deleteProject($id)
+  {
+    $project = $this->getProject($id);
+
+    if (!$project) {
+      return false;
+    }
+
+    $projectImageName = $project['imageName'];
+
+    if (
+      $this->checkField($id, true)
+    ) {
+      try {
+        $this->removeImage($projectImageName);
+
+        $statement = $this->pdo->prepare(
+          'DELETE FROM projects WHERE id=:projectId'
+        );
+        $statement->bindValue(':projectId', $id, PDO::PARAM_INT);
+        return $statement->execute();
+      } catch (Exception $e) {
+        return false;
+      }
+    }
+
+    return false;
   }
 }

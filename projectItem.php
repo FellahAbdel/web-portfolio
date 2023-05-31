@@ -47,7 +47,7 @@ function checkInput($data)
   </header>
   <main>
     <article id="home">
-      <img src="./assets/images/projects/<?= $project["imageName"] ?>" alt="">
+      <img src="/public/uploads/<?= $project["imageName"] ?>" alt="<?= $project["imageAlt"] ?>">
       <h1><?= $project["title"] ?></h1>
       <p><?= $project["description"] ?></p>
     </article>

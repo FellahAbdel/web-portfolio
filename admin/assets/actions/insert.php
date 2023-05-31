@@ -10,4 +10,8 @@ if (!empty($_POST)) {
   $imageFile = $_FILES["file-upload-field"];
 
   $success = $project->insertProject($projectName, $projectDescription, $textAltImg, $imageFile);
+  if ($success) {
+    header("Location: /admin/index.php");
+    exit;
+  }
 }

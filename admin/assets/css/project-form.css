@@ -1,9 +1,6 @@
-.form-control.success input {
-  border-color: #2ecc71;
-}
 main {
   margin-top: 100px;
-  height: 580px;
+  height: 840px;
   /* background: linear-gradient(60deg, rgb(77, 77, 77), rgb(58, 58, 58)); */
 }
 
@@ -102,7 +99,7 @@ button {
 
 @media all and (min-width: 1140px) {
   main {
-    height: 650px;
+    height: 915px;
   }
 
   form,

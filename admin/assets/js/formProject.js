@@ -7,9 +7,6 @@ const fileName = urlParams.get("fileName") || "";
 import {
   setErrorFor,
   setSuccessFor,
-  showSuccessfullMsg,
-  hideSuccesfullMsg,
-  removeSuccess,
 } from "../../../assets/js/shared-comment-contact.js";
 
 let isInsertPage = false;
@@ -27,18 +24,19 @@ export function setErrorSpecif(input, message, isInsertPage) {
     formControl.className = "file-upload-wrapper error";
   }
 }
+
 export function setSuccessSpecif(input, isInsertPage) {
   if (isInsertPage) {
     const formControl = input.parentElement;
     formControl.className = "file-upload-wrapper success";
   }
 }
+
 const formElt = document.querySelector("form");
 const projectTitleElt = document.getElementById("project-title");
 const projectDescriptionElt = document.getElementById("description");
 const textAltImageElt = document.getElementById("text-alt");
 const fileUploadWrapper = document.querySelector(".file-upload-wrapper");
-const textPrompt = fileUploadWrapper.getAttribute("data-text");
 const projectImageElt = document.querySelector(".file-upload-field");
 
 let projectTitleValue;
@@ -60,37 +58,12 @@ formElt.addEventListener("change", function (event) {
 });
 
 formElt.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  // Vérification des données.
-  if (checkInputs()) {
-    showSuccessfullMsg();
-    const formData = new FormData(formElt);
-
-    fetch(formElt.action, {
-      mode: "no-cors",
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        // Handle the response from the server
-        // ...
-        // Clear the form inputs
-        elements.forEach((element) => removeSuccess(element));
-        // removeSuccess();
-        formElt.reset();
-        fileUploadWrapper.setAttribute("data-text", textPrompt);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  } else {
-    hideSuccesfullMsg();
+  if (!checkInputs()) {
+    event.preventDefault();
   }
 });
 
 function checkInputs() {
-  // get the values from the inputs
   let allInputsValid = true;
   projectTitleValue = projectTitleElt.value.trim();
   projectDescriptionValue = projectDescriptionElt.value.trim();
@@ -98,12 +71,9 @@ function checkInputs() {
   projectImageValue = projectImageElt.value.trim();
 
   if (projectTitleValue === "") {
-    // show error
-    // add error class
     allInputsValid = false;
     setErrorFor(projectTitleElt, "Project title cannot be blank");
   } else {
-    // add sucess class
     setSuccessFor(projectTitleElt);
   }
 

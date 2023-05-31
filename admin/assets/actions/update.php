@@ -9,20 +9,11 @@ if (!empty($_POST)) {
   $imageFile = $_FILES["file-upload-field"];
 
   if (isset($_GET["id"])) {
-    $id = checkInput($_GET["id"]);
     $success = $project->updateProject($id, $projectName, $projectDescription, $textAltImg, $imageFile);
     if ($success) {
       // After completing the project update, redirect to the index page
-      header("Location: insert.php"); // Replace "/index.php" with the actual URL of your index page
+      header("Location: /admin/index.php"); // Replace "/index.php" with the actual URL of your index page
       exit; // Make sure to exit after the redirect
     }
   }
-}
-
-function checkInput($data)
-{
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
 }

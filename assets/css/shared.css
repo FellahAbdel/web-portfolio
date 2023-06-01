@@ -111,6 +111,7 @@ nav li select:focus {
 
 /* nav item */
 header ul li {
+  margin: 14px auto;
   text-align: center;
 }
 

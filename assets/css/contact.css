@@ -3,7 +3,7 @@ body {
 }
 
 main {
-  height: 1000px;
+  height: 1015px;
   background: url("/assets/images/projects/web3.jpg");
   background-position: center;
   background-size: cover;
@@ -62,7 +62,7 @@ section:last-child {
   border-radius: 5px;
 
   /* Seulement en mode mobile*/
-  height: 790px;
+  height: 820px;
   box-shadow: 2px 0 3px black;
   width: 70%;
   margin: 25px auto;

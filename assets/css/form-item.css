@@ -111,8 +111,6 @@ button {
   background-color: #8e44ad;
   padding: 0.5rem, 1.5rem;
   cursor: pointer;
-
-  margin-top: 15px;
 }
 
 button:hover {

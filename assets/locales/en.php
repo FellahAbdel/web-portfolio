@@ -15,7 +15,7 @@ $trad = [
   ],
   'projectSection' => [
     "title" => "Projects",
-    "exploreButton" => "Explore"
+    "viewButton" => "View"
   ],
   'contact-first-section' => [
     "h2" => "Get in touch",

@@ -24,7 +24,6 @@ if (!empty($_GET["id"])) {
   ?>
   <link rel="stylesheet" href="/assets/css/shared.css" />
   <!-- <link rel="stylesheet" href="/assets/css/form-item.css" /> -->
-  <link rel="stylesheet" href="/admin/assets/css/delete.css" />
   <link rel="stylesheet" href="/admin/assets/css/project-form.css" />
   <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" />
   <title>Delete current project</title>

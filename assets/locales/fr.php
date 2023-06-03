@@ -10,7 +10,7 @@ $trad = [
   'divHome' => [
     'h1' => "Hey, Je m'appelle DIALLO",
     'h3' => 'Developpeur Web',
-    'p' => 'Expérience de haut niveau dans le web design et la connaissance, la production de travail de qualité.',
+    'p' => 'Jeune développeur web talentueux avec un impressionnant portfolio de projets de haute qualité.',
     'a' => 'Decouvrez mes projets'
   ],
   'projectSection' => [

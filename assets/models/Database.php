@@ -3,14 +3,30 @@
 abstract class Database
 {
   protected PDO $pdo;
-  private const HOST = 'mysql-fellah.alwaysdata.net';
-  private const DBNAME = 'fellah_database';
-  private const USER = 'fellah_phpmyadmi';
-  private const PASS = 'famillediallo';
+  private static $host;
+  private static $dbname;
+  private static $user;
+  private static $password;
+
+  public static function setCredentials()
+  {
+    self::$host = $_ENV['DB_HOST'];
+    self::$dbname = $_ENV['DB_NAME'];
+    self::$user = $_ENV['DB_USER'];
+    self::$password = $_ENV['DB_PASSWORD'];
+  }
 
   public function __construct()
   {
-    $this->pdo = new PDO('mysql:host=' . Database::HOST . ';dbname=' . Database::DBNAME, Database::USER, Database::PASS);
+    Database::setCredentials();
+
+    // Use the credentials to connect to the database
+    $pdo = new PDO(
+      'mysql:host=' . Database::$host . ';dbname=' . Database::$dbname,
+      Database::$user,
+      Database::$password
+    );
+
     $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }

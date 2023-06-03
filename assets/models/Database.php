@@ -21,7 +21,7 @@ abstract class Database
     Database::setCredentials();
 
     // Use the credentials to connect to the database
-    $pdo = new PDO(
+    $this->pdo = new PDO(
       'mysql:host=' . Database::$host . ';dbname=' . Database::$dbname,
       Database::$user,
       Database::$password

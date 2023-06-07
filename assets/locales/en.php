@@ -28,7 +28,7 @@ $trad = [
     "div2 p2" => "67000 Strasbourg",
     "div3 h3" => "Phone number",
     "div3 p1" => "Mon-Fri from 8AM-5PM",
-    "div3 p2" => "0753103914"
+    "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [
     "h1" => "Touch with me",

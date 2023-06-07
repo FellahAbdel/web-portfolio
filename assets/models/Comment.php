@@ -12,8 +12,8 @@ class Comment extends Database
 
   private function initTable()
   {
-    $this->pdo->query("CREATE TABLE IF NOT EXISTS comments(
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
+    $this->pdo->query("CREATE TABLE IF NOT EXISTS comments (
+      id INTEGER PRIMARY KEY AUTO_INCREMENT,
       pseudo VARCHAR(255) NOT NULL,
       comment TEXT NOT NULL,
       projectId INTEGER,

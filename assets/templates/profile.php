@@ -1,13 +1,13 @@
         <div>
           <ul>
             <li>
-              <a href=""><i class="mdi mdi-github"></i></a>
+              <a href="https://github.com/FellahAbdel"><i class="mdi mdi-github"></i></a>
             </li>
             <li>
-              <a href=""><i class="mdi mdi-twitter"></i></a>
+              <a href="https://twitter.com/home"><i class="mdi mdi-twitter"></i></a>
             </li>
             <li>
-              <a href=""><i class="mdi mdi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/diallo-abdoul-aziz-b174951bb/"><i class="mdi mdi-linkedin"></i></a>
             </li>
             <li></li>
           </ul>

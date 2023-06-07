@@ -33,7 +33,7 @@ $trad = [
   "contact-second-section" => [
     "h1" => "CONTACTEZ-MOI",
     "p" => "Merci de l'intérêt que vous portez a mon profile. Veuillez utiliser ce
-            formulaire pour me contacter. Réponse rapide assurée !",
+            formulaire pour me contacter.",
     "label1" => "Prénom",
     "label2" => "Email",
     "label3" => "Numéro de téléphone",

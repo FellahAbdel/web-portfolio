@@ -51,6 +51,7 @@ function checkInput($data)
       <h1><?= $project["title"] ?></h1>
       <p><?= $project["description"] ?></p>
     </article>
+    <hr>
     <h2><?= $trad["form-item"]["h2"] ?></h2>
     <form class="form-item" action="/assets/php/getComment.php" method="get">
       <div class="form-control">
@@ -60,8 +61,6 @@ function checkInput($data)
         <i class="mdi mdi-alert-circle"></i>
         <small>Error message</small>
       </div>
-
-
       <div class="form-control">
         <label for="user-msg"><?= $trad["form-item"]["labelComment"] ?></label>
         <textarea name="user-msg" id="user-msg" cols="30" rows="9" placeholder="<?= $trad["form-item"]["commentPlaceholder"] ?>"></textarea>

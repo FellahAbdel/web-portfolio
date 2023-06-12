@@ -107,26 +107,29 @@ nav li select:focus {
     transition: 0.3s;
     height: 100vh;
   }
+
+  header ul li {
+    display: flex !important;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav li:last-child {
+    margin-top: 30px;
+    margin-left: 33%;
+  }
 }
 
 /* nav item */
 header ul li {
-  display: flex;
-  align-items: center;
-  margin-left: 25%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-nav li:last-child {
-  margin-top: 30px;
-  margin-left: 33%;
+  text-align: center;
 }
 
 header ul.active {
   left: 0;
 }
-
 /* --------------------------------------------- */
 
 /* 
@@ -177,9 +180,9 @@ nav li:last-child::after {
   color: #23b499;
 }
 
-/* header li {
+header li {
   margin-left: 20px;
-} */
+}
 
 header li a {
   color: #201f04;

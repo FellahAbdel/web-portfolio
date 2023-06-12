@@ -1,12 +1,19 @@
 <?php
-$en_select = "";
-$fr_select = "";
-if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
+session_start();
+
+if (isset($_GET['lang']) && ($_GET['lang'] == 'en' || $_GET['lang'] == 'fr')) {
+  $_SESSION['lang'] = $_GET['lang'];
+} elseif (!isset($_SESSION['lang'])) {
+  $_SESSION['lang'] = 'en'; // Default language
+}
+
+$en_select = ($_SESSION['lang'] == 'en') ? "selected" : "";
+$fr_select = ($_SESSION['lang'] == 'fr') ? "selected" : "";
+
+if ($_SESSION['lang'] == 'en') {
   require_once './assets/locales/en.php';
-  $en_select = "selected";
 } else {
   require_once './assets/locales/fr.php';
-  $fr_select = "selected";
 }
 
 include __DIR__ . '/./assets/models/Projects.php';

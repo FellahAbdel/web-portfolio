@@ -111,13 +111,22 @@ nav li select:focus {
 
 /* nav item */
 header ul li {
-  margin: 14px auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+nav li:last-child {
+  margin-top: 30px;
+  margin-left: 33%;
 }
 
 header ul.active {
   left: 0;
 }
+
 /* --------------------------------------------- */
 
 /* 
@@ -168,9 +177,9 @@ nav li:last-child::after {
   color: #23b499;
 }
 
-header li {
+/* header li {
   margin-left: 20px;
-}
+} */
 
 header li a {
   color: #201f04;

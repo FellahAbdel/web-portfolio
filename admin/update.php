@@ -49,6 +49,7 @@ function checkInput($data)
   <?php
   require_once __DIR__ . '/../assets/templates/head.php'
   ?>
+  <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" />
   <link rel="stylesheet" href="/assets/css/shared.css" />
   <link rel="stylesheet" href="/assets/css/form-item.css" />
   <link rel="stylesheet" href="/admin/assets/css/project-form.css" />

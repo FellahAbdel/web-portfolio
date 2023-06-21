@@ -31,4 +31,7 @@
   </div>
 
   <button type="submit"><?php echo $trad["AdminProjectForm"][$button]; ?></button>
+  <div class="form-group">
+    <a href="/admin/index.php" class="btn btn-dark btn-lg"><span class="mdi mdi-arrow-left"></span> <?= $trad["AdminProjectForm"]["go-back-btn"] ?></a>
+  </div>
 </form>

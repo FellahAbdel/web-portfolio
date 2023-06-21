@@ -221,6 +221,10 @@ main + footer img {
   height: 100%;
 }
 
+nav i {
+  margin-right: 15px;
+}
+
 /* Tablette */
 @media all and (min-width: 742px) {
   /* Hamburger */

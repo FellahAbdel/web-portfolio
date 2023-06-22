@@ -70,6 +70,7 @@ $trad = [
     "update button" => "Update project",
     "question" => "Do you wish to delete this project ?",
     "y-response" => "Yes",
-    "n-response" => "No"
+    "n-response" => "No",
+    "go-back-btn" => "Go back",
   ]
 ];

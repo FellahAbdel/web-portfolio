@@ -2,10 +2,10 @@
 
 $trad = [
   'nav' => [
-    'home' => 'Page d\'acceuil',
+    'home' => 'Acceuil',
     'cv' => 'CV',
     'admin' => 'Admin',
-    'contact' => 'Contactez-moi',
+    'contact' => 'Contactez-moi'
   ],
   'divHome' => [
     'h1' => "Hey, Je m'appelle DIALLO",
@@ -70,6 +70,7 @@ $trad = [
     "update button" => "Modifier",
     "question" => "Voulez-vous vraiment supprimer ce projet ?",
     "y-response" => "Oui",
-    "n-response" => "Non"
+    "n-response" => "Non",
+    "go-back-btn" => "Retour",
   ]
 ];

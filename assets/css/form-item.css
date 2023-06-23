@@ -122,13 +122,6 @@ label {
   display: block;
 }
 
-form button:last-child {
-  width: 35%;
-  margin: 15% auto 15% auto;
-  background-color: black;
-  float: left;
-}
-
 @media all and (min-width: 742px) {
   .form-item {
     width: 50%;

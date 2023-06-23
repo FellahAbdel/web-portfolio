@@ -42,6 +42,7 @@ function checkInput($data)
   <link rel="stylesheet" href="assets/css/shared.css" />
   <link rel="stylesheet" href="assets/css/project-item.css" />
   <link rel="stylesheet" href="assets/css/form-item.css" />
+  <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" />
   <title>Un projet</title>
 </head>
 
@@ -75,7 +76,9 @@ function checkInput($data)
       </div>
       <small><?= $trad["form-item"]["SuccessNotification"] ?></small>
       <button><?= $trad["form-item"]["submitBtn"] ?></button>
-      <a><span class="mdi mdi-arrow-left"></span> <?= $trad["AdminProjectForm"]["go-back-btn"] ?></a>
+      <div class="form-group">
+        <a href="/index.php" class="btn btn-dark btn-lg"><span class="mdi mdi-arrow-left"></span> <?= $trad["AdminProjectForm"]["go-back-btn"] ?></a>
+      </div>
     </form>
   </main>
   <?php

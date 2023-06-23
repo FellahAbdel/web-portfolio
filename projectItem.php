@@ -75,7 +75,7 @@ function checkInput($data)
       </div>
       <small><?= $trad["form-item"]["SuccessNotification"] ?></small>
       <button><?= $trad["form-item"]["submitBtn"] ?></button>
-      <button><span class="mdi mdi-arrow-left"></span> <?= $trad["AdminProjectForm"]["go-back-btn"] ?></button>
+      <a><span class="mdi mdi-arrow-left"></span> <?= $trad["AdminProjectForm"]["go-back-btn"] ?></a>
     </form>
   </main>
   <?php

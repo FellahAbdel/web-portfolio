@@ -225,9 +225,28 @@ nav i {
   margin-right: 15px;
 }
 
-.form-group a {
-  margin-top: 20%;
+.form-group {
+  margin: 40% auto 20%;
 }
+
+.form-group a {
+  /* margin-top: 10%; */
+  background-color: black;
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: underline;
+  text-decoration: none;
+}
+
+.form-group a:hover {
+  background-color: rgb(19, 1, 1);
+  color: rgb(241, 210, 210);
+}
+
+/* .form-group a {
+  margin-top: 20%;
+} */
 /* Tablette */
 @media all and (min-width: 742px) {
   /* Hamburger */
@@ -252,6 +271,9 @@ nav i {
     display: none;
   }
 
+  .form-group {
+    margin: 20% auto 10%;
+  }
   /* Footer en mode tab & pc */
   main + footer li {
     width: 80px;

@@ -42,7 +42,7 @@ function checkInput($data)
   <link rel="stylesheet" href="assets/css/shared.css" />
   <link rel="stylesheet" href="assets/css/project-item.css" />
   <link rel="stylesheet" href="assets/css/form-item.css" />
-  <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" />
+  <!-- <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" /> -->
   <title>Un projet</title>
 </head>
 

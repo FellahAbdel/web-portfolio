@@ -58,23 +58,34 @@ function loadMore() {
     });
 }
 
-// window.addEventListener("scroll", function () {
-//   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-//     loadMore();
-//   }
-// });
+const loadBtn = document.querySelector("#projects ul ~ button");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const footerEntry = entries[0];
-    const footerVisibleRatio = footerEntry.intersectionRatio;
+(function () {
+  //   addNamesToList("ul", 50);
 
-    if (footerVisibleRatio >= 0.9) {
-      loadMore();
-    }
-  },
-  { threshold: 0.9 }
-);
+  // Observe loadBtn
+  const options = {
+    // Use the whole screen as scroll area
+    root: null,
+    // Do not grow or shrink the root area
+    rootMargin: "0px",
+    // Threshold of 1.0 will fire callback when 100% of element is visible
+    threshold: 1.0,
+  };
 
-const footerElement = document.querySelector("footer");
-observer.observe(footerElement);
+  const observer = new IntersectionObserver((entries) => {
+    // Callback to be fired
+    entries.forEach((entry) => {
+      // Only add to list if element is coming into view not leaving
+      if (entry.isIntersecting) {
+        loadMore();
+      }
+    });
+  }, options);
+
+  observer.observe(loadBtn);
+})();
+
+loadBtn.onclick = () => {
+  loadMore();
+};

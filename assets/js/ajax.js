@@ -52,6 +52,9 @@ function loadMore() {
 
       // Update start index for next fetch call
       start += count;
+      if (areAllProjectsLoaded()) {
+        hideLoadButton();
+      }
     })
     .catch(function (error) {
       console.error("Error:", error);
@@ -61,8 +64,6 @@ function loadMore() {
 const loadBtn = document.querySelector("#projects ul ~ button");
 
 (function () {
-  //   addNamesToList("ul", 50);
-
   // Observe loadBtn
   const options = {
     // Use the whole screen as scroll area
@@ -89,3 +90,26 @@ const loadBtn = document.querySelector("#projects ul ~ button");
 loadBtn.onclick = () => {
   loadMore();
 };
+
+let extractedValue;
+
+async function fetchProjects() {
+  try {
+    const response = await fetch("assets/php/projectTableSize.php");
+    const data = await response.json();
+    extractedValue = data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function areAllProjectsLoaded() {
+  // Return true if all projects are loaded, false otherwise
+  return start >= extractedValue;
+}
+
+function hideLoadButton() {
+  loadBtn.style.display = "none";
+}
+
+fetchProjects();

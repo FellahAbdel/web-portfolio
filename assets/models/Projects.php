@@ -207,4 +207,10 @@ class Projects extends Database
 
     return false;
   }
+
+  public function getProjectTableSize()
+  {
+    return $this->pdo->query('SELECT COUNT(*) FROM projects')
+      ->fetchColumn();
+  }
 }

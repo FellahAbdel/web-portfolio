@@ -52,6 +52,9 @@ $trad = [
     "h2" => "Projects list",
     "add" => "Add"
   ],
+  "index" => [
+    "load" => "Loading...",
+  ],
   "adminActions" => [
     "edit" => "Edit",
     "delete" => "Delete"

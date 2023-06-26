@@ -48,6 +48,9 @@ $trad = [
     "commentPlaceholder" => "Rédigez votre commentaire",
     "submitBtn" => "Soumettre"
   ],
+  "index" => [
+    "load" => "Chargement...",
+  ],
   "adminProjectSection" => [
     "h2" => "Liste des projets",
     "add" => "Ajouter"

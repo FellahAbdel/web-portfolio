@@ -106,6 +106,37 @@ section:first-child {
   margin-top: 0;
 }
 
+/* Loader text */
+/* #projects ul ~ p {
+  color: wheat;
+  text-align: center;
+} */
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+#projects ul ~ button {
+  display: block;
+  animation: loadingAnimation 1.5s infinite;
+  color: rgb(246, 246, 216);
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #201f04;
+  border: none;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
 /* On selectionne le button "explore"*/
 footer:last-child {
   text-align: right;

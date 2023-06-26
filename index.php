@@ -80,11 +80,12 @@ $allProject = $projects->getProjectBetween($start, $count);
     </section>
     <section id="projects">
       <h2><?= $trad["projectSection"]["title"] ?></h2>
-      <ul>
+      <ul id="ul">
         <?php foreach ($allProject as $project) : ?>
           <?php include __DIR__ . '/assets/templates/article.php' ?>
         <?php endforeach; ?>
       </ul>
+      <button>Loading...</button>
     </section>
   </main>
   <?php

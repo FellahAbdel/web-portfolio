@@ -85,7 +85,7 @@ $allProject = $projects->getProjectBetween($start, $count);
           <?php include __DIR__ . '/assets/templates/article.php' ?>
         <?php endforeach; ?>
       </ul>
-      <button>Loading...</button>
+      <button><?= $trad["index"]["load"] ?></button>
     </section>
   </main>
   <?php

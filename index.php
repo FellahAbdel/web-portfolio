@@ -61,6 +61,10 @@ $allProject = $projects->getProjectBetween($start, $count);
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLZC5NM8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <header>
     <!--I added this.-->
     <a href="/index.php">Fellah</a>
@@ -95,10 +99,6 @@ $allProject = $projects->getProjectBetween($start, $count);
   <script src="./assets/js/shared-js.js?parent=index.php"></script>
   <script src="./assets/js/ajax.js"></script>
   <script src="./assets/js/main.js"></script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLZC5NM8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

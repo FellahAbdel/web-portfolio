@@ -58,9 +58,7 @@ function checkInput($data)
     <article id="home">
       <img src="/public/uploads/<?= $project["imageName"] ?>" alt="<?= $project["imageAlt"] ?>">
       <h1><?= $project["title"] ?></h1>
-      <div contenteditable="true">
-        <?= htmlspecialchars_decode($project["description"]) ?>
-      </div>
+      <textarea><?= $project["description"] ?></textarea>
     </article>
     <hr>
     <h2><?= $trad["form-item"]["h2"] ?></h2>

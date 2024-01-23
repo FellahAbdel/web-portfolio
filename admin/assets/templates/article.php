@@ -4,7 +4,7 @@
     <div>
       <h2><?= $project["title"] ?> </h2>
       <p>
-        <?= substr($project["description"], 0, 300) ?>
+        <?= htmlspecialchars_decode(substr($project["description"], 0, 300)) ?>
       </p>
     </div>
     <footer>

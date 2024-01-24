@@ -35,7 +35,9 @@ function loadMore() {
                       <article>
                         <div>
                           <h2>${project.title}</h2>
-                          <p>${project.description.substring(0, 300)}</p>
+                          <p>${htmlspecialchars_decode(
+                            project.description
+                          ).substring(0, 350)}...</p>
                         </div>
                         <footer>
                           <a href="projectItem.php?id=${

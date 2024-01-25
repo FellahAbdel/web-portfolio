@@ -1,3 +1,7 @@
+function stripHtmlTags(html) {
+  var doc = new DOMParser().parseFromString(html, "text/html");
+  return doc.body.textContent || "";
+}
 // var start = 3;
 var start = getProjectCount(); //* Are the same
 var count = getProjectCount();
@@ -35,7 +39,10 @@ function loadMore() {
                       <article>
                         <div>
                           <h2>${project.title}</h2>
-                          <p>${project.description.substring(0, 350)}...</p>
+                          <p>${stripHtmlTags(project.description).substring(
+                            0,
+                            350
+                          )}...</p>
                         </div>
                         <footer>
                           <a href="projectItem.php?id=${

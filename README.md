@@ -25,4 +25,22 @@
 - Use of CSS selectors
 - Adherence to the architecture of a web project
 
+## Usage
+
+To run it locally follow the steps below :
+
+```bash
+$ git clone https://github.com/FellahAbdel/web-portfolio.git
+```
+
+Get inside the project and enter :
+
+```bash
+$ php -S localhost:8000
+```
+
+Just a reminder PHP should be installed beforehand.
+
+I also deployed the website on the internet so hit the link below for a tour :
+
 [👉️👉️ Visit the website to see what it looks](http://fellah.alwaysdata.net/)

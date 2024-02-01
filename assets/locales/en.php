@@ -9,8 +9,8 @@ $trad = [
   ],
   'divHome' => [
     'h1' => 'Hi, I\'m DIALLO',
-    'h3' => 'Web developer',
-    'p' => 'Talented junior web developer with an impressive portfolio of high-quality projects.',
+    'h3' => 'CS Student at the University of Strasbourg',
+    'p' => "I am looking for an apprenticeship for the Master's program in Software Science and Engineering at the University of Strasbourg for the upcoming academic year.",
     'a' => 'Discover projects'
   ],
   'projectSection' => [

@@ -10,7 +10,7 @@ $trad = [
   'divHome' => [
     'h1' => 'Hi, I\'m DIALLO',
     'h3' => 'CS Student at the University of Strasbourg',
-    'p' => "I am looking for an apprenticeship for the Master's program in Software Science and Engineering at the University of Strasbourg for the upcoming academic year.",
+    'p' => "I'm seeking an apprenticeship for Strasbourg University's Software Science and Engineering Master's next year.",
     'a' => 'Discover projects'
   ],
   'projectSection' => [
@@ -19,15 +19,15 @@ $trad = [
   ],
   'contact-first-section' => [
     "h2" => "Get in touch",
-    "p" => "I like hearing about you. I’m always here to talk",
+    "p" => "I would be very delighted to see your internship offers.",
     "div1 h3" => "Let's discuss together",
-    "div1 p1" => "I'm here to help you",
-    "div1 p2" => "abdoulaziz@gmail.com",
-    "div2 h3" => "Office",
-    "div2 p1" => "Come tell me Hi",
+    "div1 p1" => "I would be so happy to hear from you.",
+    "div1 p2" => "abdoulazizdiallofouta@gmail.com",
+    "div2 h3" => "Home",
+    "div2 p1" => "Preference in the Grand Est region",
     "div2 p2" => "67000 Strasbourg",
     "div3 h3" => "Phone number",
-    "div3 p1" => "Mon-Fri from 8AM-5PM",
+    "div3 p1" => "Mon-Sun from 8AM-8PM",
     "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [

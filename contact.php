@@ -87,7 +87,7 @@ if ($_SESSION['lang'] == 'en') {
         </ul>
       </section>
       <section>
-        <h1>CONTACTEZ-MOI</h1>
+        <h1><?= $trad["contact-second-section"]["h1"] ?></h1>
         <!-- <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
         </p> -->

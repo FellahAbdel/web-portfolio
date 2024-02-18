@@ -31,7 +31,7 @@ $trad = [
     "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [
-    "h1" => "Touch with me",
+    "h1" => "TOUCH WITH ME",
     "p" => "Thank you for your interest in my profile. Please use this form to 
             contact me.",
     "label1" => "First Name",

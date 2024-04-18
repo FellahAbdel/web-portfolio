@@ -18,7 +18,7 @@
 
 - Translation system for static elements
 - Responsive design (smartphone, tablet, and computer)
-- AJAX request (see more projects button)
+- AJAX request (event on scroll)
 - Management of redundant elements with PHP (navigation bar, footer)
 - Adherence to digital accessibility rules
 - Use of named HTML tags

@@ -1,5 +1,5 @@
-
 <?php
+session_start();
 // $en_select = "";
 // $fr_select = "";
 // if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
@@ -9,7 +9,6 @@
 //   require_once './assets/locales/fr.php';
 //   $fr_select = "selected";
 // }
-session_start();
 
 if (isset($_GET['lang']) && ($_GET['lang'] == 'en' || $_GET['lang'] == 'fr')) {
   $_SESSION['lang'] = $_GET['lang'];

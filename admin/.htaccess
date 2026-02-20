@@ -1,0 +1,4 @@
+AuthName "Private folder"
+AuthType Basic
+AuthUserFile "/home/fellah/www/admin/.htpasswd"
+Require valid-user

@@ -1,0 +1,10 @@
+AuthName 	"Private folder"
+AuthType 	Basic
+AuthUserFile 	"/home/fellah/www/admin/.htpasswd"
+Require 	valid-user
+
+order deny,allow
+deny from all
+allow from 46.193.68.184require user fellah
+ErrorDocument 401 /home/fellah/www/errors.php
+ErrorDocument 403 /home/fellah/www/errors.php

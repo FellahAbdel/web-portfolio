@@ -5,6 +5,6 @@ Require 	valid-user
 
 order deny,allow
 deny from all
-allow from 46.193.68.184 require user fellah
+allow from 213.144.194.150 require user fellah
 ErrorDocument 401 /home/fellah/www/errors.php
 ErrorDocument 403 /home/fellah/www/errors.php

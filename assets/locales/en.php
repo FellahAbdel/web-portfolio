@@ -5,7 +5,8 @@ $trad = [
     'home' => 'Home',
     'cv' => 'CV',
     'admin' => "Admin",
-    'contact' => 'Contact'
+    'contact' => 'Contact',
+    'articles' => 'Articles'
   ],
   'divHome' => [
     'h1' => 'Hi, I\'m DIALLO',
@@ -52,6 +53,16 @@ $trad = [
     "h2" => "Projects list",
     "add" => "Add"
   ],
+  "adminArticleSection" => [
+    "h2" => "Articles list",
+    "add" => "Add",
+    "manage" => "Manage articles"
+  ],
+  "articles" => [
+    "no_articles" => "No articles yet.",
+    "read_more" => "Read more",
+    "back_to_list" => "Back to articles"
+  ],
   "index" => [
     "load" => "Loading...",
   ],
@@ -62,7 +73,10 @@ $trad = [
   "adminPageTitle" => [
     "insert" => "Add new project !",
     "update" => "Update current project",
-    "delete" => "Delete current project"
+    "delete" => "Delete current project",
+    "insertArticle" => "Add new article",
+    "updateArticle" => "Update current article",
+    "deleteArticle" => "Delete current article"
   ],
   "AdminProjectForm" => [
     "project title" => "Project Title",
@@ -72,6 +86,19 @@ $trad = [
     "upload button" => "Add project",
     "update button" => "Update project",
     "question" => "Do you wish to delete this project ?",
+    "y-response" => "Yes",
+    "n-response" => "No",
+    "go-back-btn" => "Go back",
+  ],
+  "AdminArticleForm" => [
+    "title" => "Article Title",
+    "content" => "Article content",
+    "text alt" => "Alternative text of image",
+    "image" => "Select article image !",
+    "upload button" => "Add article",
+    "update button" => "Update article",
+    "delete button" => "Delete article",
+    "question" => "Do you wish to delete this article ?",
     "y-response" => "Yes",
     "n-response" => "No",
     "go-back-btn" => "Go back",

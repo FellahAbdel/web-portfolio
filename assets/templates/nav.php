@@ -4,6 +4,7 @@
           <li><a href="/public/cvDiallo.pdf" target="_blank"><i class="mdi mdi-file-account"></i> <?= $trad['nav']['cv'] ?></a></li>
           <li><a href="/admin/"><i class="mdi mdi-shield-crown"></i> <?= $trad['nav']['admin'] ?></a></li>
           <li><a href="/contact.php"><i class="mdi mdi-account-box"></i> <?= $trad['nav']['contact'] ?></a></li>
+          <li><a href="/articles.php"><i class="mdi mdi-post"></i> <?= $trad['nav']['articles'] ?></a></li>
 
           <li class="select">
             <select id="lang" name="lang">

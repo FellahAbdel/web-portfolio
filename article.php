@@ -39,7 +39,20 @@ if ($id == 1) {
 
       <p>Dans le monde du développement, la guerre des langages est un vieux refrain. Pourtant, Paul a ouvert sa conférence par un "Disclaimer" essentiel : il ne s\'agit pas de savoir quel langage est le meilleur, mais de comprendre comment leurs philosophies divergent et comment elles peuvent se rejoindre autour de pratiques de qualité.</p>
 
-      <h2>Une bataille de philosophies : Rigidité vs Liberté</h2>
+      <div class="table-of-contents">
+        <h3>Table des matières</h3>
+        <ul>
+          <li><a href="#philosophies">1. Une bataille de philosophies : Rigidité vs Liberté</a></li>
+          <li><a href="#standards">2. Transposer les standards Java dans l\'écosystème Python</a></li>
+          <li><a href="#comparatif">3. Le comparatif en un coup d\'œil</a></li>
+          <li><a href="#avis">4. Mon avis sur cette conférence</a></li>
+          <li><a href="#code">5. Pour les curieux : explorez le code</a></li>
+          <li><a href="#references">6. Références et outils utiles</a></li>
+          <li><a href="#conclusion">7. Conclusion</a></li>
+        </ul>
+      </div>
+
+      <h2 id="philosophies">Une bataille de philosophies : Rigidité vs Liberté</h2>
 
       <p>Venant de l\'univers Java / Spring Boot, Paul a souligné le choc culturel vécu lors de sa transition vers Python.</p>
 
@@ -49,7 +62,7 @@ if ($id == 1) {
 
       <p>Cependant, cette liberté peut effrayer le développeur habitué à la rigueur du compilateur Java. C\'est là qu\'interviennent des outils modernes pour "industrialiser" Python.</p>
 
-      <h2>Transposer les standards Java dans l\'écosystème Python</h2>
+      <h2 id="standards">Transposer les standards Java dans l\'écosystème Python</h2>
 
       <p>Pour illustrer ses propos, Paul a présenté un projet de gestion de "Todo" (une application de Todo list) construit avec <strong>FastAPI</strong>, le framework Python qui monte. L\'objectif ? Retrouver la robustesse de Spring Boot.</p>
 
@@ -77,7 +90,7 @@ if ($id == 1) {
         <li><strong>Unit of Work</strong> : Pour gérer les transactions de manière atomique, simulant le fameux <code>@Transactional</code> de Spring.</li>
       </ul>
 
-      <h2>Le comparatif en un coup d\'œil</h2>
+      <h2 id="comparatif">Le comparatif en un coup d\'œil</h2>
 
       <p>Voici le tableau récapitulatif partagé lors de la session pour aider les développeurs à se repérer :</p>
 
@@ -128,13 +141,13 @@ if ($id == 1) {
         </tbody>
       </table>
 
-      <h2>Mon avis sur cette conférence</h2>
+      <h2 id="avis">Mon avis sur cette conférence</h2>
 
       <p>Cette présentation était particulièrement rafraîchissante. Pour quelqu\'un qui ne connaîtrait pas Python, elle permet de briser le mythe du "langage de script un peu brouillon".</p>
 
       <p>Ce que je retiens, c\'est que l\'outil ne doit pas dicter l\'architecture. Paul a prouvé qu\'un développeur peut importer ses bonnes pratiques (Clean Architecture, tests unitaires avec Pytest) quel que soit l\'écosystème. Cependant, il a aussi mis en garde contre l\'anti-pattern majeur : essayer de forcer Python à devenir exactement du Java. Il faut savoir embrasser la légèreté de Python là où elle fait sens.</p>
 
-      <h2>Pour les curieux : explorez le code</h2>
+      <h2 id="code">Pour les curieux : explorez le code</h2>
 
       <p>Pour ceux qui souhaitent comparer les implémentations de leurs propres yeux, Paul a mis à disposition les dépôts GitHub des deux versions du projet (Java et Python). C\'est une ressource précieuse pour observer comment les concepts de Clean Architecture sont transposés d\'un langage à l\'autre.</p>
 
@@ -142,7 +155,20 @@ if ($id == 1) {
         <img src="public/uploads/java-python-qr-code.jpeg" alt="Codes QR vers les dépôts GitHub" style="max-width: 100%; height: auto; border: 1px solid #ddd; padding: 10px;">
       </div>
 
-      <h2>Conclusion</h2>
+      <h2 id="references">Références et outils utiles</h2>
+
+      <p>Pour aller plus loin et mettre en pratique les concepts abordés lors de cette présentation, voici les principales références citées :</p>
+
+      <ul>
+        <li><strong>FastAPI</strong> : Framework web moderne et rapide (haute performance) pour construire des API avec Python.</li>
+        <li><strong>UV (Astral)</strong> : Un installateur et gestionnaire de paquets Python extrêmement rapide, écrit en Rust.</li>
+        <li><strong>SQLAlchemy</strong> : La boîte à outils SQL et le mapping objet-relationnel (ORM) de référence pour Python.</li>
+        <li><strong>Alembic</strong> : Outil de gestion des migrations de base de données pour SQLAlchemy.</li>
+        <li><strong>Pydantic</strong> : Bibliothèque de validation de données et de gestion de paramètres utilisant les annotations de type Python.</li>
+        <li><strong>Ruff</strong> : Linter et formateur de code Python tout-en-un, conçu pour la rapidité.</li>
+      </ul>
+
+      <h2 id="conclusion">Conclusion</h2>
 
       <p>En fin de compte, que l\'on code en Java ou en Python, les problématiques restent les mêmes : comment produire un code maintenable, testable et robuste ? La réponse ne se trouve pas dans le langage, mais dans la rigueur des outils de qualité et la compréhension profonde des frameworks utilisés.</p>
 

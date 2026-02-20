@@ -34,8 +34,8 @@ class Projects extends Database
   {
     $statement = $this->pdo->prepare(
       'SELECT * FROM projects
-      ORDER BY id
-      LIMIT :start, :countP'
+        ORDER BY id DESC
+        LIMIT :start, :countP'
     );
     $statement->bindValue(':start', $startPosition, PDO::PARAM_INT);
     $statement->bindValue(':countP', $countProject, PDO::PARAM_INT);

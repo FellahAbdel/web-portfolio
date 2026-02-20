@@ -9,8 +9,8 @@ $trad = [
   ],
   'divHome' => [
     'h1' => "Hey, Je m'appelle DIALLO",
-    'h3' => 'Developpeur Web',
-    'p' => 'Jeune développeur web talentueux avec un impressionnant portfolio de projets de haute qualité.',
+    'h3' => "Récemment diplômé de l'Université de Strasbourg avec une Licence en Informatique.",
+    'p' => "En recherche d'une alternance pour le Master en Science du Logiciel de l'Université de Toulouse III - Paul Sabatier pour Septembre 2024.",
     'a' => 'Decouvrez mes projets'
   ],
   'projectSection' => [
@@ -19,15 +19,15 @@ $trad = [
   ],
   'contact-first-section' => [
     "h2" => "Entrez en contact",
-    "p" => "J’aime entendre parler de vous. Je suis toujours ici pour discuter",
+    "p" => "Je serai très heureux de voir vos offres d'alternance.",
     "div1 h3" => "Discutez-avec moi",
-    "div1 p1" => "Je suis là pour vous aider",
-    "div1 p2" => "abdoulaziz@gmail.com",
-    "div2 h3" => "Burreau",
-    "div2 p1" => "Venez me dire Bonjour",
+    "div1 p1" => "Je serai très ravi de vous entendre.",
+    "div1 p2" => "abdoulazizdiallofouta@gmail.com",
+    "div2 h3" => "Maison",
+    "div2 p1" => "De preference dans le grand Est",
     "div2 p2" => "67000 Strasbourg",
     "div3 h3" => "Numéro de téléphone",
-    "div3 p1" => "Lun-Vend de 8h-17h",
+    "div3 p1" => "Lun-Vend de 8h-2àh",
     "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [

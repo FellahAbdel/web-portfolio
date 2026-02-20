@@ -9,8 +9,8 @@ $trad = [
   ],
   'divHome' => [
     'h1' => 'Hi, I\'m DIALLO',
-    'h3' => 'Web developer',
-    'p' => 'Talented junior web developer with an impressive portfolio of high-quality projects.',
+    'h3' => 'Recent CS student graduate at the University of Strasbourg',
+    'p' => "Looking for an apprenticeship for the Software Science Master's program at Toulouse University starting in September 2024.",
     'a' => 'Discover projects'
   ],
   'projectSection' => [
@@ -19,19 +19,19 @@ $trad = [
   ],
   'contact-first-section' => [
     "h2" => "Get in touch",
-    "p" => "I like hearing about you. I’m always here to talk",
+    "p" => "I would be very delighted to see your internship offers.",
     "div1 h3" => "Let's discuss together",
-    "div1 p1" => "I'm here to help you",
-    "div1 p2" => "abdoulaziz@gmail.com",
-    "div2 h3" => "Office",
-    "div2 p1" => "Come tell me Hi",
+    "div1 p1" => "I would be so happy to hear from you.",
+    "div1 p2" => "abdoulazizdiallofouta@gmail.com",
+    "div2 h3" => "Home",
+    "div2 p1" => "Preference in the Grand Est region",
     "div2 p2" => "67000 Strasbourg",
     "div3 h3" => "Phone number",
-    "div3 p1" => "Mon-Fri from 8AM-5PM",
+    "div3 p1" => "Mon-Sun from 8AM-8PM",
     "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [
-    "h1" => "Touch with me",
+    "h1" => "TOUCH WITH ME",
     "p" => "Thank you for your interest in my profile. Please use this form to 
             contact me.",
     "label1" => "First Name",

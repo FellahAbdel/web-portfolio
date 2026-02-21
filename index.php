@@ -1,14 +1,5 @@
 <?php
 session_start();
-// $en_select = "";
-// $fr_select = "";
-// if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
-//   require_once './assets/locales/en.php';
-//   $en_select = "selected";
-// } else {
-//   require_once './assets/locales/fr.php';
-//   $fr_select = "selected";
-// }
 
 if (isset($_GET['lang']) && ($_GET['lang'] == 'en' || $_GET['lang'] == 'fr')) {
   $_SESSION['lang'] = $_GET['lang'];
@@ -84,9 +75,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     <section id="projects">
       <h2><?= $trad["projectSection"]["title"] ?></h2>
-      <ul id="ul">
+      <ul id="ul" class="projects-grid">
         <?php foreach ($allProject as $project) : ?>
-          <?php include __DIR__ . '/assets/templates/article.php' ?>
+          <?php include __DIR__ . '/assets/templates/projectCard.php' ?>
         <?php endforeach; ?>
       </ul>
       <button><?= $trad["index"]["load"] ?></button>

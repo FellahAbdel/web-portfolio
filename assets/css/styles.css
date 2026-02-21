@@ -1,229 +1,418 @@
 @import url("./keyframe.css");
 @import url("./common.css");
 
+/* --- Hero Section (Minimaliste & Impactant) --- */
 section:first-child {
-  height: 700px;
-  background-image: url("/assets/images/projects/webDev.jpg");
-  background-position: center;
-  background-size: cover;
-  display: grid;
+  height: 100vh;
+  min-height: 700px;
+  background-color: var(--bg-primary);
+  background-image: none; /* Suppression de l'image de fond sombre */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de fond subtil (Gradient Mesh / Glow) */
+section:first-child::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 113, 227, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  animation: float 10s ease-in-out infinite;
+}
+
+section:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(134, 134, 139, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 20px); }
 }
 
 #home {
-  backdrop-filter: blur(5px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  max-width: 1200px;
   width: 100%;
-  top: 200px;
-  padding: 10px 0;
-  height: 450px;
-  position: relative;
-  top: 120px;
   margin: 0 auto;
-  border-radius: 5px;
-  text-align: center;
-  display: grid;
+  align-items: center;
+  z-index: 1;
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
+  border-radius: 0;
+  height: auto;
+  top: auto;
 }
 
-/* Nouveau look */
-#home svg {
-  width: 200px;
-  fill: rgb(0, 0, 0);
-  display: block;
+/* Colonne Texte (Gauche) */
+#home div:last-child {
+  text-align: left;
+  padding: 0;
+  order: 1; /* Texte à gauche sur desktop */
 }
 
-#home div:first-child {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  justify-items: center;
-  gap: 50px;
-}
-
-#home div:first-child ul {
-  display: grid;
-}
-
-#home div:first-child ul li {
-  height: 2px;
-}
-
-#home div:first-child a {
-  color: black;
-}
-
-#home div:first-child a:hover {
-  color: #201f04;
-}
-
-#home image {
-  width: 170px;
-}
-
-/* Le titre de la page d'acceuil*/
 #home div:last-child h1 {
-  font-size: 2rem;
-  color: white;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-family);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--spacing-4);
+  background: linear-gradient(135deg, var(--text-primary) 0%, #434344 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #home div:last-child h3 {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: antiquewhite;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.5;
 }
 
 #home div:last-child p {
-  color: rgb(255, 255, 255);
-  margin-bottom: 50px;
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-8);
+  max-width: 500px;
+  line-height: 1.6;
 }
 
-/* Pour le button de Discover projects*/
+/* Bouton CTA (Style Apple) */
 #home div:last-child a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: var(--text-primary); /* Noir Apple */
+  color: #FFFFFF;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
   text-decoration: none;
-  background-color: #201f04;
-  padding: 15px 24px;
-  color: rgb(246, 246, 216);
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 2px 4px 8px rgb(68, 67, 67);
-  transition: 0.3s;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-md);
 }
 
 #home div:last-child a:hover {
-  background-color: #141304;
-  color: white;
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
-/* On cible le dernier div dans home */
-#home div:last-child {
-  text-align: left;
-  padding: 15px 20px;
+/* Colonne Image/Avatar (Droite) */
+#home div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2; /* Image à droite sur desktop */
+  position: relative;
 }
 
-/*---------------------------------------------*/
-
-/* Pour le titre de la liste des projets */
-#projects > h2 {
-  margin-top: 0;
+/* Suppression des anciens styles de liste/liens sociaux */
+#home div:first-child ul,
+#home div:first-child ul li,
+#home div:first-child a {
+  display: none;
 }
 
-/* Loader text */
-/* #projects ul ~ p {
-  color: wheat;
-  text-align: center;
-} */
-
-@keyframes loadingAnimation {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.2;
-  }
+/* Style de l'image Avatar */
+#home image,
+#home img,
+#home svg {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-lg); /* Carré arrondi moderne */
+  box-shadow: var(--shadow-xl);
+  transform: rotate(-3deg); /* Petit effet dynamique */
+  transition: var(--transition-smooth);
+  background-color: var(--bg-secondary); /* Placeholder si pas d'image */
 }
 
-#projects ul ~ button {
-  display: block;
-  animation: loadingAnimation 1.5s infinite;
-  color: rgb(246, 246, 216);
-  text-align: center;
-  font-weight: bold;
-  padding: 15px;
-  background-color: #201f04;
-  border: none;
-  border-radius: 15px;
+#home:hover image,
+#home:hover img,
+#home:hover svg {
+  transform: rotate(0deg) scale(1.02);
+}
+
+
+/* --- Section Projets (Grid Moderne) --- */
+#projects {
+  padding: var(--spacing-16) var(--spacing-8);
+  max-width: 1200px;
   margin: 0 auto;
+  /* Gradient subtil pour donner de la profondeur */
+  background: linear-gradient(180deg, var(--bg-primary) 0%, #F8F9FA 100%);
+  border-radius: var(--radius-lg); /* Optionnel : arrondir le bloc */
 }
 
-/* On selectionne le button "explore"*/
-footer:last-child {
-  text-align: right;
+#projects > h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-12);
+  text-align: left; /* Alignement gauche plus moderne */
+  letter-spacing: -0.02em;
 }
 
-footer:last-child a {
-  color: rgb(121, 121, 36);
-  padding: 6px;
-  border-radius: 6px;
+/* Grille de projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-8);
+  padding: 0;
+  list-style: none;
 }
 
-footer:last-child a i {
-  font-size: 16px;
-  vertical-align: middle;
+/* Carte Projet (Style Premium) */
+.project-card {
+  background-color: #FFFFFF; /* Carte blanche */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm); /* Ombre plus douce par défaut */
+  transition: var(--transition-base);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Pour que toutes les cartes aient la même hauteur */
 }
 
-footer:last-child a:hover {
-  color: white;
-  background-color: black;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--border-color);
 }
 
-@media all and (min-width: 742px) {
-  .hamburger {
-    display: none;
-  }
+/* Lien global sur la carte */
+.project-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
 
-  section:first-child {
-    height: 800px;
-  }
+/* Image Wrapper */
+.project-image-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
 
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Overlay au survol */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Plus léger */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.btn-view-project {
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  transform: translateY(10px);
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card:hover .btn-view-project {
+  transform: translateY(0);
+}
+
+/* Contenu de la carte */
+.project-content {
+  padding: var(--spacing-6);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-2);
+}
+
+.project-content h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.project-arrow {
+  font-size: var(--font-size-xl);
+  color: var(--text-tertiary);
+  transition: var(--transition-base);
+  opacity: 0;
+  transform: translate(-5px, 5px);
+}
+
+.project-card:hover .project-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  color: var(--text-primary);
+}
+
+.project-content p {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-6);
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: auto;
+}
+
+.tag {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 4px 12px;
+  border-radius: var(--radius-full); /* Pill shape */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  transition: var(--transition-base);
+}
+
+.project-card:hover .tag {
+  border-color: var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+/* Loader Button */
+#projects ul ~ button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  margin-top: var(--spacing-8);
+  transition: var(--transition-base);
+  animation: none; /* On enlève l'animation clignotante */
+  display: block;
+  margin: var(--spacing-8) auto 0;
+}
+
+#projects ul ~ button:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--text-secondary);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
   #home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-8);
+  }
+
+  #home div:last-child {
+    order: 2;
+    text-align: center;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.406);
-    padding: 10px 50px;
-    margin-top: 70px;
   }
 
-  #home svg {
-    fill: beige;
-  }
-
-  #home div:first-child a {
-    color: beige;
-  }
-
-  #home div:first-child a:hover {
-    color: rgb(209, 209, 196);
+  #home div:first-child {
+    order: 1;
   }
 
   #home div:last-child h1 {
-    font-size: 40px;
+    font-size: var(--font-size-4xl);
   }
 
-  #home div:last-child h3 {
-    font-size: 25px;
-  }
-
-  #home div:last-child p {
-    font-size: 19px;
+  section:first-child::before,
+  section:first-child::after {
+    display: none; /* Performance mobile */
   }
 }
 
-@media all and (min-width: 1140px) {
-  #home {
-    width: 60%;
-  }
-
-  #home image {
-    width: 190px;
-  }
-
+@media (max-width: 768px) {
   #home div:last-child h1 {
-    font-size: 45px;
+    font-size: var(--font-size-3xl);
   }
 
-  #home div:last-child h3 {
-    font-size: 30px;
+  #home image,
+  #home img,
+  #home svg {
+    width: 200px;
+    height: 200px;
   }
 
-  #home div:last-child p {
-    font-size: 24px;
-  }
-
-  footer:last-child a:hover {
-    animation: danse 300ms ease-out;
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }

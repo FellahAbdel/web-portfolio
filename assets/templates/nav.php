@@ -13,7 +13,7 @@
             </select>
           </li>
         </ul>
-        <div>
+        <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>

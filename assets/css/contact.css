@@ -1,141 +1,262 @@
-body {
-  margin: 0;
-}
+/* --- Contact Page (Premium Style) --- */
 
 main {
-  height: 1015px;
-  background: url("/assets/images/projects/web3.jpg");
-  background-position: center;
-  background-size: cover;
+  padding-top: 100px; /* Espace pour le header fixe */
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-main > div {
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-8);
+  width: 100%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-16);
+  align-items: start;
+}
+
+/* --- Colonne Infos (Gauche) --- */
+.contact-info h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+  letter-spacing: -0.02em;
+}
+
+.contact-intro {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-12);
+  line-height: 1.6;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.info-item {
+  display: flex;
+  gap: var(--spacing-6);
+  align-items: flex-start;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.info-content h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.info-content p,
+.info-content a {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.link-text {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: var(--transition-base);
+  border-bottom: 1px solid transparent;
+}
+
+.link-text:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* --- Colonne Formulaire (Droite) --- */
+.contact-form-wrapper {
+  background-color: #FFFFFF;
+  padding: var(--spacing-12);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+}
+
+.form-header {
+  margin-bottom: var(--spacing-8);
+}
+
+.form-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.form-header p {
+  color: var(--text-secondary);
+}
+
+/* Formulaire Premium */
+.premium-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+}
+
+.form-control {
   position: relative;
-  top: 90px;
-  padding: 0.5rem;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-main.hide {
-  display: none;
+.form-control label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
 }
 
-footer.hide {
-  display: none;
-}
-main > div.change-top {
-  top: 250px !important ;
-}
-
-main.change-height {
-  height: 1040px !important;
-}
-
-section:last-child p {
-  margin-bottom: 3rem;
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  background-color: var(--bg-secondary);
+  transition: var(--transition-base);
+  font-family: inherit;
 }
 
-/* Pour pc & tab */
-main li {
-  display: none;
+.form-control input:focus,
+.form-control textarea:focus {
+  background-color: #FFFFFF;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px var(--accent-light);
 }
 
-div p:last-child {
-  font-weight: bold;
+/* Validation Icons */
+.form-control i {
+  position: absolute;
+  right: var(--spacing-3);
+  top: 42px; /* Ajusté selon label + padding */
+  font-size: var(--font-size-lg);
+  opacity: 0;
+  transition: var(--transition-base);
 }
 
-i {
-  font-size: 1.17rem;
+.form-control.success input {
+  border-color: #10B981;
 }
 
-/* Pour pc & tabl */
-section:first-child {
-  display: none;
+.form-control.success .success-icon {
+  color: #10B981;
+  opacity: 1;
 }
 
-section:last-child {
-  background-color: rgba(255, 255, 255, 0.957);
-  backdrop-filter: blur(3px);
-
-  padding: 2rem;
-  font-family: "Roboto", sans-serif;
-  border-radius: 5px;
-
-  /* Seulement en mode mobile*/
-  height: 820px;
-  box-shadow: 2px 0 3px black;
-  width: 70%;
-  margin: 25px auto;
+.form-control.error input {
+  border-color: #EF4444;
 }
 
-label {
-  margin-bottom: 0.2rem;
+.form-control.error .error-icon {
+  color: #EF4444;
+  opacity: 1;
+}
+
+.form-control small {
+  color: #EF4444;
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-1);
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: var(--transition-base);
+}
+
+.form-control.error small {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: var(--spacing-4);
+  background-color: var(--text-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-submit:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.success-msg {
   display: block;
+  color: #10B981;
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+  opacity: 0; /* Caché par défaut */
 }
 
-/* Nouvo design sur le formulaire */
-/* Le code qui devait être là je l'ai dans le form-item.css comme ça je pourrais 
-utilisé le même CSS pour le comment-form dans projectItem.php 
-*/
-
-/* Tablette */
-@media all and (min-width: 742px) {
-  main {
-    height: 1050px;
+/* Responsive */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
   }
 
-  main > div {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin: auto 100px;
-    padding: 0;
-    top: 220px;
+  .contact-info {
+    text-align: center;
   }
 
-  section:first-child {
-    display: block;
-    background-color: rgba(135, 49, 138, 0.658);
-    backdrop-filter: blur(5px);
-    padding: 0 0.8rem;
-    border-radius: 5px 0 0 5px;
-    color: rgb(255, 247, 231);
+  .info-list {
+    align-items: center;
   }
 
-  section:last-child {
-    width: auto;
-    padding: 15px 3rem;
-    margin: 0 auto; /* To override the margin applied in mobile form */
-    border-radius: 0 6px 6px 0;
-  }
-
-  main li {
-    display: grid;
-    grid-template-columns: 30px 1fr;
-    align-items: baseline;
-  }
-
-  form div ~ small {
-    top: 725px;
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
-/* Pcs */
-@media all and (min-width: 1140px) {
-  main > div {
-    width: 70%;
-    margin: auto; /* Center the form */
-    justify-content: center;
-    grid-gap: 0;
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
-  section:last-child {
-    padding: 0 3rem;
-
-    box-sizing: border-box; /* make sure padding and border are included in the width */
-    width: 100%;
-  }
-
-  form div ~ small {
-    top: 690px;
+  .contact-form-wrapper {
+    padding: var(--spacing-6);
   }
 }

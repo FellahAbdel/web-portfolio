@@ -2,23 +2,9 @@ function stripHtmlTags(html) {
   var doc = new DOMParser().parseFromString(html, "text/html");
   return doc.body.textContent || "";
 }
-// var start = 3;
-var start = getProjectCount(); //* Are the same
-var count = getProjectCount();
 
-function getProjectCount() {
-  // Return different project count based on screen size
-  if (window.innerWidth >= 1140) {
-    // Desktop
-    return 3;
-  } else if (window.innerWidth >= 742) {
-    // tablet
-    return 2;
-  } else {
-    // Mobile phone
-    return 1;
-  }
-}
+var start = 3; // Initialement 3 projets chargés par PHP
+var count = 3; // On charge 3 par 3 ensuite
 
 function loadMore() {
   fetch("assets/models/getProjects.php?start=" + start + "&count=" + count)
@@ -31,35 +17,46 @@ function loadMore() {
     .then(function (projects) {
       // Append projects to container element
       projects.forEach(function (project) {
+        // Nouveau template HTML correspondant à projectCard.php
         const html = `
-                    <li>
-                      <img src="/public/uploads/${project.imageName}" alt="${
-          project.imageAlt
-        }" />
-                      <article>
-                        <div>
-                          <h2>${project.title}</h2>
-                          <p>${stripHtmlTags(project.description).substring(
-                            0,
-                            350
-                          )}...</p>
-                        </div>
-                        <footer>
-                          <a href="projectItem.php?id=${
-                            project.id
-                          }">explore <i class="mdi mdi-arrow-right-thick" ></i></a>
-                        </footer>
-                      </article>
-                    </li>
-                    `;
-        document
-          .querySelector("#projects ul")
-          .insertAdjacentHTML("beforeend", html);
+          <li class="project-card">
+            <a href="/projectItem.php?id=${project.id}" class="project-link-wrapper">
+              <div class="project-image-wrapper">
+                <img src="/public/uploads/${project.imageName}" alt="${project.imageAlt}" loading="lazy" />
+                <div class="project-overlay">
+                  <span class="btn-view-project">
+                    Voir <i class="mdi mdi-arrow-right"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>${project.title}</h3>
+                  <i class="mdi mdi-arrow-top-right project-arrow"></i>
+                </div>
+                <p>
+                  ${stripHtmlTags(project.description).substring(0, 120)}...
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Web</span>
+                  <span class="tag">Dev</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        `;
+        
+        const projectsList = document.querySelector("#projects ul");
+        if (projectsList) {
+            projectsList.insertAdjacentHTML("beforeend", html);
+        }
       });
 
       // Update start index for next fetch call
       start += count;
-      if (areAllProjectsLoaded()) {
+      
+      // Vérification si tous les projets sont chargés
+      if (extractedValue && start >= extractedValue) {
         hideLoadButton();
       }
     })
@@ -70,53 +67,57 @@ function loadMore() {
 
 const loadBtn = document.querySelector("#projects ul ~ button");
 
-(function () {
-  // Observe loadBtn
-  const options = {
-    // Use the whole screen as scroll area
-    root: null,
-    // Do not grow or shrink the root area
-    rootMargin: "0px",
-    // Threshold of 1.0 will fire callback when 100% of element is visible
-    threshold: 1.0,
-  };
+if (loadBtn) {
+    // Observer pour le chargement infini
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1, // Déclencher un peu avant que le bouton soit totalement visible
+    };
 
-  const observer = new IntersectionObserver((entries) => {
-    // Callback to be fired
-    entries.forEach((entry) => {
-      // Only add to list if element is coming into view not leaving
-      if (entry.isIntersecting) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // On vérifie si on n'a pas déjà tout chargé
+                if (!extractedValue || start < extractedValue) {
+                    loadMore();
+                } else {
+                    hideLoadButton();
+                }
+            }
+        });
+    }, options);
+
+    observer.observe(loadBtn);
+
+    loadBtn.onclick = () => {
         loadMore();
-      }
-    });
-  }, options);
-
-  observer.observe(loadBtn);
-})();
-
-loadBtn.onclick = () => {
-  loadMore();
-};
+    };
+}
 
 let extractedValue;
 
 async function fetchProjects() {
   try {
     const response = await fetch("assets/php/projectTableSize.php");
-    const data = await response.json();
-    extractedValue = data;
+    if (response.ok) {
+        const data = await response.json();
+        extractedValue = data;
+        // Si on a déjà tout affiché au chargement initial
+        if (start >= extractedValue) {
+            hideLoadButton();
+        }
+    }
   } catch (error) {
     console.error(error);
   }
 }
 
-function areAllProjectsLoaded() {
-  // Return true if all projects are loaded, false otherwise
-  return start >= extractedValue;
-}
-
 function hideLoadButton() {
-  loadBtn.style.display = "none";
+  if (loadBtn) {
+    loadBtn.style.display = "none";
+  }
 }
 
+// Initialisation
 fetchProjects();

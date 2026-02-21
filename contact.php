@@ -1,14 +1,4 @@
 <?php
-// $en_select = "";
-// $fr_select = "";
-// if (isset($_GET['lang']) && $_GET['lang'] == 'en' || !isset($_GET['lang'])) {
-//   require_once './assets/locales/en.php';
-//   $en_select = "selected";
-// } else {
-//   require_once './assets/locales/fr.php';
-//   $fr_select = "selected";
-// }
-
 session_start();
 
 if (isset($_GET['lang']) && ($_GET['lang'] == 'en' || $_GET['lang'] == 'fr')) {
@@ -25,8 +15,6 @@ if ($_SESSION['lang'] == 'en') {
 } else {
   require_once './assets/locales/fr.php';
 }
-// var_dump($_GET['lang']);
-
 ?>
 
 <!DOCTYPE html>
@@ -37,67 +25,74 @@ if ($_SESSION['lang'] == 'en') {
   require_once './assets/templates/head.php'
   ?>
   <link rel="stylesheet" href="assets/css/shared.css" />
-  <link rel="stylesheet" href="assets/css/form-item.css" />
   <link rel="stylesheet" href="assets/css/contact.css" />
-  <title>contact</title>
+  <title>Contact - Fellah</title>
 </head>
 
 
 <body>
   <header>
-    <!--I added this.-->
     <a href="/index.php">Fellah</a>
     <?php
     include './assets/templates/nav.php'
     ?>
   </header>
   <main>
-    <!-- <h1>Contactez-moi</h1> -->
-    <div>
-      <section>
-        <h2><?= $trad["contact-first-section"]["h2"] ?></h2>
-        <p>
-          <?= $trad["contact-first-section"]["p"] ?>
-        </p>
-        <ul>
-          <li>
-            <i class="mdi mdi-email-outline"></i>
-            <div>
-              <h3> <?= $trad["contact-first-section"]["div1 h3"] ?> </h3>
-              <p><?= $trad["contact-first-section"]["div1 p1"] ?></p>
-              <p><?= $trad["contact-first-section"]["div1 p2"] ?></p>
-            </div>
-          </li>
-          <li>
-            <i class="mdi mdi-map-marker"></i>
-            <div>
-              <h3> <?= $trad["contact-first-section"]["div2 h3"] ?> </h3>
-              <p><?= $trad["contact-first-section"]["div2 p1"] ?></p>
-              <p><?= $trad["contact-first-section"]["div2 p2"] ?></p>
-            </div>
-          </li>
-          <li>
-            <i class="mdi mdi-phone"></i>
-            <div>
-              <h3> <?= $trad["contact-first-section"]["div3 h3"] ?> </h3>
-              <p><?= $trad["contact-first-section"]["div3 p1"] ?></p>
-              <p><?= $trad["contact-first-section"]["div3 p2"] ?></p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h1><?= $trad["contact-second-section"]["h1"] ?></h1>
-        <!-- <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-        </p> -->
-        <p>
-          <?= $trad["contact-second-section"]["p"] ?>
-        </p>
-        <?php
-        require_once './assets/templates/form.php'
-        ?>
-      </section>
+    <div class="contact-container">
+      <div class="contact-grid">
+        <!-- Section Infos (Gauche) -->
+        <section class="contact-info">
+          <h2><?= $trad["contact-first-section"]["h2"] ?></h2>
+          <p class="contact-intro">
+            <?= $trad["contact-first-section"]["p"] ?>
+          </p>
+          
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="icon-box">
+                <i class="mdi mdi-email-outline"></i>
+              </div>
+              <div class="info-content">
+                <h3><?= $trad["contact-first-section"]["div1 h3"] ?></h3>
+                <p><?= $trad["contact-first-section"]["div1 p1"] ?></p>
+                <a href="mailto:<?= $trad["contact-first-section"]["div1 p2"] ?>" class="link-text"><?= $trad["contact-first-section"]["div1 p2"] ?></a>
+              </div>
+            </li>
+            
+            <li class="info-item">
+              <div class="icon-box">
+                <i class="mdi mdi-map-marker-outline"></i>
+              </div>
+              <div class="info-content">
+                <h3><?= $trad["contact-first-section"]["div2 h3"] ?></h3>
+                <p><?= $trad["contact-first-section"]["div2 p1"] ?></p>
+                <p class="sub-text"><?= $trad["contact-first-section"]["div2 p2"] ?></p>
+              </div>
+            </li>
+            
+            <li class="info-item">
+              <div class="icon-box">
+                <i class="mdi mdi-phone-outline"></i>
+              </div>
+              <div class="info-content">
+                <h3><?= $trad["contact-first-section"]["div3 h3"] ?></h3>
+                <p><?= $trad["contact-first-section"]["div3 p1"] ?></p>
+                <a href="tel:<?= str_replace(' ', '', $trad["contact-first-section"]["div3 p2"]) ?>" class="link-text"><?= $trad["contact-first-section"]["div3 p2"] ?></a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section Formulaire (Droite) -->
+        <section class="contact-form-wrapper">
+          <div class="form-header">
+            <h1><?= $trad["contact-second-section"]["h1"] ?></h1>
+            <p><?= $trad["contact-second-section"]["p"] ?></p>
+          </div>
+          
+          <?php require_once './assets/templates/form.php' ?>
+        </section>
+      </div>
     </div>
   </main>
   <?php

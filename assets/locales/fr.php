@@ -9,9 +9,9 @@ $trad = [
     'articles' => 'Articles'
   ],
   'divHome' => [
-    'h1' => "Hey, Je m'appelle DIALLO",
-    'h3' => "Récemment diplômé de l'Université de Strasbourg avec une Licence en Informatique.",
-    'p' => "En recherche d'une alternance pour le Master en Science du Logiciel de l'Université de Toulouse III - Paul Sabatier pour Septembre 2024.",
+    'h1' => "Hey, moi c'est Aziz",
+    'h3' => "Apprenti développeur dans le cadre de mon Master 2 en Sciences du Logiciel.",
+    'p' => "Passionné par le développement web et logiciel, je suis actuellement en formation à l'Université de Toulouse",
     'a' => 'Decouvrez mes projets'
   ],
   'projectSection' => [

@@ -146,7 +146,7 @@ section:first-child::after {
 #home svg {
   width: 320px;
   height: 320px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-lg); /* Carré arrondi moderne */
   box-shadow: var(--shadow-xl);
   transform: rotate(-3deg); /* Petit effet dynamique */

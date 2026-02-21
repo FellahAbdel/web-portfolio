@@ -160,12 +160,12 @@ if ($id == 1) {
       <p>Pour aller plus loin et mettre en pratique les concepts abordés lors de cette présentation, voici les principales références citées :</p>
 
       <ul>
-        <li><strong>FastAPI</strong> : Framework web moderne et rapide (haute performance) pour construire des API avec Python.</li>
-        <li><strong>UV (Astral)</strong> : Un installateur et gestionnaire de paquets Python extrêmement rapide, écrit en Rust.</li>
-        <li><strong>SQLAlchemy</strong> : La boîte à outils SQL et le mapping objet-relationnel (ORM) de référence pour Python.</li>
-        <li><strong>Alembic</strong> : Outil de gestion des migrations de base de données pour SQLAlchemy.</li>
-        <li><strong>Pydantic</strong> : Bibliothèque de validation de données et de gestion de paramètres utilisant les annotations de type Python.</li>
-        <li><strong>Ruff</strong> : Linter et formateur de code Python tout-en-un, conçu pour la rapidité.</li>
+        <li><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer"><strong>FastAPI</strong></a> : Framework web moderne et rapide (haute performance) pour construire des API avec Python.</li>
+        <li><a href="https://github.com/astral-sh/uv" target="_blank" rel="noopener noreferrer"><strong>UV (Astral)</strong></a> : Un installateur et gestionnaire de paquets Python extrêmement rapide, écrit en Rust.</li>
+        <li><a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener noreferrer"><strong>SQLAlchemy</strong></a> : La boîte à outils SQL et le mapping objet-relationnel (ORM) de référence pour Python.</li>
+        <li><a href="https://alembic.sqlalchemy.org/en/latest/" target="_blank" rel="noopener noreferrer"><strong>Alembic</strong></a> : Outil de gestion des migrations de base de données pour SQLAlchemy.</li>
+        <li><a href="https://docs.pydantic.dev/latest/" target="_blank" rel="noopener noreferrer"><strong>Pydantic</strong></a> : Bibliothèque de validation de données et de gestion de paramètres utilisant les annotations de type Python.</li>
+        <li><a href="https://docs.astral.sh/ruff/" target="_blank" rel="noopener noreferrer"><strong>Ruff</strong></a> : Linter et formateur de code Python tout-en-un, conçu pour la rapidité.</li>
       </ul>
 
       <h2 id="conclusion">Conclusion</h2>

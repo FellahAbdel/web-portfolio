@@ -1,7 +1,7 @@
       <nav>
         <ul>
           <li><a href="/index.php"><i class="mdi mdi-home-circle"></i> <?= $trad['nav']['home'] ?> </a> </li>
-          <li><a href="/public/cvDiallo.pdf" target="_blank"><i class="mdi mdi-file-account"></i> <?= $trad['nav']['cv'] ?></a></li>
+          <li><a href="/cv.php"><i class="mdi mdi-file-account"></i> <?= $trad['nav']['cv'] ?></a></li>
           <li><a href="/admin/"><i class="mdi mdi-shield-crown"></i> <?= $trad['nav']['admin'] ?></a></li>
           <li><a href="/contact.php"><i class="mdi mdi-account-box"></i> <?= $trad['nav']['contact'] ?></a></li>
           <li><a href="/articles.php"><i class="mdi mdi-post"></i> <?= $trad['nav']['articles'] ?></a></li>

@@ -102,5 +102,168 @@ $trad = [
     "y-response" => "Oui",
     "n-response" => "Non",
     "go-back-btn" => "Retour",
+  ],
+  "cv" => [
+    "title" => "Ingénieur Logiciel Fullstack",
+    "availability" => "Disponible : Septembre 2026",
+    "location" => "Toulouse 31000, France",
+    "license" => "Permis B",
+    "intro" => "Actuellement en fin de cycle de Master Sciences du Logiciel et fort de deux ans d’expérience en alternance chez Capgemini, je suis à la recherche d’un CDI en développement logiciel / fullstack pour consolider et mettre à profit mes compétences techniques.",
+    "sections" => [
+      "skills" => "Compétences",
+      "experience" => "Expériences Professionnelles",
+      "education" => "Formations",
+      "projects" => "Projets Académiques & Personnels",
+      "languages" => "Langues & Intérêts",
+      "references" => "Références"
+    ],
+    "hard_skills" => [
+      "title" => "Hard Skills",
+      "items" => [
+        "Méthodologie" => "Agile - Scrum - SAFe",
+        "Langages" => "Java, JavaScript, Python, PHP",
+        "Web & Mobile" => "Spring Boot, Angular, Vue.js, React, Android",
+        "DevOps" => "Ansible, Docker Swarm, Traefik, GitHub Actions, SonarQube",
+        "Monitoring" => "Prometheus, Micrometer, Actuator",
+        "BDD" => "PostgreSQL, Oracle, MongoDB, MySQL, SQLite"
+      ]
+    ],
+    "soft_skills" => [
+      "title" => "Soft Skills",
+      "items" => [
+        "Adaptabilité & Autonomie",
+        "Esprit d’équipe & Collaboration",
+        "Méthodologie Agile (Scrum)",
+        "Leadership (Rôle Tech-lead)",
+        "Gestion de projet (Gantt, Trello)"
+      ]
+    ],
+    "experiences" => [
+      [
+        "period" => "Nov. 2024 – Sep. 2026",
+        "role" => "Développeur Logiciel / Fullstack (Alternance)",
+        "company" => "Capgemini, Toulouse",
+        "description" => "Intervention sur l’ensemble du cycle de vie logiciel (Build & Run) dans un contexte Agile :",
+        "details" => [
+          "Développement : Conception d’API REST, implémentation d’interfaces utilisateur et maintenance d’applications Web et microservices.",
+          "Qualité : Rédaction et exécution des tests de recette sur Jira, et amélioration continue de la couverture par des tests.",
+          "Documentation : Création et maintenance de la documentation technique et fonctionnelle sur Confluence.",
+          "Run & Support : Monitoring, supervision et traitement des tickets d’incidents."
+        ],
+        "tech" => "Java, Spring Boot, Angular, PostgreSQL, Oracle, Jenkins, Git, Gitlab, Confluence, Jira"
+      ],
+      [
+        "period" => "Sep. 2024 – Oct. 2024",
+        "role" => "Développeur Back-end / Ops",
+        "company" => "Zerofiltre.tech",
+        "description" => "Contrat de développeur suite au stage de fin de licence."
+      ],
+      [
+        "period" => "Juin 2024 – Août 2024",
+        "role" => "Développeur Back-end / Ops (Stage)",
+        "company" => "Zerofiltre.tech",
+        "description" => "Développement de nouvelles fonctionalités backend et gestion de l’infrastructure opérationnelle.",
+        "tech" => "Java 17, Maven, Spring Boot, Docker, Kubernetes, GitHub Actions, JUnit"
+      ]
+    ],
+    "education" => [
+      [
+        "period" => "2024 – 2026",
+        "title" => "Master Sciences du Logiciel",
+        "institution" => "Université de Toulouse III - Paul Sabatier, Toulouse"
+      ],
+      [
+        "period" => "2021 – 2024",
+        "title" => "Licence Informatique",
+        "institution" => "Université de Strasbourg, Strasbourg"
+      ],
+      [
+        "period" => "2019 – 2021",
+        "title" => "DEUST Mathématiques-Physique-Chimie",
+        "institution" => "Université Moulay Ismaïl, Maroc"
+      ]
+    ],
+    "projects" => [
+      "master2" => [
+        "title" => "Master 2 (2026)",
+        "items" => [
+          [
+            "date" => "2026",
+            "title" => "Projet DevOps : Gestion de tâches (Todo)",
+            "description" => "Développement d’une application de gestion de tâches avec une chaîne complète d’intégration continue, déploiement automatisé et monitoring sur VM conteneurisées.",
+            "details" => [
+              "Backend REST avec Spring Boot (Java / Kotlin / Groovy).",
+              "Automatisation du déploiement avec Ansible et Docker Swarm.",
+              "CI/CD : GitHub Actions, SonarQube, Traefik.",
+              "Monitoring : Prometheus, Micrometer, Spring Boot Actuator."
+            ]
+          ],
+          [
+            "date" => "2026",
+            "title" => "Booking Resto",
+            "description" => "Développement d’une application mobile Android (Java) permettant de consulter des restaurants, effectuer des réservations et publier des avis avec photos enrichies et géolocalisées.",
+            "details" => [
+              "Publication d’avis via CameraX et Canvas API.",
+              "Intégration de la géolocalisation (API GPS) et Google Maps.",
+              "Utilisation des capteurs Android et stockage via Firebase."
+            ],
+            "tools" => "Android Studio"
+          ],
+          [
+            "date" => "2026",
+            "title" => "Day Challenge",
+            "description" => "Développement d’un jeu mobile réalisé en une journée."
+          ]
+        ]
+      ],
+      "master1" => [
+        "title" => "Master 1 (2025)",
+        "items" => [
+          [
+            "date" => "2025",
+            "title" => "Jeu de lettres (Inspiré Motus/Wordle)",
+            "description" => "Application web interactive développée avec Vue.js où l’utilisateur devine un mot avec des indices visuels."
+          ],
+          [
+            "date" => "2025",
+            "title" => "Webservice RESTful de Recettes",
+            "description" => "Service utilisant Jakarta RESTful Web Services (JAX-RS) pour récupérer des recettes via l’API Edamam."
+          ]
+        ]
+      ],
+      "licence" => [
+        "title" => "Années précédentes (Licence)",
+        "items" => [
+          [
+            "date" => "2024",
+            "title" => "Tech-lead : Poker Multijoueur",
+            "description" => "Direction d’une équipe de 9 étudiants.",
+            "tech" => "React-Redux, Socket.io, MongoDB, Jest"
+          ],
+          [
+            "date" => "2023",
+            "title" => "Jeu d’Échecs",
+            "description" => "Architecture MVC.",
+            "tech" => "Java / Swing"
+          ],
+          [
+            "date" => "2023",
+            "title" => "Portfolio Web",
+            "description" => "Interface CRUD admin.",
+            "tech" => "HTML/CSS, JavaScript, MySQL, PHP"
+          ]
+        ]
+      ]
+    ],
+    "languages" => [
+      "items" => [
+        "Anglais" => "Niveau C1 (Certifié)",
+        "Français" => "Courant"
+      ]
+    ],
+    "interests" => [
+      "title" => "Intérêts",
+      "items" => ["Lecture", "Cinéma", "Voyages (Sénégal, Maroc, Allemagne, Espagne)", "Marche", "Natation"]
+    ]
   ]
 ];

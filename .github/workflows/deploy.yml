@@ -1,0 +1,25 @@
+name: Deploy to Alwaysdata
+
+on:
+  push:
+    branches:
+      - main  # Ou 'master' selon le nom de votre branche principale
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}      # Ex: ssh-votre-nom.alwaysdata.net
+          username: ${{ secrets.SSH_USER }}  # VOTRE_UTILISATEUR_ALWAYSDATA
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/www
+            git pull origin main
+            # Ajoutez ici d'autres commandes si nécessaire (ex: composer install)

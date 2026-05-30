@@ -1,0 +1,8 @@
+.git
+.idea
+Dockerfile
+docker-compose.yml
+.env
+.github
+*.db
+*.sqbpro

@@ -2,8 +2,8 @@ name: Deploy to Alwaysdata
 
 on:
   push:
-    branches:
-      - main  # Ou 'master' selon le nom de votre branche principale
+    tags:
+      - 'v*'  # Se déclenche pour les tags comme v1.0, v2.1.3, etc.
 
 jobs:
   deploy:
@@ -16,10 +16,10 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}      # Ex: ssh-votre-nom.alwaysdata.net
-          username: ${{ secrets.SSH_USER }}  # VOTRE_UTILISATEUR_ALWAYSDATA
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ~/www
-            git pull origin main
-            # Ajoutez ici d'autres commandes si nécessaire (ex: composer install)
+            git fetch --all --tags
+            git checkout ${{ github.ref_name }}

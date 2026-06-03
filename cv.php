@@ -184,6 +184,7 @@ $cv = $trad['cv'];
 
   <?php require_once './assets/templates/footer.php' ?>
   <script src="./assets/js/shared-js.js?parent=cv.php"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

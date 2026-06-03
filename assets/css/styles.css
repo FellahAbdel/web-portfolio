@@ -408,7 +408,6 @@ section:first-child::after {
   #home img,
   #home svg {
     width: 200px;
-    height: 200px;
   }
 
   .projects-grid {

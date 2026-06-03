@@ -145,7 +145,6 @@ section:first-child::after {
 #home img,
 #home svg {
   width: 320px;
-  height: 320px;
   object-fit: contain;
   border-radius: var(--radius-lg); /* Carré arrondi moderne */
   box-shadow: var(--shadow-xl);

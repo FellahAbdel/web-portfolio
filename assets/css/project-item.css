@@ -1,8 +1,7 @@
-/* --- Project Detail Page (Premium Style) --- */
+/* --- Project Detail Page (Glassmorphism) --- */
 
 main {
-  padding-top: 100px; /* Espace pour le header fixe */
-  background-color: var(--bg-primary);
+  padding-top: 140px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,7 +11,8 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--spacing-8);
-  flex-grow: 1; /* Pour pousser le footer vers le bas si peu de contenu */
+  flex-grow: 1;
+  width: 100%;
 }
 
 /* Header du projet */
@@ -23,7 +23,7 @@ main {
 
 .project-header h1 {
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   color: var(--text-primary);
   margin-bottom: var(--spacing-4);
   letter-spacing: -0.02em;
@@ -43,14 +43,19 @@ main {
   gap: var(--spacing-2);
 }
 
+.meta-item i {
+  color: var(--accent);
+}
+
 /* Image Hero */
 .project-hero-image {
   width: 100%;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
   margin-bottom: var(--spacing-12);
   background-color: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
 }
 
 .project-hero-image img {
@@ -76,13 +81,18 @@ main {
 
 .project-description p {
   margin-bottom: var(--spacing-6);
+  color: var(--text-secondary);
 }
 
 /* Sidebar */
 .project-sidebar {
-  background-color: var(--bg-secondary);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   padding: var(--spacing-8);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
   height: fit-content;
   position: sticky;
   top: 120px;
@@ -102,19 +112,8 @@ main {
   margin-bottom: var(--spacing-8);
 }
 
-.tag {
-  background-color: #FFFFFF;
-  color: var(--text-secondary);
-  padding: 6px 12px;
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-}
-
 .project-actions {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-light);
   padding-top: var(--spacing-6);
 }
 
@@ -128,25 +127,24 @@ main {
 }
 
 .btn-back:hover {
-  color: var(--accent-color);
+  color: var(--accent);
   transform: translateX(-5px);
 }
 
 /* --- Section Commentaires --- */
 .comments-section {
-  background-color: var(--bg-primary); /* Changement : fond blanc pour se fondre avec le reste */
   padding: var(--spacing-16) 0;
   border-top: 1px solid var(--border-light);
-  margin-top: auto; /* Pousse vers le bas */
+  margin-top: auto;
 }
 
 .comments-container {
-  max-width: 700px; /* Un peu plus large */
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 var(--spacing-8);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrage horizontal */
+  align-items: center;
 }
 
 .comments-container h2 {
@@ -156,67 +154,27 @@ main {
   color: var(--text-primary);
 }
 
-/* Formulaire (Surcharge de form-item.css pour le rendre premium) */
+/* Formulaire de commentaire (même apparence que le formulaire de contact) */
 .form-item {
-  background-color: #FFFFFF;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: var(--spacing-8);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg); /* Ombre plus prononcée pour détacher le formulaire */
-  width: 100%; /* Prend toute la largeur du conteneur */
-  border: 1px solid var(--border-light);
-}
-
-.form-control {
-  margin-bottom: var(--spacing-6);
-}
-
-.form-control label {
-  display: block;
-  margin-bottom: var(--spacing-2);
-  font-weight: var(--font-weight-medium);
-  color: var(--text-primary);
-  font-size: var(--font-size-sm);
-}
-
-.form-control input,
-.form-control textarea {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glass);
   width: 100%;
-  padding: var(--spacing-3) var(--spacing-4);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  transition: var(--transition-base);
-  background-color: var(--bg-secondary); /* Fond gris clair pour les inputs */
-}
-
-.form-control input:focus,
-.form-control textarea:focus {
-  border-color: var(--accent-color);
-  background-color: #FFFFFF;
-  box-shadow: 0 0 0 4px var(--accent-light);
-}
-
-.btn-submit {
-  width: 100%;
-  padding: var(--spacing-3);
-  background-color: var(--text-primary);
-  color: #FFFFFF;
-  border: none;
-  border-radius: var(--radius-full);
-  font-weight: var(--font-weight-semibold);
-  cursor: pointer;
-  transition: var(--transition-base);
-  margin-top: var(--spacing-4);
-}
-
-.btn-submit:hover {
-  background-color: #000000;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  main {
+    padding-top: 110px;
+  }
+
   .project-body {
     grid-template-columns: 1fr;
   }

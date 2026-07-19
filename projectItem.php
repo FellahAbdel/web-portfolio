@@ -41,7 +41,6 @@ function checkInput($data)
   <?php require_once "./assets/templates/head.php" ?>
   <link rel="stylesheet" href="assets/css/shared.css" />
   <link rel="stylesheet" href="assets/css/project-item.css" />
-  <link rel="stylesheet" href="assets/css/form-item.css" />
 
   <title><?= $project["title"] ?> - Fellah</title>
 </head>
@@ -64,7 +63,7 @@ function checkInput($data)
         </div>
       </div>
 
-      <div class="project-hero-image">
+      <div class="project-hero-image reveal">
         <img src="/public/uploads/<?= $project["imageName"] ?>" alt="<?= $project["imageAlt"] ?>">
       </div>
       
@@ -120,6 +119,7 @@ function checkInput($data)
   <script src="./assets/js/comment.js" type="module"></script>
   <script src="./assets/js/shared-js.js?parent=projectItem.php"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/reveal.js"></script>
 </body>
 
 </html>

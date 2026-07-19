@@ -1,8 +1,8 @@
-/* --- Contact Page (Premium Style) --- */
+/* --- Contact Page (Glassmorphism) --- */
 
 main {
-  padding-top: 100px; /* Espace pour le header fixe */
-  background-color: var(--bg-primary);
+  padding-top: 140px;
+  padding-bottom: var(--spacing-16);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@ main {
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-8);
+  padding: 0 var(--spacing-8);
   width: 100%;
 }
 
@@ -41,26 +41,40 @@ main {
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-8);
+  gap: var(--spacing-6);
 }
 
 .info-item {
   display: flex;
   gap: var(--spacing-6);
   align-items: flex-start;
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  transition: var(--transition-base);
+}
+
+.info-item:hover {
+  background: var(--glass-bg);
 }
 
 .icon-box {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background-color: var(--bg-secondary);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-primary);
+  color: var(--accent);
   font-size: var(--font-size-xl);
   flex-shrink: 0;
+  transition: var(--transition-base);
+}
+
+.info-item:hover .icon-box {
+  box-shadow: var(--glow-accent);
+  border-color: var(--glass-border-hover);
 }
 
 .info-content h3 {
@@ -81,22 +95,23 @@ main {
   color: var(--text-primary);
   font-weight: var(--font-weight-medium);
   text-decoration: none;
-  transition: var(--transition-base);
   border-bottom: 1px solid transparent;
 }
 
 .link-text:hover {
-  color: var(--accent-color);
-  border-bottom-color: var(--accent-color);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* --- Colonne Formulaire (Droite) --- */
 .contact-form-wrapper {
-  background-color: #FFFFFF;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: var(--spacing-12);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid var(--glass-border);
 }
 
 .form-header {
@@ -114,7 +129,7 @@ main {
   color: var(--text-secondary);
 }
 
-/* Formulaire Premium */
+/* Formulaire */
 .premium-form {
   display: flex;
   flex-direction: column;
@@ -127,106 +142,10 @@ main {
   gap: var(--spacing-6);
 }
 
-.form-control {
-  position: relative;
+.form-footer {
   display: flex;
   flex-direction: column;
-}
-
-.form-control label {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-2);
-}
-
-.form-control input,
-.form-control textarea {
-  width: 100%;
-  padding: var(--spacing-3) var(--spacing-4);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  background-color: var(--bg-secondary);
-  transition: var(--transition-base);
-  font-family: inherit;
-}
-
-.form-control input:focus,
-.form-control textarea:focus {
-  background-color: #FFFFFF;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 4px var(--accent-light);
-}
-
-/* Validation Icons */
-.form-control i {
-  position: absolute;
-  right: var(--spacing-3);
-  top: 42px; /* Ajusté selon label + padding */
-  font-size: var(--font-size-lg);
-  opacity: 0;
-  transition: var(--transition-base);
-}
-
-.form-control.success input {
-  border-color: #10B981;
-}
-
-.form-control.success .success-icon {
-  color: #10B981;
-  opacity: 1;
-}
-
-.form-control.error input {
-  border-color: #EF4444;
-}
-
-.form-control.error .error-icon {
-  color: #EF4444;
-  opacity: 1;
-}
-
-.form-control small {
-  color: #EF4444;
-  font-size: var(--font-size-xs);
-  margin-top: var(--spacing-1);
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: var(--transition-base);
-}
-
-.form-control.error small {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.btn-submit {
-  width: 100%;
-  padding: var(--spacing-4);
-  background-color: var(--text-primary);
-  color: #FFFFFF;
-  border: none;
-  border-radius: var(--radius-full);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-base);
-  cursor: pointer;
-  transition: var(--transition-base);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-submit:hover {
-  background-color: #000000;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.success-msg {
-  display: block;
-  color: #10B981;
-  margin-bottom: var(--spacing-4);
-  text-align: center;
-  opacity: 0; /* Caché par défaut */
+  gap: var(--spacing-4);
 }
 
 /* Responsive */
@@ -252,6 +171,10 @@ main {
 }
 
 @media (max-width: 600px) {
+  main {
+    padding-top: 110px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }

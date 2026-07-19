@@ -1,4 +1,4 @@
-<li class="project-card">
+<li class="project-card reveal">
   <a href="/projectItem.php?id=<?= $project["id"] ?>" class="project-link-wrapper">
     <div class="project-image-wrapper">
       <img src="/public/uploads/<?= $project["imageName"] ?>" alt="<?= $project["imageAlt"] ?>" loading="lazy" />

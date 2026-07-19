@@ -51,7 +51,7 @@ $cv = $trad['cv'];
     </section>
 
     <!-- Skills Section -->
-    <section class="cv-section">
+    <section class="cv-section reveal">
       <h2><?= $cv['sections']['skills'] ?></h2>
       <div class="skills-grid">
         <div class="skill-card">
@@ -77,7 +77,7 @@ $cv = $trad['cv'];
     </section>
 
     <!-- Experience Section -->
-    <section class="cv-section">
+    <section class="cv-section reveal">
       <h2><?= $cv['sections']['experience'] ?></h2>
       <div class="timeline">
         <?php foreach ($cv['experiences'] as $exp) : ?>
@@ -106,7 +106,7 @@ $cv = $trad['cv'];
     </section>
 
     <!-- Education Section -->
-    <section class="cv-section">
+    <section class="cv-section reveal">
       <h2><?= $cv['sections']['education'] ?></h2>
       <div class="timeline">
         <?php foreach ($cv['education'] as $edu) : ?>
@@ -122,7 +122,7 @@ $cv = $trad['cv'];
     </section>
 
     <!-- Projects Section -->
-    <section class="cv-section">
+    <section class="cv-section reveal">
       <h2><?= $cv['sections']['projects'] ?></h2>
       <div class="projects-container">
         <?php foreach ($cv['projects'] as $groupKey => $group) : ?>
@@ -160,7 +160,7 @@ $cv = $trad['cv'];
     </section>
 
     <!-- Languages & Interests -->
-    <section class="cv-section">
+    <section class="cv-section reveal">
       <h2><?= $cv['sections']['languages'] ?></h2>
       <div class="skills-grid">
         <div class="skill-card">
@@ -185,6 +185,7 @@ $cv = $trad['cv'];
   <?php require_once './assets/templates/footer.php' ?>
   <script src="./assets/js/shared-js.js?parent=cv.php"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/reveal.js"></script>
 </body>
 
 </html>

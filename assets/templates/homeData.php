@@ -1,4 +1,4 @@
-<div>
+<div class="reveal">
   <h1>
     <?= $trad['divHome']["h1"] ?>
   </h1>

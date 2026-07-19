@@ -225,7 +225,7 @@ if (!$article) {
         </p>
       </div>
       
-      <div class="article-featured-image">
+      <div class="article-featured-image reveal">
         <!-- Placeholder image si l'image n'existe pas -->
         <img src="/public/uploads/<?= $article['imageName'] ?>" onerror="this.src='https://placehold.co/800x400?text=Java+vs+Python'" alt="<?= $article['imageAlt'] ?>">
       </div>
@@ -246,6 +246,7 @@ if (!$article) {
   ?>
   <script src="./assets/js/shared-js.js?parent=article.php"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/reveal.js"></script>
 </body>
 
 </html>

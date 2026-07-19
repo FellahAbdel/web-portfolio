@@ -41,7 +41,7 @@ if ($_SESSION['lang'] == 'en') {
     <div class="contact-container">
       <div class="contact-grid">
         <!-- Section Infos (Gauche) -->
-        <section class="contact-info">
+        <section class="contact-info reveal">
           <h2><?= $trad["contact-first-section"]["h2"] ?></h2>
           <p class="contact-intro">
             <?= $trad["contact-first-section"]["p"] ?>
@@ -84,7 +84,7 @@ if ($_SESSION['lang'] == 'en') {
         </section>
 
         <!-- Section Formulaire (Droite) -->
-        <section class="contact-form-wrapper">
+        <section class="contact-form-wrapper reveal">
           <div class="form-header">
             <h1><?= $trad["contact-second-section"]["h1"] ?></h1>
             <p><?= $trad["contact-second-section"]["p"] ?></p>
@@ -101,6 +101,7 @@ if ($_SESSION['lang'] == 'en') {
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/shared-js.js?parent=contact.php"></script>
   <script src="./assets/js/contact.js" type="module"></script>
+  <script src="./assets/js/reveal.js"></script>
 </body>
 
 </html>

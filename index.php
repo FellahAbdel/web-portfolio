@@ -89,6 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="./assets/js/shared-js.js?parent=index.php"></script>
   <script src="./assets/js/ajax.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/reveal.js"></script>
 </body>
 
 </html>

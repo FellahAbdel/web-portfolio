@@ -7,7 +7,7 @@
   <title>Error</title>
   <style>
     body {
-      background-color: black;
+      background-color: #0A0A0F;
     }
   </style>
 </head>

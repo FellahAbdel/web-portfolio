@@ -62,7 +62,7 @@ $articles = [
           <p><?= $trad["articles"]["no_articles"] ?? "Aucun article pour le moment." ?></p>
         <?php else : ?>
           <?php foreach ($articles as $article) : ?>
-            <article class="article-card">
+            <article class="article-card reveal">
               <div class="article-image">
                 <!-- Placeholder image si l'image n'existe pas -->
                 <img src="/public/uploads/<?= $article['imageName'] ?>" onerror="this.src='https://placehold.co/600x400?text=Java+vs+Python'" alt="<?= $article['imageAlt'] ?>">
@@ -91,6 +91,7 @@ $articles = [
   ?>
   <script src="./assets/js/shared-js.js?parent=articles.php"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/reveal.js"></script>
 </body>
 
 </html>

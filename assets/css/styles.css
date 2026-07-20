@@ -36,7 +36,7 @@ section:first-child {
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: var(--spacing-4);
-  background: linear-gradient(135deg, #FFFFFF 0%, var(--accent) 55%, var(--accent-2) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-primary) 55%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -77,7 +77,7 @@ section:first-child {
 
 #home div:last-child a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.35), 0 14px 36px -6px var(--accent-glow);
+  box-shadow: 0 0 0 1px var(--accent-light), 0 14px 32px -6px var(--accent-glow);
 }
 
 /* Colonne Image/Avatar (Droite) */
@@ -106,7 +106,7 @@ section:first-child {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.18), 0 25px 60px -15px var(--accent-glow), var(--shadow-xl);
+  box-shadow: 0 0 0 1px var(--accent-light), 0 25px 55px -16px var(--accent-glow), var(--shadow-xl);
   animation: float 8s ease-in-out infinite;
 }
 
@@ -206,8 +206,10 @@ section:first-child {
 .btn-view-project {
   background: var(--glass-bg-strong);
   backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
   color: var(--text-primary);
   border: 1px solid var(--glass-border-hover);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--radius-full);
   font-weight: var(--font-weight-semibold);

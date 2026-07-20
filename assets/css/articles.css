@@ -90,8 +90,10 @@ section:first-child {
 .btn-view-article {
   background: var(--glass-bg-strong);
   backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
   color: var(--text-primary);
   border: 1px solid var(--glass-border-hover);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--radius-full);
   font-weight: var(--font-weight-semibold);
@@ -324,7 +326,7 @@ section:first-child {
   border-radius: 6px;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.9em;
-  color: #F0ABFC;
+  color: var(--code-color);
 }
 
 .article-body img {
@@ -398,7 +400,7 @@ section:first-child {
 }
 
 .article-body tr:hover td {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--table-hover-bg);
 }
 
 /* Tags */

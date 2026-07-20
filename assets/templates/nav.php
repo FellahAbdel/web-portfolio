@@ -12,6 +12,13 @@
               <option value="en" <?php echo $en_select ?>>English</option>
             </select>
           </li>
+
+          <li class="select">
+            <select id="theme" name="theme" aria-label="Thème">
+              <option value="dark">🌙 Sombre</option>
+              <option value="light">☀️ Clair</option>
+            </select>
+          </li>
         </ul>
         <div class="hamburger">
           <span></span>

@@ -62,7 +62,10 @@ main {
   height: 48px;
   border-radius: var(--radius-md);
   background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
   border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight);
   display: flex;
   align-items: center;
   justify-content: center;

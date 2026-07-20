@@ -90,6 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="./assets/js/ajax.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/reveal.js"></script>
+  <script src="./assets/js/theme.js"></script>
 </body>
 
 </html>

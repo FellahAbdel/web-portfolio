@@ -92,6 +92,7 @@ $articles = [
   <script src="./assets/js/shared-js.js?parent=articles.php"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/reveal.js"></script>
+  <script src="./assets/js/theme.js"></script>
 </body>
 
 </html>

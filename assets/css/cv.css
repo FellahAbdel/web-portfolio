@@ -16,7 +16,7 @@
   font-weight: var(--font-weight-extrabold);
   letter-spacing: -0.03em;
   margin-bottom: var(--spacing-2);
-  background: linear-gradient(135deg, #FFFFFF 0%, var(--accent) 55%, var(--accent-2) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-primary) 55%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -112,7 +112,7 @@
   height: 10px;
   border-radius: 50%;
   background: var(--accent-gradient);
-  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.18), 0 0 14px var(--accent-glow);
+  box-shadow: 0 0 0 4px var(--accent-light), 0 0 14px var(--accent-glow);
   z-index: 1;
 }
 

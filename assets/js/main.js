@@ -1,4 +1,4 @@
-const hamburger = document.querySelector("header div");
+const hamburger = document.querySelector("header div.hamburger");
 const navMenu = document.querySelector("header ul");
 
 // Bloque le scroll de la page tant qu'un menu (nav mobile ou select custom)

@@ -395,7 +395,11 @@ header nav i {
   transform: rotate(180deg);
 }
 
-/* Liste déroulante (panneau en verre) */
+/* Liste déroulante (panneau en verre)
+   Le fond flouté vit sur ::before (z-index négatif) et non sur l'élément
+   qui porte le texte : certains WebKit mobiles composent mal un
+   backdrop-filter + transform/opacity animés quand du contenu réel est
+   dans la même couche, ce qui peut faire disparaître le texte. */
 .select-dropdown {
   position: absolute;
   top: calc(100% + var(--spacing-2));
@@ -405,29 +409,31 @@ header nav i {
   margin: 0;
   padding: var(--spacing-2);
   list-style: none;
+  border-radius: var(--radius-md);
+  display: none;
+  isolation: isolate;
+}
+
+.select-dropdown.is-open {
+  display: block;
+  animation: selectDropdownIn 0.16s ease-out;
+}
+
+.select-dropdown::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: var(--glass-bg-strong);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
+  border-radius: inherit;
   box-shadow: var(--shadow-xl), var(--glass-highlight);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(-6px) scale(0.98);
-  transform-origin: top right;
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
-}
-
-.select-dropdown.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0) scale(1);
-  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
 .select-option {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -171,6 +171,11 @@ function enhanceSelect(select) {
   wrapper.appendChild(trigger);
   wrapper.appendChild(dropdown);
   wrapper.classList.add("enhanced");
+  // Le <select> natif ne sert plus que de source de valeur : on le retire de
+  // la navigation clavier/AT pour éviter un double contrôle et, sur mobile,
+  // qu'un tap ouvre le picker natif sous le trigger custom.
+  select.tabIndex = -1;
+  select.setAttribute("aria-hidden", "true");
   syncLabel();
 }
 

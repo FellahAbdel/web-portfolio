@@ -210,6 +210,14 @@ button, input, textarea, select {
   color: inherit;
 }
 
+/* Empêche le scroll de fond tant que le menu mobile ou un select custom
+   est ouvert (voir main.js / custom-select.js -> updateScrollLock). */
+html.no-scroll,
+html.no-scroll body {
+  overflow: hidden;
+  height: 100%;
+}
+
 h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
@@ -395,11 +403,13 @@ header nav i {
   transform: rotate(180deg);
 }
 
-/* Liste déroulante (panneau en verre)
-   Le fond flouté vit sur ::before (z-index négatif) et non sur l'élément
-   qui porte le texte : certains WebKit mobiles composent mal un
-   backdrop-filter + transform/opacity animés quand du contenu réel est
-   dans la même couche, ce qui peut faire disparaître le texte. */
+/* Liste déroulante. Volontairement SANS backdrop-filter : elle est nichée
+   dans le menu mobile plein écran qui a lui-même un backdrop-filter animé
+   (transform + opacity), et empiler deux backdrop-filter dans un contexte
+   transformé est une source connue de bugs de rendu sur WebKit mobile
+   (contenu qui disparaît, menu qui semble se refermer tout seul). Fond
+   quasi opaque à la place : le look reste cohérent avec le reste du site,
+   juste moins translucide sur ce petit composant. */
 .select-dropdown {
   position: absolute;
   top: calc(100% + var(--spacing-2));
@@ -410,26 +420,15 @@ header nav i {
   padding: var(--spacing-2);
   list-style: none;
   border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--glass-border-hover);
+  box-shadow: var(--shadow-xl);
   display: none;
-  isolation: isolate;
 }
 
 .select-dropdown.is-open {
   display: block;
-  animation: selectDropdownIn 0.16s ease-out;
-}
-
-.select-dropdown::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--glass-bg-strong);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: inherit;
-  box-shadow: var(--shadow-xl), var(--glass-highlight);
+  animation: selectDropdownIn 0.15s ease-out;
 }
 
 .select-option {

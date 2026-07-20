@@ -39,14 +39,16 @@
   50% { transform: translate(-10px, 10px); }
 }
 
-/* Ouverture du menu déroulant custom (select langue/thème) */
+/* Ouverture du menu déroulant custom (select langue/thème).
+   Opacity seule, sans transform : le menu est niché dans le nav mobile
+   qui a déjà son propre backdrop-filter/transform animé, et cumuler les
+   transforms dans ce contexte est une source de bugs de rendu sur
+   certains WebKit mobiles. */
 @keyframes selectDropdownIn {
   from {
     opacity: 0;
-    transform: translateY(-6px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }

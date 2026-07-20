@@ -10,6 +10,7 @@ function closeAllDropdowns() {
       dropdown._outsideClickHandler = null;
     }
   });
+  if (window.updateScrollLock) window.updateScrollLock();
 }
 
 function enhanceSelect(select) {
@@ -95,6 +96,7 @@ function enhanceSelect(select) {
     trigger.setAttribute("aria-expanded", "true");
     const currentIndex = options.findIndex((o) => o.value === select.value);
     setFocusedOption(currentIndex >= 0 ? currentIndex : 0);
+    if (window.updateScrollLock) window.updateScrollLock();
 
     // Attaché au tick suivant : sinon, sur mobile, le clic/tap qui vient
     // d'ouvrir le menu est encore en train de "bubbler" et déclenche aussi
@@ -123,6 +125,7 @@ function enhanceSelect(select) {
       document.removeEventListener("touchstart", dropdown._outsideClickHandler);
       dropdown._outsideClickHandler = null;
     }
+    if (window.updateScrollLock) window.updateScrollLock();
     if (focusTrigger) trigger.focus();
   }
 

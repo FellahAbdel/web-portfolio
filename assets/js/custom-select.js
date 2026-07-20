@@ -5,6 +5,10 @@ function closeAllDropdowns() {
     if (trigger && trigger.classList.contains("select-trigger")) {
       trigger.setAttribute("aria-expanded", "false");
     }
+    if (dropdown._outsideClickHandler) {
+      document.removeEventListener("click", dropdown._outsideClickHandler);
+      dropdown._outsideClickHandler = null;
+    }
   });
 }
 
@@ -91,6 +95,22 @@ function enhanceSelect(select) {
     trigger.setAttribute("aria-expanded", "true");
     const currentIndex = options.findIndex((o) => o.value === select.value);
     setFocusedOption(currentIndex >= 0 ? currentIndex : 0);
+
+    // Attaché au tick suivant : sinon, sur mobile, le clic/tap qui vient
+    // d'ouvrir le menu est encore en train de "bubbler" et déclenche aussi
+    // ce listener, qui refermait le menu instantanément.
+    const handler = (event) => {
+      if (!wrapper.contains(event.target)) {
+        closeDropdown(false);
+      }
+    };
+    dropdown._outsideClickHandler = handler;
+    setTimeout(() => {
+      if (dropdown._outsideClickHandler === handler) {
+        document.addEventListener("click", handler);
+        document.addEventListener("touchstart", handler);
+      }
+    }, 0);
   }
 
   function closeDropdown(focusTrigger) {
@@ -98,6 +118,11 @@ function enhanceSelect(select) {
     trigger.setAttribute("aria-expanded", "false");
     optionEls.forEach((el) => el.classList.remove("is-focused"));
     focusedIndex = -1;
+    if (dropdown._outsideClickHandler) {
+      document.removeEventListener("click", dropdown._outsideClickHandler);
+      document.removeEventListener("touchstart", dropdown._outsideClickHandler);
+      dropdown._outsideClickHandler = null;
+    }
     if (focusTrigger) trigger.focus();
   }
 
@@ -151,12 +176,6 @@ function enhanceSelect(select) {
       event.preventDefault();
       closeDropdown(true);
     } else if (event.key === "Tab") {
-      closeDropdown(false);
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (isOpen() && !wrapper.contains(event.target)) {
       closeDropdown(false);
     }
   });

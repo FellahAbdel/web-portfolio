@@ -6,18 +6,23 @@
           <li><a href="/contact.php"><i class="mdi mdi-account-box"></i> <?= $trad['nav']['contact'] ?></a></li>
           <li><a href="/articles.php"><i class="mdi mdi-post"></i> <?= $trad['nav']['articles'] ?></a></li>
 
-          <li class="select">
-            <select id="lang" name="lang">
-              <option value="fr" <?php echo $fr_select ?>>Français</option>
-              <option value="en" <?php echo $en_select ?>>English</option>
-            </select>
-          </li>
+          <li class="nav-settings">
+            <span class="nav-settings-label">Préférences</span>
+            <div class="nav-settings-row">
+              <div class="select">
+                <select id="lang" name="lang">
+                  <option value="fr" <?php echo $fr_select ?>>Français</option>
+                  <option value="en" <?php echo $en_select ?>>English</option>
+                </select>
+              </div>
 
-          <li class="select">
-            <select id="theme" name="theme" aria-label="Thème">
-              <option value="dark">🌙 Sombre</option>
-              <option value="light">☀️ Clair</option>
-            </select>
+              <div class="select">
+                <select id="theme" name="theme" aria-label="Thème">
+                  <option value="dark">🌙 Sombre</option>
+                  <option value="light">☀️ Clair</option>
+                </select>
+              </div>
+            </div>
           </li>
         </ul>
         <div class="hamburger">

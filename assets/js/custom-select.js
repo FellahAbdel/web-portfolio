@@ -205,4 +205,12 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeAllDropdowns();
 });
 
-document.querySelectorAll(".select select").forEach(enhanceSelect);
+// Sur mobile (même seuil que le menu hamburger), on garde le <select>
+// natif tel quel : son picker OS est fiable partout, contrairement au menu
+// custom qui s'est montré capricieux sur certains navigateurs mobiles.
+// Le custom select ne s'active que sur desktop/tablette large.
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+if (!isMobile) {
+  document.querySelectorAll(".select select").forEach(enhanceSelect);
+}

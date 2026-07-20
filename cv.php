@@ -187,6 +187,7 @@ $cv = $trad['cv'];
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/reveal.js"></script>
   <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/custom-select.js"></script>
 </body>
 
 </html>

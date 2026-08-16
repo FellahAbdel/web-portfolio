@@ -4,6 +4,7 @@ $trad = [
   'nav' => [
     'home' => 'Acceuil',
     'cv' => 'CV',
+    'certifications' => 'Certifications',
     'admin' => 'Admin',
     'contact' => 'Contactez-moi',
     'articles' => 'Articles'
@@ -264,6 +265,97 @@ $trad = [
     "interests" => [
       "title" => "Intérêts",
       "items" => ["Lecture", "Cinéma", "Voyages (Sénégal, Maroc, Allemagne, Espagne)", "Marche", "Natation"]
+    ]
+  ],
+  "certifications_page" => [
+    "title" => "Mes Certifications",
+    "subtitle" => "Parcours de certifications et qualifications professionnelles validées.",
+    "badge" => "Chronologie officielle",
+    "filter_all" => "Toutes",
+    "filter_web" => "Web & Development",
+    "filter_devops" => "DevOps & Linux",
+    "filter_lang" => "Langues",
+    "view_timeline" => "Timeline",
+    "view_grid" => "Grille",
+    "verify_button" => "Vérifier la certification",
+    "issued_by" => "Délivré par",
+    "obtained_in" => "Obtenu en",
+    "list" => [
+      [
+        "id" => "angular-guide",
+        "title" => "Angular - The Complete Guide",
+        "issuer" => "Udemy (Maximilian Schwarzmüller)",
+        "category" => "web",
+        "category_label" => "Web & Development",
+        "date" => "2 Août 2026",
+        "year" => "2026",
+        "raw_date" => "2026-08-02",
+        "image" => "assets/images/certifications/angular.png",
+        "credential_id" => "UC-789a169a-2068-4662-8c9d-9bbcf6c62787",
+        "verify_url" => "https://ude.my/UC-789a169a-2068-4662-8c9d-9bbcf6c62787",
+        "description" => "Certification attestant de la maîtrise complète du framework Angular (56h au total) : architecture par composants, TypeScript, RxJS, services, routage et gestion d'état.",
+        "skills" => ["Angular", "TypeScript", "RxJS", "Components & Services", "Routing", "Frontend"]
+      ],
+      [
+        "id" => "languagecert-c1",
+        "title" => "LanguageCert Test of English C1 (LTE)",
+        "issuer" => "PeopleCert / LanguageCert",
+        "category" => "lang",
+        "category_label" => "Langues Professionnelles",
+        "date" => "10 Mars 2024",
+        "year" => "2024",
+        "raw_date" => "2024-03-10",
+        "image" => "assets/images/certifications/languagecert.png",
+        "credential_id" => "E0574861-51F0-4038-A5BA-9969E4AF1328",
+        "verify_url" => "https://badges.peoplecert.org/Badge/en/E0574861-51F0-4038-A5BA-9969E4AF1328",
+        "description" => "Certification officielle internationale (Niveau C1 Advanced) de maîtrise de la langue anglaise en milieu professionnel (Listening & Reading).",
+        "skills" => ["Anglais C1", "Business English", "Listening & Reading", "Communication"]
+      ],
+      [
+        "id" => "devops-mindset",
+        "title" => "DevOps Culture and Mindset",
+        "issuer" => "University of California, Davis (Coursera)",
+        "category" => "devops",
+        "category_label" => "DevOps & Cloud",
+        "date" => "15 Août 2023",
+        "year" => "2023",
+        "raw_date" => "2023-08-15",
+        "image" => "assets/images/certifications/devops-mindset.png",
+        "credential_id" => "RV5546QB4BQX",
+        "verify_url" => "https://coursera.org/verify/RV5546QB4BQX",
+        "description" => "Certification académique couvrant la culture DevOps, les principes d'intégration et livraison continues (CI/CD), et l'alignement des équipes d'ingénierie.",
+        "skills" => ["DevOps Culture", "CI/CD", "Continuous Delivery", "Agile Mindset", "Automation"]
+      ],
+      [
+        "id" => "web-bootcamp",
+        "title" => "The Complete 2022 Web Development Bootcamp",
+        "issuer" => "Udemy (Dr. Angela Yu)",
+        "category" => "web",
+        "category_label" => "Web & Development",
+        "date" => "7 Septembre 2022",
+        "year" => "2022",
+        "raw_date" => "2022-09-07",
+        "image" => "assets/images/certifications/web-bootcamp.png",
+        "credential_id" => "UC-0904ee54-9ea9-44b6-8ee0-e198f1d002e2",
+        "verify_url" => "https://ude.my/UC-0904ee54-9ea9-44b6-8ee0-e198f1d002e2",
+        "description" => "Certification complète en développement Web Fullstack (65.5h de formation) : HTML5, CSS3, JavaScript ES6, Node.js, Express, MongoDB et React.",
+        "skills" => ["HTML5 / CSS3", "JavaScript ES6", "Node.js", "Express.js", "MongoDB", "React"]
+      ],
+      [
+        "id" => "linux-essentials",
+        "title" => "NDG Linux Essentials",
+        "issuer" => "Cisco Networking Academy & LPI",
+        "category" => "devops",
+        "category_label" => "DevOps & Linux",
+        "date" => "7 Juin 2021",
+        "year" => "2021",
+        "raw_date" => "2021-06-07",
+        "image" => "assets/images/certifications/linux-essentials.png",
+        "credential_id" => "NDG-LINUX-ESSENTIALS",
+        "verify_url" => "https://www.lpi.org",
+        "description" => "Certification professionnelle validant les compétences d'administration système Linux, d'exécution en ligne de commande Bash et de gestion de la sécurité.",
+        "skills" => ["Linux OS", "Bash / Shell", "Command Line", "File Permissions", "SysAdmin"]
+      ]
     ]
   ]
 ];

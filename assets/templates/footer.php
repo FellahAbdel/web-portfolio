@@ -6,6 +6,8 @@
     
     <ul class="footer-links">
       <li><a href="/index.php"><?= $trad['nav']['home'] ?></a></li>
+      <li><a href="/cv.php"><?= $trad['nav']['cv'] ?></a></li>
+      <li><a href="/certifications.php"><?= $trad['nav']['certifications'] ?></a></li>
       <li><a href="/articles.php"><?= $trad['nav']['articles'] ?></a></li>
       <li><a href="/contact.php"><?= $trad['nav']['contact'] ?></a></li>
     </ul>

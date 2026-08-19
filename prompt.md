@@ -1,34 +1,44 @@
-Modifie uniquement la page Contact en conservant au maximum son design, sa structure et sa mise en page actuels.
+Je veux créer une jolie page dans **Admin** permettant de consulter les messages envoyés depuis le formulaire de contact.
 
-Je ne veux pas une refonte complète de la page. Je veux simplement adapter son contenu à ma situation professionnelle actuelle.
+Garde le même style visuel que le reste du site : moderne, épuré, professionnel et cohérent avec le design actuel.
 
-### Modifications souhaitées
+### Fonctionnalités
 
-* Remplacer le texte :
-  « I would be very delighted to see your internship offers. »
+La page doit permettre de :
 
-  par un message orienté vers les projets web, par exemple :
-  « Vous avez un projet web ou une application à développer ? N’hésitez pas à me contacter pour en discuter. »
+* Voir la liste de tous les contacts reçus.
+* Afficher pour chaque contact :
 
-* Adapter le titre et les textes de la page pour qu'ils soient davantage orientés vers des **clients, entreprises ou personnes ayant un projet web à réaliser**, plutôt que vers la recherche d'un stage.
+  * prénom / nom
+  * email
+  * numéro de téléphone
+  * date de réception
+  * sujet ou aperçu du message
+  * statut : lu / non lu
+* Cliquer sur un contact pour ouvrir une vue détaillée avec l'intégralité de son message.
+* Marquer un message comme **lu** ou **non lu**.
+* Supprimer un message.
+* Ajouter une recherche pour retrouver rapidement un contact.
+* Ajouter des filtres simples, notamment **Tous / Non lus / Lus**.
+* Afficher un compteur du nombre de messages non lus.
 
-* Mettre à jour mes informations professionnelles actuelles :
+### Design
 
-  * Développeur Full Stack
-  * Java / Spring Boot
-  * Angular
-  * Expérience professionnelle en développement
-  * Projets web et applications
+Je veux une interface d'administration moderne, avec par exemple :
 
-* Conserver les blocs de contact existants (email, téléphone, localisation), mais remplacer les informations obsolètes par mes informations actuelles.
-
-* Modifier le texte « TOUCH WITH ME » et le message qui l'accompagne afin qu'il soit plus naturel et professionnel, par exemple :
-  « Vous avez une idée, un projet ou un besoin en développement web ? Décrivez-moi votre projet et je vous répondrai rapidement. »
-
-* Adapter le champ « Your message » pour encourager les visiteurs à expliquer leur projet ou leur besoin.
+* Un titre « Messages de contact »
+* Une petite statistique indiquant le nombre total de messages et le nombre de messages non lus.
+* Une liste ou un tableau propre des messages.
+* Des badges visuels pour distinguer les messages lus et non lus.
+* Une vue détaillée agréable lorsqu'on sélectionne un message.
+* Une interface responsive.
 
 ### Important
 
-Ne change pas inutilement le design, les couleurs, les icônes, les espacements ou la disposition actuelle.
+Cette page doit être **réellement connectée aux messages envoyés depuis le formulaire Contact**.
 
-L'objectif est simplement de transformer cette page Contact en une page permettant à des personnes ou entreprises de **me contacter pour me confier un projet web**, tout en conservant exactement le style visuel actuel.
+Lorsqu'une personne remplit le formulaire de contact et l'envoie, son message doit être enregistré afin qu'il apparaisse automatiquement dans cette interface Admin.
+
+Ne crée donc pas simplement une interface avec des données fictives : mets en place la logique nécessaire pour récupérer et afficher les vrais messages envoyés depuis le formulaire.
+
+Conserve le design général et les composants existants du site afin que la nouvelle page Admin s'intègre naturellement au reste de l'application.

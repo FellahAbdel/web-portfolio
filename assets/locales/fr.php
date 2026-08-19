@@ -61,6 +61,19 @@ $trad = [
     "h2" => "Liste des projets",
     "add" => "Ajouter"
   ],
+  "adminMessagesSection" => [
+    "title" => "Messages de contact",
+    "subtitle" => "Consultez et gérez les demandes reçues depuis le formulaire de contact.",
+    "tab_projects" => "Projets",
+    "tab_messages" => "Messages de contact",
+    "total" => "Total",
+    "unread" => "Non lus",
+    "read" => "Lus",
+    "all" => "Tous",
+    "search_placeholder" => "Rechercher par nom, email, téléphone, mot-clé...",
+    "no_messages" => "Aucun message trouvé",
+    "no_messages_desc" => "Les messages envoyés depuis votre formulaire de contact apparaîtront ici."
+  ],
   "adminArticleSection" => [
     "h2" => "Liste des articles",
     "add" => "Ajouter",

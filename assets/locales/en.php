@@ -58,6 +58,19 @@ $trad = [
     "h2" => "Projects list",
     "add" => "Add"
   ],
+  "adminMessagesSection" => [
+    "title" => "Contact Messages",
+    "subtitle" => "View and manage inquiries received from your portfolio contact form.",
+    "tab_projects" => "Projects",
+    "tab_messages" => "Messages",
+    "total" => "Total",
+    "unread" => "Unread",
+    "read" => "Read",
+    "all" => "All",
+    "search_placeholder" => "Search by name, email, phone, keyword...",
+    "no_messages" => "No messages found",
+    "no_messages_desc" => "Inquiries submitted through your contact form will appear here."
+  ],
   "adminArticleSection" => [
     "h2" => "Articles list",
     "add" => "Add",

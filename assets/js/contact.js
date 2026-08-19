@@ -45,47 +45,71 @@ form.addEventListener("submit", (e) => {
 });
 
 function checkInputs() {
+  const isFr =
+    document.documentElement.lang === "fr" ||
+    window.location.search.includes("lang=fr");
+
   // get the values from the inputs
   let allInputsValid = true;
   const usernameValue = usernameElt.value.trim();
   const emailValue = emailElt.value.trim();
   const phoneNumberValue = phoneNumberElt.value.trim();
   const userMessage = userMessageElt.value.trim();
+
   if (usernameValue === "") {
-    // show error
-    // add error class
     allInputsValid = false;
-    setErrorFor(usernameElt, "First name cannot be blank");
+    setErrorFor(
+      usernameElt,
+      isFr ? "Veuillez renseigner votre nom." : "Please enter your name."
+    );
   } else {
-    // add sucess class
     setSuccessFor(usernameElt);
   }
 
   if (emailValue === "") {
     allInputsValid = false;
-    setErrorFor(emailElt, "Email cannot be blank.");
+    setErrorFor(
+      emailElt,
+      isFr ? "Veuillez renseigner votre email." : "Email cannot be blank."
+    );
   } else if (!emailCheck(emailValue)) {
-    setErrorFor(emailElt, "Email is not valid");
+    allInputsValid = false;
+    setErrorFor(
+      emailElt,
+      isFr ? "Adresse email non valide." : "Email is not valid."
+    );
   } else {
     setSuccessFor(emailElt);
   }
 
   if (phoneNumberValue === "") {
     allInputsValid = false;
-    setErrorFor(phoneNumberElt, "Phone number cannot be blank.");
+    setErrorFor(
+      phoneNumberElt,
+      isFr ? "Veuillez renseigner votre numéro de téléphone." : "Phone number cannot be blank."
+    );
   } else if (!phoneNumberCheck(phoneNumberValue)) {
     allInputsValid = false;
-    setErrorFor(phoneNumberElt, "Phone number is not valid.");
+    setErrorFor(
+      phoneNumberElt,
+      isFr ? "Numéro de téléphone non valide." : "Phone number is not valid."
+    );
   } else {
     setSuccessFor(phoneNumberElt);
   }
 
   if (userMessage === "") {
     allInputsValid = false;
-    setErrorFor(userMessageElt, "Message number cannot be blank.");
-  } else if (userMessage.length > 200) {
+    setErrorFor(
+      userMessageElt,
+      isFr ? "Veuillez décrire votre projet ou besoin." : "Please describe your project or need."
+    );
+  } else if (userMessage.length < 5) {
     allInputsValid = false;
-    setErrorFor(userMessageElt, "At least 200 characters");
+    setErrorFor(
+      userMessageElt,
+      isFr ? "Votre message doit comporter au moins 5 caractères." : "Please enter at least 5 characters."
+    );
   } else {
     setSuccessFor(userMessageElt);
   }
@@ -94,6 +118,7 @@ function checkInputs() {
 }
 
 const emailCheck = (email) =>
-  /[a-zA-Z0-9-._]+@[a-zA-Z0-9-._]+\.[a-z]{2,}/.test(email);
+  /^[a-zA-Z0-9-._]+@[a-zA-Z0-9-._]+\.[a-z]{2,}$/.test(email);
 
-const phoneNumberCheck = (phoneNumber) => /^\d{10}$/.test(phoneNumber);
+const phoneNumberCheck = (phoneNumber) =>
+  /^[0-9+ \.\-\(\)]{7,30}$/.test(phoneNumber.trim());

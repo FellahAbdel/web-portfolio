@@ -20,27 +20,31 @@ $trad = [
     "viewButton" => "Voir"
   ],
   'contact-first-section' => [
-    "h2" => "Entrez en contact",
-    "p" => "Je serai très heureux de voir vos offres d'alternance.",
-    "div1 h3" => "Discutez-avec moi",
-    "div1 p1" => "Je serai très ravi de vous entendre.",
+    "h2" => "Concrétisons votre projet",
+    "p" => "Développeur Full Stack spécialisé en Java / Spring Boot et Angular, avec une solide expérience dans la conception d'applications web et logicielles. Vous avez un projet web ou une application à développer ? N’hésitez pas à me contacter pour en discuter.",
+    "div1 h3" => "Échangeons par email",
+    "div1 p1" => "Partagez votre projet ou vos besoins.",
     "div1 p2" => "abdoulazizdiallofouta@gmail.com",
-    "div2 h3" => "Maison",
-    "div2 p1" => "De preference dans le grand Est",
-    "div2 p2" => "67000 Strasbourg",
-    "div3 h3" => "Numéro de téléphone",
-    "div3 p1" => "Lun-Vend de 8h-2àh",
+    "div2 h3" => "Localisation",
+    "div2 p1" => "Toulouse, France",
+    "div2 p2" => "Disponible sur place ou à distance",
+    "div3 h3" => "Téléphone",
+    "div3 p1" => "Lun - Ven de 8h à 19h",
     "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [
-    "h1" => "CONTACTEZ-MOI",
-    "p" => "Merci de l'intérêt que vous portez a mon profile. Veuillez utiliser ce
-            formulaire pour me contacter.",
-    "label1" => "Prénom",
-    "label2" => "Email",
+    "h1" => "Parlons de votre projet",
+    "p" => "Vous avez une idée, un projet ou un besoin en développement web ? Décrivez-moi votre projet et je vous répondrai rapidement.",
+    "label1" => "Nom & Prénom",
+    "label2" => "Adresse email",
     "label3" => "Numéro de téléphone",
-    "label4" => "Votre message",
-    "submitBtn" => "Soumettre"
+    "label4" => "Décrivez votre projet ou votre besoin",
+    "placeholder1" => "Votre nom et prénom",
+    "placeholder2" => "Votre adresse email",
+    "placeholder3" => "Votre numéro de téléphone",
+    "placeholder4" => "Présentez brièvement votre projet, vos objectifs, les fonctionnalités attendues ou la stack souhaitée (Java, Spring Boot, Angular...)...",
+    "successMsg" => "Votre message a été envoyé avec succès ! Je vous répondrai rapidement.",
+    "submitBtn" => "Envoyer ma demande"
   ],
   "form-item" => [
     "h2" => "Laissez-moi un commentaire",

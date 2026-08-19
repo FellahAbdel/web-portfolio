@@ -18,7 +18,7 @@ if ($_SESSION['lang'] == 'en') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars($_SESSION['lang'] ?? 'en') ?>">
 
 <head>
   <?php

@@ -20,27 +20,31 @@ $trad = [
     "viewButton" => "View"
   ],
   'contact-first-section' => [
-    "h2" => "Get in touch",
-    "p" => "I would be very delighted to see your internship offers.",
-    "div1 h3" => "Let's discuss together",
-    "div1 p1" => "I would be so happy to hear from you.",
+    "h2" => "Let's build your project",
+    "p" => "Full Stack Developer specialized in Java / Spring Boot and Angular, with solid experience in developing modern web applications. Do you have a web project or an application to develop? Feel free to contact me to discuss it.",
+    "div1 h3" => "Email me",
+    "div1 p1" => "Share your project idea or requirements.",
     "div1 p2" => "abdoulazizdiallofouta@gmail.com",
-    "div2 h3" => "Home",
-    "div2 p1" => "Preference in the Grand Est region",
-    "div2 p2" => "67000 Strasbourg",
+    "div2 h3" => "Location",
+    "div2 p1" => "Toulouse, France",
+    "div2 p2" => "Available on-site & remotely",
     "div3 h3" => "Phone number",
-    "div3 p1" => "Mon-Sun from 8AM-8PM",
+    "div3 p1" => "Mon - Fri, 8:00 AM - 7:00 PM",
     "div3 p2" => "07 53 10 39 14"
   ],
   "contact-second-section" => [
-    "h1" => "TOUCH WITH ME",
-    "p" => "Thank you for your interest in my profile. Please use this form to 
-            contact me.",
-    "label1" => "First Name",
-    "label2" => "Email",
+    "h1" => "Let's discuss your project",
+    "p" => "Have an idea, a project, or a need in web development? Tell me about your project and I will get back to you quickly.",
+    "label1" => "Full Name",
+    "label2" => "Email Address",
     "label3" => "Phone Number",
-    "label4" => "Your message",
-    "submitBtn" => "submit"
+    "label4" => "Describe your project or need",
+    "placeholder1" => "Your full name",
+    "placeholder2" => "Your email address",
+    "placeholder3" => "Your phone number",
+    "placeholder4" => "Tell me about your project, goals, key features, or desired stack (Java, Spring Boot, Angular...)...",
+    "successMsg" => "Your message has been successfully sent! I will get back to you shortly.",
+    "submitBtn" => "Send Request"
   ],
   "form-item" => [
     "h2" => "Leave a comment",

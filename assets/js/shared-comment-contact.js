@@ -13,13 +13,13 @@ export function setSuccessFor(input) {
 }
 
 export function showSuccessfullMsg() {
-  const smallElt = document.querySelector("form div~small");
-  smallElt.style.visibility = "visible";
+  const smallElt = document.querySelector(".success-msg") || document.querySelector("form div~small");
+  if (smallElt) smallElt.style.visibility = "visible";
 }
 
 export function hideSuccesfullMsg() {
-  const smallElt = document.querySelector("form div~small");
-  smallElt.style.visibility = "hidden";
+  const smallElt = document.querySelector(".success-msg") || document.querySelector("form div~small");
+  if (smallElt) smallElt.style.visibility = "hidden";
 }
 
 export function removeSuccess(input) {

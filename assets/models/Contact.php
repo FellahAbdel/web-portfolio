@@ -42,10 +42,10 @@ class Contact extends Database
   }
   private function checkClientInputs($clientInputs): bool
   {
-    $clientNameValid = $this->checkField($clientInputs[0], true, 3, 255);
+    $clientNameValid = $this->checkField($clientInputs[0], true, 2, 255);
     $clientEmailValid = $this->checkField($clientInputs[1], true, 1, 255, '/[a-zA-Z0-9-._]+@[a-zA-Z0-9-._]+\.[a-z]{2,}/');
-    $clientPhoneNumberV = $this->checkField($clientInputs[2], true, 1, 255, '/^\d{10}$/');
-    $clientMessageV = $this->checkField($clientInputs[3], true, 1, 255);
+    $clientPhoneNumberV = $this->checkField($clientInputs[2], true, 1, 50, '/^[0-9+ \.\-\(\)]{7,30}$/');
+    $clientMessageV = $this->checkField($clientInputs[3], true, 1, 5000);
     return $clientEmailValid && $clientNameValid && $clientMessageV && $clientPhoneNumberV;
   }
 

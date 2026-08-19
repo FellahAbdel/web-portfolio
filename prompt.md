@@ -1,31 +1,34 @@
-Prompt — Ajout d’un onglet Certifications
+Modifie uniquement la page Contact en conservant au maximum son design, sa structure et sa mise en page actuels.
 
-Je veux ajouter un nouvel onglet « Certifications » à l’interface, tout en respectant strictement le design system et l’identité visuelle actuels du projet.
+Je ne veux pas une refonte complète de la page. Je veux simplement adapter son contenu à ma situation professionnelle actuelle.
 
-Objectif
+### Modifications souhaitées
 
-Créer une page permettant de présenter toutes mes certifications de manière claire, moderne et facilement consultable, avec une chronologie visuelle intuitive.
+* Remplacer le texte :
+  « I would be very delighted to see your internship offers. »
 
-Fonctionnalités
-Ajouter un onglet « Certifications » dans la navigation existante.
-Permettre d’afficher mes certifications sous forme de cartes ou éléments de timeline.
-Chaque certification sera représentée à partir d’une image PNG fournie.
-Afficher pour chaque certification :
-le visuel/logo de la certification ;
-son nom ;
-l’organisme délivrant la certification ;
-la date d’obtention ;
-éventuellement une courte description ou les compétences associées.
-Organiser les certifications chronologiquement, de la plus récente à la plus ancienne.
-Rendre la timeline très facile à lire, avec une hiérarchie visuelle claire entre les dates, les certifications et leurs informations.
-Prévoir un affichage responsive pour desktop et mobile.
-Design
-Reprendre les couleurs, typographies, espacements, bordures, ombres, composants et animations déjà présents dans le projet.
-Ne pas créer un style visuel qui dénote avec le reste de l’interface.
-Privilégier une présentation élégante, minimaliste et professionnelle.
-Ajouter des micro-interactions discrètes au survol ou lors de l’apparition des certifications, uniquement si elles sont cohérentes avec le design existant.
-Expérience utilisateur
+  par un message orienté vers les projets web, par exemple :
+  « Vous avez un projet web ou une application à développer ? N’hésitez pas à me contacter pour en discuter. »
 
-La page doit permettre de comprendre rapidement mon parcours de certifications en parcourant la timeline, sans surcharge visuelle.
+* Adapter le titre et les textes de la page pour qu'ils soient davantage orientés vers des **clients, entreprises ou personnes ayant un projet web à réaliser**, plutôt que vers la recherche d'un stage.
 
-L’objectif final est d’obtenir une section « Certifications » cohérente avec le site actuel, visuellement soignée et immédiatement lisible.
+* Mettre à jour mes informations professionnelles actuelles :
+
+  * Développeur Full Stack
+  * Java / Spring Boot
+  * Angular
+  * Expérience professionnelle en développement
+  * Projets web et applications
+
+* Conserver les blocs de contact existants (email, téléphone, localisation), mais remplacer les informations obsolètes par mes informations actuelles.
+
+* Modifier le texte « TOUCH WITH ME » et le message qui l'accompagne afin qu'il soit plus naturel et professionnel, par exemple :
+  « Vous avez une idée, un projet ou un besoin en développement web ? Décrivez-moi votre projet et je vous répondrai rapidement. »
+
+* Adapter le champ « Your message » pour encourager les visiteurs à expliquer leur projet ou leur besoin.
+
+### Important
+
+Ne change pas inutilement le design, les couleurs, les icônes, les espacements ou la disposition actuelle.
+
+L'objectif est simplement de transformer cette page Contact en une page permettant à des personnes ou entreprises de **me contacter pour me confier un projet web**, tout en conservant exactement le style visuel actuel.

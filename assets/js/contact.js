@@ -20,24 +20,56 @@ const elements = [usernameElt, emailElt, phoneNumberElt, userMessageElt];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const isFr =
+    document.documentElement.lang === "fr" ||
+    window.location.search.includes("lang=fr");
+
   if (checkInputs()) {
-    showSuccessfullMsg();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerText : "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerText = isFr ? "Envoi en cours..." : "Sending...";
+    }
+
     const formData = new FormData(form);
 
     fetch(form.action, {
       method: "POST",
       body: formData,
     })
-      .then((response) => {
-        // Handle the response from the server
-        // ...
-        // Clear the form inputs
+      .then(async (response) => {
+        const data = await response.json().catch(() => null);
+        if (!response.ok || !data || !data.success) {
+          const errorMsg =
+            data && data.error
+              ? data.error
+              : isFr
+              ? "Une erreur est survenue lors de l'envoi. Veuillez réessayer."
+              : "An error occurred while sending your message. Please try again.";
+          throw new Error(errorMsg);
+        }
+        return data;
+      })
+      .then((data) => {
+        showSuccessfullMsg();
         elements.forEach((element) => removeSuccess(element));
-        // removeSuccess();
         form.reset();
+
+        setTimeout(() => {
+          hideSuccesfullMsg();
+        }, 7000);
       })
       .catch((error) => {
-        console.error(error);
+        console.error("Contact form error:", error);
+        hideSuccesfullMsg();
+        alert(error.message || (isFr ? "Erreur lors de l'envoi." : "Sending failed."));
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalBtnText;
+        }
       });
   } else {
     hideSuccesfullMsg();

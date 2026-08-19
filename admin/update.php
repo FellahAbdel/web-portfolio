@@ -49,9 +49,7 @@ function checkInput($data)
   <?php
   require_once __DIR__ . '/../assets/templates/head.php'
   ?>
-  <link rel="stylesheet" href="/admin/assets/css/bootstrapp.css" />
   <link rel="stylesheet" href="/assets/css/shared.css" />
-  <link rel="stylesheet" href="/assets/css/form-item.css" />
   <link rel="stylesheet" href="/admin/assets/css/project-form.css" />
   <script src="https://cdn.tiny.cloud/1/9vn6cnyc2nhzsn1onc2crevikcwxivlfrir4y43qht5odb8x/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
